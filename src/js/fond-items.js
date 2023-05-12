@@ -28,8 +28,8 @@ const fondItems =
   {
     title: 'Medicins Sans Frontieres',
     url: 'https://www.msf.org/ukraine',
-    imageFond1: import('../images/donate-bar/5medicins@1x.png'),
-    imageFond2: import('../images/donate-bar/5medicins@2x.png'),
+    imageFond1: import('../images/donate-bar/5medecins@1x.png'),
+    imageFond2: import('../images/donate-bar/5medecins@2x.png'),
   },
   {
     title: 'RAZOM',
