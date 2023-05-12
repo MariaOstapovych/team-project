@@ -202,7 +202,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 12px 165px;
+    padding: 14px 62px;
 
     border: 2px solid blue;
     border-radius: 40px;
@@ -221,5 +221,8 @@
     &:focus {
         color: white;
         background-color: blue;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 14px 165px;
     }
 }
