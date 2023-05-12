@@ -1,13 +1,11 @@
 .container {
     width: 100%;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     @media (min-width: 375px) {
         width: 375px;
-        padding-left: 20px;
-        padding-right: 20px;
     }
 
     @media (min-width: 768px) {
