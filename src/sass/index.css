@@ -38,7 +38,6 @@ img {
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.googleapis.com/css2?family=DM+Sans&display=swap);
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 @font-face {
   font-family: "DM Sans";
@@ -61,6 +60,112 @@ img {
   font-display: swap;
   src: url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap);
 }
+.shopping-title {
+  color: rgb(17, 17, 17);
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.shopping-title--color {
+  color: rgb(79, 46, 232);
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 375px) {
+  .shopping__books-list {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .shopping__books-list {
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .shopping__books-list {
+    max-width: 996px;
+  }
+}
+
+.books-list__item {
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  border-radius: 16px;
+  height: 170px;
+  left: 20px;
+  top: 182px;
+  box-sizing: border-box;
+  padding: 30px 24px;
+  gap: 48px;
+}
+@media (min-width: 414px) {
+  .books-list__item {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .books-list__item {
+    width: 704px;
+  }
+}
+
+.books-list__name {
+  width: 114px;
+  height: 18px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.books-list__categories {
+  color: rgb(180, 175, 175);
+  width: 101px;
+  height: 14px;
+  left: 128px;
+  top: 36px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+
+.books-list__description {
+  width: 193px;
+  height: 68px;
+  left: 128px;
+  top: 58px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+}
+
+.books-list__author {
+  color: rgb(180, 175, 175);
+  font-family: "DM Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
