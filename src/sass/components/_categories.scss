@@ -1,1 +1,94 @@
 // Olga
+.categories {
+    color:  rgba(17, 17, 17, 0.6);
+  
+    &__container {
+      max-height: 228px;
+      padding-right: 28px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+  
+      @include small-mobile {
+        max-width: 335px;
+        padding-right: 18px;
+      }
+  
+      @include mobile {
+        width: 335px;
+      }
+  
+      @include tablet {
+        width: 337px;
+        max-height: 472px;
+      }
+  
+      @include desktop {
+        width: 318px;
+      }
+  
+      // Scrollbar
+      &::-webkit-scrollbar {
+        width: 8px;
+  
+        &-track {
+          background:  #202024;
+        }
+  
+        &-thumb {
+          width: 100%;
+          height: 114px;
+          border-radius: 12px;
+          background: rgba(17, 17, 17, 0.6);
+  
+          @include tablet {
+            height: 167px;
+          }
+        }
+      }
+    }
+  
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+  
+      @include tablet {
+        gap: 32px;
+      }
+    }
+  }
+  
+  //To equal fonts with the basic styles
+  .category {
+    font-size: 16px;
+    line-height: 1.12;
+  
+    letter-spacing: -0.02em;
+  
+    cursor: pointer;
+  
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: font-size, color;
+  
+    @include tablet {
+      font-size: 18px;
+      line-height: 1.33;
+    }
+  
+    &:hover,
+    &:focus {
+      font-size: 17px;
+      color:  #111111;
+  
+      @include tablet {
+        font-size: 19px;
+      }
+    }
+  
+    &.checked-category {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #eac645;
+    }
+  }
