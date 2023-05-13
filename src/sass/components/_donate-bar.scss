@@ -9,6 +9,8 @@
     border-radius: 16px;
     background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
     box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+    color: $color-background-text-white;
+    font-family: 'DM Sans', sans-serif;
 
     @media (min-width: 768px){
     height: 472px;
@@ -29,12 +31,10 @@
 .support__title {
     margin-right: 12px;
     margin-bottom: 40px;
-    font-family: 'DM Sans';
     font-weight: 700;
     font-size: 28px;
     line-height: 1.143;
     letter-spacing: -0.04em;
-    color: $color-background-text-white;
 }
 
 .icon-trident {
@@ -59,3 +59,26 @@
     fill: $color-text-button-purple;
 }
 
+.swiper{
+    height: 188px;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+    height: 292px;
+    }
+}
+
+.support-items{
+    display: flex;
+    align-items: center;
+}
+
+.support-number{
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 1.286;
+}
+
+.support-image{
+    filter: brightness(0) invert(1);
+}
