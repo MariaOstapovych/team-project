@@ -87,7 +87,14 @@ img {
 }
 
 .book {
-  width: 200px;
+  width: 287px;
+  height: 408px;
+}
+@media screen and (min-width: 768px) {
+  .book {
+    width: 192px;
+    height: 281px;
+  }
 }
 
 .visibility {
@@ -99,7 +106,6 @@ img {
   white-space: nowrap;
   width: 1px;
   height: 1px;
-  overflow: hidden;
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
@@ -115,8 +121,6 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(17, 17, 17, 0.6);
-  overflow-y: scroll;
-  overflow: hidden;
 }
 
 .modal {
@@ -140,12 +144,12 @@ img {
 @media screen and (min-width: 375px) and (max-width: 767px) {
   .modal {
     max-height: calc(100% - 40px);
-    overflow-y: scroll;
   }
 }
 @media screen and (min-width: 375px) {
   .modal {
     width: 335px;
+    overflow: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -273,7 +277,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 14px 62px;
+  padding: 14px 28px;
   border: 2px solid #4F2EE8;
   border-radius: 40px;
   background-color: inherit;
