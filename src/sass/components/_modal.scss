@@ -228,3 +228,9 @@
         padding: 14px 165px;
     }
 }
+
+.icon-close{
+    &:hover,&:focus {
+        fill: $color-text-button-purple;
+    }
+}
