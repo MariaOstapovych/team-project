@@ -1,0 +1,1 @@
+{"mappings":"oeAAAA,EAAA,S","sources":["src/shopping-list.js"],"sourcesContent":["import './js/home-page'\nimport './js/header'\nimport './js/donate-bar'\nimport './js/fond-items'\nimport './js/donate-bar'\nimport './js/request'\nimport './js/modal'"],"names":["parcelRequire"],"version":3,"file":"shopping-list.47347618.js.map"}
