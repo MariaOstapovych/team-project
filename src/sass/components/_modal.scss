@@ -1,8 +1,4 @@
 // Nazar
-.header {
-    color: blue;
-}
-
 .book{
     width: 200px;
 }
@@ -31,7 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(17, 17, 17, 0.4);
+    background-color: $color-text-medgrey;
     overflow-y: scroll;
     overflow: hidden;
 }
@@ -47,8 +43,8 @@
     padding: 40px 22px;
     width: calc(100% - 20px * 2);
 
-    background: white;
-    border: 2px solid black;
+    background: $color-background-text-white;
+    border: 2px solid $color-background-text-black;
     border-radius: 18px;
 
     &.is-hidden {
@@ -88,12 +84,12 @@
 
     background: inherit;
     border: none;
-    color: black;
+    color: $color-background-text-black;
 
 
     &:hover,
     &:focus {
-        color: blue;
+        color: $color-text-button-purple ;
     }
 
     @media screen and (min-width: 768px) {
@@ -139,11 +135,12 @@
 }
 
 .modal__title {
-    margin-bottom: 4px;
-
+    font-family: 'DM Sans';
+    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(18 / 16);
+    margin-bottom: 4px;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 8px;
@@ -153,13 +150,14 @@
 }
 
 .modal__author {
+    font-family: 'DM Sans';
     margin-bottom: 18px;
 
     font-style: italic;
     font-size: 12px;
     line-height: calc(14 / 12);
 
-    color: gray;
+    color: $color-text-lightgrey;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 20px;
@@ -172,6 +170,7 @@
     max-width: 287px;
     margin-bottom: 14px;
 
+    font-family: 'DM Sans';
     font-size: 14px;
     line-height: calc(18 / 14);
 
@@ -204,7 +203,7 @@
     margin-right: auto;
     padding: 14px 62px;
 
-    border: 2px solid blue;
+    border: 2px solid $color-text-button-purple;
     border-radius: 40px;
 
     background-color: inherit;
@@ -219,8 +218,8 @@
 
     &:hover,
     &:focus {
-        color: white;
-        background-color: blue;
+        color: $color-background-text-white;
+        background-color: $color-text-button-purple;
     }
     @media screen and (min-width: 768px) {
         padding: 14px 165px;
