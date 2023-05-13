@@ -1,1 +1,61 @@
 // Iryna
+.support__container{
+    max-width: 335px;
+    height: 352px;
+    padding-left: 40px;
+    padding-right: 58px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+    border-radius: 16px;
+    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
+    box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+
+    @media (min-width: 768px){
+    height: 472px;
+    padding-bottom: 14px;
+    }
+
+    @media (min-width: 1440px){
+    width: 356px;
+    height: 490px;
+    padding-bottom: 24px;
+    }
+}
+
+.support__title-box{
+  display: flex;   
+}
+
+.support__title {
+    margin-right: 12px;
+    margin-bottom: 40px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.143;
+    letter-spacing: -0.04em;
+    color: $color-background-text-white;
+}
+
+.icon-trident {
+    fill: $color-background-text-white;
+}
+
+.support__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $color-background-text-white;
+    fill: $color-text-button-purple;
+}
+
