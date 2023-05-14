@@ -12,7 +12,7 @@ const categoriesEl = document.querySelector('.categories-list');
 const fetch = new FetchBooks();
 
 function renderCategories() {
-  
+ 
   fetch
     .fetchCategoryList()
     .then(data => {

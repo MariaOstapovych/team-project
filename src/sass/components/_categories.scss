@@ -1,94 +1,74 @@
 // Olga
-.categories {
-    color:  rgba(17, 17, 17, 0.6);
-  
-    &__container {
-      max-height: 228px;
-      padding-right: 28px;
-      overflow-y: scroll;
-      overflow-x: hidden;
-  
-      @include small-mobile {
-        max-width: 335px;
-        padding-right: 18px;
-      }
-  
-      @include mobile {
-        width: 335px;
-      }
-  
-      @include tablet {
-        width: 337px;
-        max-height: 472px;
-      }
-  
-      @include desktop {
-        width: 318px;
-      }
-  
-      // Scrollbar
-      &::-webkit-scrollbar {
-        width: 8px;
-  
-        &-track {
-          background:  #202024;
-        }
-  
-        &-thumb {
-          width: 100%;
-          height: 114px;
-          border-radius: 12px;
-          background: rgba(17, 17, 17, 0.6);
-  
-          @include tablet {
-            height: 167px;
-          }
-        }
-      }
-    }
-  
-    &-list {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-  
-      @include tablet {
-        gap: 32px;
-      }
-    }
+.filter {
+  width: 100%;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0px;
+    margin-bottom: 0;
+    width: 337px;
+    height: 472px;
   }
-  
-  //To equal fonts with the basic styles
-  .category {
-    font-size: 16px;
-    line-height: 1.12;
-  
-    letter-spacing: -0.02em;
-  
-    cursor: pointer;
-  
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition-property: font-size, color;
-  
-    @include tablet {
-      font-size: 18px;
-      line-height: 1.33;
-    }
-  
-    &:hover,
-    &:focus {
-      font-size: 17px;
-      color:  #111111;
-  
-      @include tablet {
-        font-size: 19px;
-      }
-    }
-  
-    &.checked-category {
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #eac645;
-    }
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    margin-bottom: 86px;
   }
+}
+
+.filter__list {
+  max-height: 228px;
+  width: 100%;
+  // overflow: scroll;
+  //   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @media screen and (min-width: $tablet) {
+    max-height: 472px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 8px;
+    height: 114px;
+    border-radius: 12px;
+    border: 12px solid #E0E0E0;
+  }
+}
+
+.filter__item {
+  padding-bottom: 24px;
+  padding-right: 20px;
+
+  font-family: 'DMSans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.12;
+
+  letter-spacing: -0.02em;
+ transition: all ease-in-out 160ms;
+
+  color:  #11111199;
+  cursor: pointer;
+  &:hover{
+    // zoom: 101%;
+    transform: scale(1.05) translateX(10px);
+
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 1.33;
+    padding-bottom: 32px;
+  }
+}
+
+.filter__item--active {
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #4f2ee8;
+}

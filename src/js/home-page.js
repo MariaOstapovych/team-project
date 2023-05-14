@@ -231,7 +231,7 @@ if (listTopBooks) {
   listTopBooks.addEventListener('click', handleLoadMore);
 }
 
-spinnerPlay();
+
 
 async function handleLoadMore(e) {
   try {
