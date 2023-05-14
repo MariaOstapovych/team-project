@@ -34,96 +34,272 @@ img {
 
 /* latin-ext */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZa4ET-DJF4e8BH9.woff2)
-    format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZa4ET-DJF4e8BH9.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZa4Hz-DJF4e8A.woff2)
-    format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZa4Hz-DJF4e8A.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZ2IHTWEBlwu8Q.woff2)
-    format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZ2IHTWEBlwu8Q.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2)
-    format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBamC3YU-CnE6Q.woff2)
-    format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBamC3YU-CnE6Q.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBimC3YU-Ck.woff2)
-    format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBimC3YU-Ck.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBamC3YU-CnE6Q.woff2)
-    format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBamC3YU-CnE6Q.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBimC3YU-Ck.woff2)
-    format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBimC3YU-Ck.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+@media (min-width: 375px) {
+  .shopping {
+    width: 100%;
+  }
+}
+
+.shopping-title {
+  color: rgb(17, 17, 17);
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.shopping-title--color {
+  color: rgb(79, 46, 232);
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 375px) {
+  .shopping__books-list {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .shopping__books-list {
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .shopping__books-list {
+    max-width: 996px;
+  }
+}
+
+.books-list__item {
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  border-radius: 16px;
+  height: 170px;
+  left: 20px;
+  top: 182px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 14px;
+}
+@media (min-width: 375px) {
+  .books-list__item {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .books-list__item {
+    height: 213px;
+    padding: 24px;
+  }
+}
+
+.books-list__image {
+  min-width: 100px;
+  min-height: 142px;
+  background-color: aqua;
+  margin-right: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .books-list__image {
+    margin-right: 24px;
+    min-width: 116px;
+    min-height: 165px;
+  }
+}
+
+.books-info {
+  display: flex;
+  width: 100%;
+  min-height: 142px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .books-info {
+    min-height: 165px;
+  }
+}
+
+.icon-dump {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+}
+@media (min-width: 768px) {
+  .icon-dump {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.books-list__name {
+  height: 18px;
+  margin-bottom: 4px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.books-list__categories {
+  color: rgb(180, 175, 175);
+  height: 14px;
+  left: 128px;
+  top: 36px;
+  margin-bottom: 8px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+@media (min-width: 768px) {
+  .books-list__categories {
+    margin-bottom: 14px;
+  }
+}
+
+.books-list__description {
+  display: -webkit-box;
+  max-height: 68px;
+  left: 128px;
+  top: 58px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+}
+@media (max-width: 1439px) {
+  .books-list__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+@media (min-width: 768px) {
+  .books-list__description {
+    max-height: 53px;
+  }
+}
+
+.books-list__author {
+  color: rgb(180, 175, 175);
+  font-family: "DM Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.pagination-button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.pagination-svg {
+  width: 38px;
+  height: 38px;
+}
+@media (min-width: 768px) {
+  .pagination-svg {
+    width: 44px;
+    height: 44px;
+  }
+}
+
 .container {
   width: 100%;
   margin: 0;
@@ -158,20 +334,10 @@ img {
   padding-top: 24px;
   padding-bottom: 20px;
   border-radius: 16px;
-  background: radial-gradient(
-    183.6% 183.01% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #ffffff 100%
-  );
+  background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
-  color: #ffffff;
-  font-family: 'DM Sans', sans-serif;
-}
-
-@media (min-width: 768px) {
-  .swiper {
-    height: 292px;
-  }
+  color: #FFFFFF;
+  font-family: "DM Sans", sans-serif;
 }
 @media (min-width: 768px) {
   .support__container {
@@ -201,7 +367,7 @@ img {
 }
 
 .icon-trident {
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
 
 .support__button {
@@ -218,13 +384,18 @@ img {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #ffffff;
-  fill: #4f2ee8;
+  background-color: #FFFFFF;
+  fill: #4F2EE8;
 }
 
 .swiper {
   height: 188px;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .swiper {
+    height: 292px;
+  }
 }
 
 .support-items {
@@ -240,4 +411,200 @@ img {
 
 .support-image {
   filter: brightness(0) invert(1);
+}
+
+@media (min-width: 375px) {
+  .shopping {
+    width: 100%;
+  }
+}
+
+.shopping-title {
+  color: rgb(17, 17, 17);
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.shopping-title--color {
+  color: rgb(79, 46, 232);
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 375px) {
+  .shopping__books-list {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .shopping__books-list {
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .shopping__books-list {
+    max-width: 996px;
+  }
+}
+
+.books-list__item {
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  border-radius: 16px;
+  height: 170px;
+  left: 20px;
+  top: 182px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 14px;
+}
+@media (min-width: 375px) {
+  .books-list__item {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .books-list__item {
+    height: 213px;
+    padding: 24px;
+  }
+}
+
+.books-list__image {
+  min-width: 100px;
+  min-height: 142px;
+  background-color: aqua;
+  margin-right: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .books-list__image {
+    margin-right: 24px;
+    min-width: 116px;
+    min-height: 165px;
+  }
+}
+
+.books-info {
+  display: flex;
+  width: 100%;
+  min-height: 142px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .books-info {
+    min-height: 165px;
+  }
+}
+
+.icon-dump {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+}
+@media (min-width: 768px) {
+  .icon-dump {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.books-list__name {
+  height: 18px;
+  margin-bottom: 4px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.books-list__categories {
+  color: rgb(180, 175, 175);
+  height: 14px;
+  left: 128px;
+  top: 36px;
+  margin-bottom: 8px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+@media (min-width: 768px) {
+  .books-list__categories {
+    margin-bottom: 14px;
+  }
+}
+
+.books-list__description {
+  display: -webkit-box;
+  max-height: 68px;
+  left: 128px;
+  top: 58px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+}
+@media (max-width: 1439px) {
+  .books-list__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+@media (min-width: 768px) {
+  .books-list__description {
+    max-height: 53px;
+  }
+}
+
+.books-list__author {
+  color: rgb(180, 175, 175);
+  font-family: "DM Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.pagination-button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.pagination-svg {
+  width: 38px;
+  height: 38px;
+}
+@media (min-width: 768px) {
+  .pagination-svg {
+    width: 44px;
+    height: 44px;
+  }
 }
