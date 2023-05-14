@@ -7,7 +7,7 @@
     line-height: 1.19;
     letter-spacing: -0.04em;
     text-transform: capitalize;
-    color:  #111111;
+    color:  var(--color-background-text-black);
     margin-bottom: 40px;
   
     @include tablet {
@@ -18,12 +18,9 @@
     }
   }
   
-  .title-best-sellers-color {
-    color: #4f2ee8;
-  }
-  
+  .title-best-sellers-color,
   .title-last-word-color {
-    color: #4f2ee8;
+    color:var(--color-text-button-purple);
   }
   
   .item-category {
@@ -33,7 +30,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-overflow: ellipsis;
-    color:  #b4afaf;
+    color:  var(--color-text-lightgrey);
     margin-bottom: 18px;
     display: block;
   }
@@ -141,7 +138,7 @@
     overflow: hidden;
     text-transform: uppercase;
     text-overflow: ellipsis;
-    color: var(--main-color);
+    color: var(--color-background-text-black);
     margin-bottom: 4px;
   }
   
@@ -156,7 +153,7 @@
     text-overflow: ellipsis;
     padding-top: 4px;
     padding-bottom: 4px;
-    color:  #b4afaf;
+    color:  var(--color-text-lightgrey);
   }
   
   .title-category {
@@ -164,7 +161,7 @@
     line-height: 1.19;
     letter-spacing: -0.04em;
     text-transform: capitalize;
-    color: #111111;
+    color: var(--color-background-text-black);
     margin-bottom: 40px;
   
     @include tablet {
@@ -185,7 +182,7 @@
     line-height: 1.17px;
     letter-spacing: -0.04em;
     text-overflow: ellipsis;
-    color: #b4afaf;
+    color: var(--color-text-lightgrey);
   }
   
   .see-more {
@@ -196,20 +193,19 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
   
-    color: #111111;
+    color: var(--color-background-text-black);
     box-sizing: border-box;
     width: 124px;
     height: 46px;
     margin-left: auto;
     background:  #f6f6f6;
-    border: 2px solid #4f2ee8;
-
+    border: 2px solid var(--color-text-button-purple);
     border-radius: 40px;
   
     &:hover,
     :focus {
-      background:#4f2ee8;
-      color: #111111;
+      background:var(--color-text-button-purple);
+      color: var(--color-background-text-black);
     }
   
     transition-property: color, background-color;
@@ -260,14 +256,14 @@
     height: 54px;
     border-radius: 50%;
     border: 5px solid rgba(17, 17, 17, 0.5);
-    background-color: #4f2ee8;
+    background-color: var(--color-text-button-purple);
     box-shadow: 0 0 0 5px rgba(79, 46, 232, 0.3);
     transition: transform 0.2s ease-in-out;
   
     &:hover,
     :focus {
       transform: scale(1.05);
-      background-color:#eac645;
+      background-color:var(--color-background-text-yellow);
     }
   }
   
