@@ -15,20 +15,20 @@
     />
     <link rel="stylesheet" href="./sass/index.css" />
   </head>
-  <body>
-    <a href="./shopping-list.html">shopping list</a>
+  <body  class="page">
+    <!-- <a href="./shopping-list.html">shopping list</a> -->
 
     <include src="./partials/header.html"></include>
-    
+    <div class="desktop-layout">
       <aside class="sidebar">
       <include src="./partials/categories.html"></include>
       <include src="./partials/donate-bar.html"></include>
       </aside>
 <main>
+</div>
   <include src="./partials/home-page.html"></include>
-      <include src="./partials/modal.html"></include>
-    </main>
-  
+ </main>
+    <include src="./partials/modal.html"></include>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
