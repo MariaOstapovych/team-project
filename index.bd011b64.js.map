@@ -1,1 +1,0 @@
-{"mappings":"gfAAAA,EAAA,S","sources":["src/index.js"],"sourcesContent":["import './js/home-page'\nimport './js/header'\nimport './js/fond-items'\nimport './js/categories'\nimport './js/donate-bar'\nimport './js/scroll-up'\nimport './js/request'\nimport './js/modal'\n\n\n"],"names":["parcelRequire"],"version":3,"file":"index.bd011b64.js.map"}
