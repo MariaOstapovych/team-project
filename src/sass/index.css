@@ -216,3 +216,20 @@ img {
 .support-image {
   filter: brightness(0) invert(1);
 }
+
+.scroll-up {
+  z-index: 100;
+  position: fixed;
+  opacity: 0.3;
+  transform: scale(0.8);
+  right: 20px;
+  bottom: 20px;
+  transition: opacity 250ms linear;
+  transition: transform 250ms linear;
+}
+
+.scroll-up:hover,
+.scroll-up:focus {
+  opacity: 0.9;
+  transform: scale(1);
+}/*# sourceMappingURL=index.css.map */
