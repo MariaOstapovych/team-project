@@ -17,7 +17,23 @@
   </head>
   <body>
     <a href="./index.html">home-page</a>
-    <div class="container">
+    <div class="container container-center">
+      <section class="support-container__shopping">
+        <div class="support__title-box">
+          <h2 class="support__title">Support Ukraine</h2>
+          <svg class="icon-trident" width="20" height="32">
+            <use href="./images/icons.svg#icon-trident"></use>
+          </svg>
+        </div>
+        <div class="swiper">
+          <ul class="swiper-wrapper support-list-js"></ul>
+        </div>
+        <button class="swiper-button-next support__button" type="button">
+          <svg width="22" height="22">
+            <use href="./images/icons.svg#icon-slider"></use>
+          </svg>
+        </button>
+      </section>
       <div class="shopping">
         <h1 class="shopping-title">
           Shopping <span class="shopping-title--color">List</span>
@@ -26,9 +42,11 @@
           <li class="books-list__item">
             <div class="books-list__image"></div>
             <div class="books-info">
-              <svg class="icon-dump">
-                <use href="./images/icons.svg#icon-dump2"></use>
-              </svg>
+              <button class="dump-button">
+                <svg class="dump-icon">
+                  <use href="./images/icons.svg#icon-dump2"></use>
+                </svg>
+              </button>
               <p class="books-list__name">I will find you</p>
               <p class="books-list__categories">Hardcover fiction</p>
               <span class="books-list__description"
@@ -43,26 +61,37 @@
             </div>
           </li>
         </ul>
-        <div class="pagination">
-          <ul class="pagination-list">
-            <li class="pagination-item">
-              <button type="button" class="pagination-button">
-                <svg class="pagination-svg"><use href="./images/icons.svg#icon-slider2arrow"></use></svg>
-              </button>
-              <button type="button" class="pagination-button">
-                <svg class="pagination-svg"><use href="./images/icons.svg#icon-slider1arrow"></use></svg>
-              </button>
-            </li>
-            <li>
-              <button type="button" class="pagination-button">
-                <svg class="pagination-svg"><use href="./images/icons.svg#icon-slider1arrowColor"></use></svg>
-              </button>
-              <button type="button" class="pagination-button">
-                <svg class="pagination-svg"><use href="./images/icons.svg#icon-slider2arrowColor"></use></svg>
-              </button>
-            </li>
-          </ul>
-        </div>
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <button type="button" class="pagination-button">
+              <svg class="pagination-svg">
+                <use href="./images/icons.svg#icon-slider2arrow"></use>
+              </svg>
+            </button>
+            <button type="button" class="pagination-button">
+              <svg class="pagination-svg">
+                <use href="./images/icons.svg#icon-slider1arrow"></use>
+              </svg>
+            </button>
+          </li>
+          <!-- <li class="pagination-item">
+            <button type="button" class="pagination-button">
+              <svg></svg>
+            </button>
+          </li> -->
+          <li>
+            <button type="button" class="pagination-button">
+              <svg class="pagination-svg">
+                <use href="./images/icons.svg#icon-slider1arrowColor"></use>
+              </svg>
+            </button>
+            <button type="button" class="pagination-button">
+              <svg class="pagination-svg">
+                <use href="./images/icons.svg#icon-slider2arrowColor"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
     <script src="./shopping-list.js" type="module"></script>
