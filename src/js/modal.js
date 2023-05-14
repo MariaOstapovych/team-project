@@ -51,7 +51,11 @@ function createMarkup(arr) {
     console.log(book.books[0]);
   });
 }
-
+function createMarkup(arr) {
+  return arr.map(book => {
+    console.log(book._id);
+  });
+}
 getTopBooks()
   .then(data => {
     const markup = createMarkup(data);
