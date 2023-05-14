@@ -1,9 +1,10 @@
 // Nazar
 import axios from 'axios';
+import { makeMarkupGategory } from './categories';
 const btnModalOpen = document.querySelector('.modal__open');
 const btnModalCLose = document.querySelector('.modal__close-btn');
-const backdrop = document.querySelector('.backdrop');
-const modal = document.querySelector('.modal');
+const backdrop = document.querySelector('.backdrop-js');
+const modal = document.querySelector('.modal-js');
 
 btnModalOpen.addEventListener('click', onClick);
 
@@ -30,7 +31,6 @@ function onBackdropClick(evt) {
 btnModalCLose.addEventListener('click', onBtnClose);
 function onBtnClose(evt) {
   evt.preventDefault();
-  evt.preventDefault();
   backdrop.style.display = 'none';
 }
 
@@ -51,8 +51,6 @@ function createMarkup(arr) {
     console.log(book.books[0]);
   });
 }
-
-const list = document.getElementById('list');
 
 getTopBooks()
   .then(data => {

@@ -387,6 +387,6 @@ img {
   }
 }
 
-.icon-close:hover, .icon-close:focus {
+.modal__close-btn:hover, .modal__close-btn:focus {
   fill: #4F2EE8;
 }
