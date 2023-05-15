@@ -9,7 +9,6 @@ export async function getCategoriesList() {
     
     return categoriesList.data;
 }
-getCategoriesList()
 
 //ПОПУЛЯРНІ КНИГИ, ЩО НАЛЕЖАТЬ ДО УСІХ КАТЕГОРІЙ
 
@@ -21,7 +20,6 @@ export async function getTopBooks() {
     return topBooks.data;
 }
 
-getTopBooks();
 
 //КНИГИ ОКРЕМОЇ КАТЕГОРІЇ
 
