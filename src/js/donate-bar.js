@@ -14,8 +14,8 @@ const swiperButton = document.querySelector('.swiper-button-next');
 
     return `<li class="swiper-slide support-items">
       <p class="support-number">${formattedNumber}</p>
-      <a class="support-image" href="${url}" target="_blank" rel="noopener noreferrer nofollow">
-        <img srcset="${imageFond1} 1x, ${imageFond2} 2x" src="${imageFond1}"
+      <a href="${url}" target="_blank" rel="noopener noreferrer nofollow">
+        <img class="support-image" srcset="${imageFond1} 1x, ${imageFond2} 2x" src="${imageFond1}"
         alt="${title}" loading="lazy" width="129"/>
       </a>
     </li>`;
@@ -31,25 +31,21 @@ const swiper = new Swiper('.swiper', {
   direction: 'vertical',
   loop: true,
   rewind: true,
+
   navigation: {
     nextEl: '.swiper-button-next',
   },
   speed: 400,
+  freeMode: true,
+
   breakpoints: {
     // when window width is >= 300px
     300: {
-      slidesPerView: 3,
-      spaceBetween: 20
-    },
-    // when window width is >= 375px
-    375: {
       slidesPerView: 4,
-      spaceBetween: 20
     },
      // when window width is >= 768px
     768: {
       slidesPerView: 6,
-      spaceBetween: 30
     } 
   }
 });
