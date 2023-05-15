@@ -68,7 +68,7 @@
 }
 
 .icon-cart {
-    fill: #111111;
+    fill: #ffffff;
 }
 
 .current {
@@ -234,13 +234,14 @@
 
 // =========================
 // МОДАЛЬНЕ ВІКНО МЕНЮ
-.modalll.is-hidden {
+.header_modal.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    z-index: 10000;
 }
 
-.modalll {
+.header_modal {
     position: absolute;
     top: 64px;
     left: 0px;
@@ -248,7 +249,7 @@
     height: 100vh;
     overflow: hidden;
     padding: 20px;
-    z-index: 7;
+    z-index: 10000;
     background-image: radial-gradient( 183.6% 183.01% at 59.76% -23.42%, #4f2ee8 18.03%, #ffffff 100%);
     transition: opacity 150ms linear, visibility 150ms linear;
     @media screen and (min-width: 768px) {
@@ -268,7 +269,7 @@
     background-color: #4f2ee8;
     border: 1.5px solid #111111;
     border-radius: 18px;
-    color: #ffffff;
+    color: transparent;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
@@ -308,18 +309,25 @@
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    z-index: 10000000000000;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: #ffffff;
+    margin-top: 183px;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &.is-hidden {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+        z-index: 1000;
     }
+}
+
+.drop-menu__shopping {
+    color: #ffffff;
 }
 
 .drop-menu__home,
@@ -329,6 +337,7 @@
     display: flex;
     align-items: center;
     gap: 7px;
+    z-index: 10000;
 }
 
 .drop-menu__home:hover,
