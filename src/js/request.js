@@ -9,7 +9,7 @@ export async function getCategoriesList() {
     
     return categoriesList.data;
 }
-getCategoriesList()
+getCategoriesList();
 
 //ПОПУЛЯРНІ КНИГИ, ЩО НАЛЕЖАТЬ ДО УСІХ КАТЕГОРІЙ
 
