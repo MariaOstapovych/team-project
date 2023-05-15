@@ -1578,9 +1578,8 @@ body .dark,
   }
 }
 
-.modal__close-btn:hover,
-.modal__close-btn:focus {
-  fill: #4f2ee8;
+.modal__close-btn:hover, .modal__close-btn:focus {
+  fill: #4F2EE8;
 }
 
 .amazon {
