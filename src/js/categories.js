@@ -1,12 +1,11 @@
 // Olga
-import { getCategoriesList } from "./request";
-import axios from "axios";
+import { getCategoriesList } from './request';
+import axios from 'axios';
 // import { getBooksCategory } from "./request";
 
-const listElement = document.querySelector(".cat-list-js");
-const bookList = document.querySelector(".book-list-js");
-
-listElement.addEventListener("click", onClick);
+const listElement = document.querySelector('.cat-list-js');
+const bookList = document.querySelector('.book-list-js');
+listElement.addEventListener('click', onClick);
 
 function onClick(evt) {
   const categoryName = evt.target.outerText;
@@ -19,32 +18,30 @@ function onClick(evt) {
     .then(function (response) {
       // обработка успешного запроса
       console.log(response.data);
-      const book = response.data.map(
-        ({
-          _id,
-          book_image,
-          title,
-          author
-        }) => console.log(_id,
-          book_image,
-          title,
-          author)
-      )
+      const book = response.data.map(({ _id, book_image, title, author }) =>
+        console.log(_id, book_image, title, author)
+      );
 
- bookList.insertAdjacentHTML("beforeend", createBookList(response.data));
-
+      bookList.innerHTML = createBookList(response.data);
     })
-    .catch(function(error) {
+    .catch(function (error) {
       // обработка ошибки
       console.log(error);
-    })
-    .finally(function() {
-      // выполняется всегда
     });
+  // .finally(function () {
+  //   // выполняется всегда
+  // });
 }
 
 function createBookList(arr) {
-  return arr.map(({ _id, book_image, title, author }) => `<li class="item-category-book js-book-modal" data-book-id="${_id}">
+  return arr
+    .map(
+      ({
+        _id,
+        book_image,
+        title,
+        author,
+      }) => `<li class="item-category-book js-book-modal" data-book-id="${_id}">
        <a class="link-books-render" href="#">   
         <div class="card-book">
             <div class="img-card-book">
@@ -60,9 +57,10 @@ function createBookList(arr) {
               </div>
           </div>
       </a>
-      </li>`).join("");
+      </li>`
+    )
+    .join('');
 }
-
 
 const createCategoryList = async () => {
   try {
@@ -78,8 +76,8 @@ const createCategoryList = async () => {
           </button>
         </li>`
       )
-      .join("");
-    listElement.insertAdjacentHTML("beforeend", buttonsCategoriesList);
+      .join('');
+    listElement.insertAdjacentHTML('beforeend', buttonsCategoriesList);
   } catch (error) {
     console.log(error);
   }
