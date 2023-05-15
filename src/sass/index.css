@@ -34,75 +34,95 @@ img {
 
 /* latin-ext */
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZa4ET-DJF4e8BH9.woff2) format("woff2");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZa4ET-DJF4e8BH9.woff2)
+    format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZa4Hz-DJF4e8A.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZa4Hz-DJF4e8A.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZ2IHTWEBlwu8Q.woff2) format("woff2");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZ2IHTWEBlwu8Q.woff2)
+    format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBamC3YU-CnE6Q.woff2) format("woff2");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBamC3YU-CnE6Q.woff2)
+    format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBimC3YU-Ck.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrCBimC3YU-Ck.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBamC3YU-CnE6Q.woff2) format("woff2");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBamC3YU-CnE6Q.woff2)
+    format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBimC3YU-Ck.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitCBimC3YU-Ck.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 .container-center {
   display: flex;
@@ -120,10 +140,14 @@ img {
     padding-top: 24px;
     padding-bottom: 20px;
     border-radius: 16px;
-    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4f2ee8 18.03%, #ffffff 100%);
+    background: radial-gradient(
+      183.6% 183.01% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #ffffff 100%
+    );
     box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
-    color: #FFFFFF;
-    font-family: "DM Sans", sans-serif;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
     margin-right: 40px;
     height: 490px;
     padding-bottom: 14px;
@@ -138,7 +162,7 @@ img {
 
 .shopping-title {
   color: rgb(17, 17, 17);
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -166,7 +190,7 @@ img {
 
 .shopping-title--color {
   color: rgb(79, 46, 232);
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -275,7 +299,7 @@ img {
 .books-list__name {
   height: 18px;
   margin-bottom: 4px;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -290,7 +314,7 @@ img {
   left: 128px;
   top: 36px;
   margin-bottom: 8px;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -308,7 +332,7 @@ img {
   max-height: 68px;
   left: 128px;
   top: 58px;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -331,7 +355,7 @@ img {
 
 .books-list__author {
   color: rgb(180, 175, 175);
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -384,11 +408,6 @@ img {
   padding-left: 20px;
   padding-right: 20px;
 }
-@media (min-width: 375px) {
-  .container {
-    width: 375px;
-  }
-}
 @media (min-width: 768px) {
   .container {
     width: 768px;
@@ -416,10 +435,14 @@ img {
   padding-top: 24px;
   padding-bottom: 20px;
   border-radius: 16px;
-  background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
+  background: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #ffffff 100%
+  );
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
-  color: #FFFFFF;
-  font-family: "DM Sans", sans-serif;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
 }
 @media (min-width: 768px) {
   .support__container {
@@ -449,7 +472,7 @@ img {
 }
 
 .icon-trident {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .support__button {
@@ -466,8 +489,8 @@ img {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #FFFFFF;
-  fill: #4F2EE8;
+  background-color: #ffffff;
+  fill: #4f2ee8;
 }
 
 .swiper {
@@ -511,10 +534,14 @@ img {
     padding-top: 24px;
     padding-bottom: 20px;
     border-radius: 16px;
-    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4f2ee8 18.03%, #ffffff 100%);
+    background: radial-gradient(
+      183.6% 183.01% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #ffffff 100%
+    );
     box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
-    color: #FFFFFF;
-    font-family: "DM Sans", sans-serif;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
     margin-right: 40px;
     height: 490px;
     padding-bottom: 14px;
@@ -529,7 +556,7 @@ img {
 
 .shopping-title {
   color: rgb(17, 17, 17);
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -557,7 +584,7 @@ img {
 
 .shopping-title--color {
   color: rgb(79, 46, 232);
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -666,7 +693,7 @@ img {
 .books-list__name {
   height: 18px;
   margin-bottom: 4px;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -681,7 +708,7 @@ img {
   left: 128px;
   top: 36px;
   margin-bottom: 8px;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -699,7 +726,7 @@ img {
   max-height: 68px;
   left: 128px;
   top: 58px;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -722,7 +749,7 @@ img {
 
 .books-list__author {
   color: rgb(180, 175, 175);
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -810,7 +837,7 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   margin: -1px;
 }
 
@@ -834,7 +861,7 @@ img {
   transform: translate(-50%, -50%) scale(1);
   padding: 40px 22px;
   width: calc(100% - 40px);
-  background: #FFFFFF;
+  background: #ffffff;
   border: 2px solid #111111;
   border-radius: 18px;
 }
@@ -877,8 +904,9 @@ img {
   border: none;
   color: #111111;
 }
-.modal__close-btn:hover, .modal__close-btn:focus {
-  color: #4F2EE8;
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+  color: #4f2ee8;
 }
 @media screen and (min-width: 768px) {
   .modal__close-btn {
@@ -903,7 +931,7 @@ img {
   height: 408px;
   border-radius: 8px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -921,7 +949,7 @@ img {
 }
 
 .modal__title {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -937,12 +965,12 @@ img {
 }
 
 .modal__author {
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   margin-bottom: 18px;
   font-style: italic;
   font-size: 12px;
   line-height: 1.1666666667;
-  color: #B4AFAF;
+  color: #b4afaf;
 }
 @media screen and (min-width: 768px) {
   .modal__author {
@@ -955,7 +983,7 @@ img {
 .modal__description {
   max-width: 287px;
   margin-bottom: 14px;
-  font-family: "DM Sans";
+  font-family: 'DM Sans';
   font-size: 14px;
   line-height: 1.2857142857;
 }
@@ -981,7 +1009,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding: 14px 28px;
-  border: 2px solid #4F2EE8;
+  border: 2px solid #4f2ee8;
   border-radius: 40px;
   background-color: inherit;
   text-align: center;
@@ -992,9 +1020,10 @@ img {
   text-transform: uppercase;
   color: inherit;
 }
-.modal__add-btn:hover, .modal__add-btn:focus {
-  color: #FFFFFF;
-  background-color: #4F2EE8;
+.modal__add-btn:hover,
+.modal__add-btn:focus {
+  color: #ffffff;
+  background-color: #4f2ee8;
 }
 @media screen and (min-width: 768px) {
   .modal__add-btn {
@@ -1002,8 +1031,9 @@ img {
   }
 }
 
-.modal__close-btn:hover, .modal__close-btn:focus {
-  fill: #4F2EE8;
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+  fill: #4f2ee8;
 }
 
 .amazon {
@@ -1011,4 +1041,4 @@ img {
   mix-blend-mode: luminosity;
   order: 0;
   flex-grow: 0;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
