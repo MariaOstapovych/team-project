@@ -41,9 +41,14 @@ export class FetchBooks {
 //         'https://books-backend.p.goit.global/books/category-list'
 //     );
     
+<<<<<<< HEAD
 //     return categoriesList.data;
 // }
 // getCategoriesList()
+=======
+    return categoriesList.data;
+}
+>>>>>>> main
 
 // //ПОПУЛЯРНІ КНИГИ, ЩО НАЛЕЖАТЬ ДО УСІХ КАТЕГОРІЙ
 
@@ -55,7 +60,10 @@ export class FetchBooks {
 //     return topBooks.data;
 // }
 
+<<<<<<< HEAD
 // getTopBooks();
+=======
+>>>>>>> main
 
 // //КНИГИ ОКРЕМОЇ КАТЕГОРІЇ
 
