@@ -77,8 +77,10 @@
     margin-right: 16px;
     font-size: 14px;
     line-height: 1.286;
+    letter-spacing: -0.04em;
 }
 
 .support-image{
-    filter: brightness(0) invert(1);
+    filter: brightness(0)invert(1)saturate(2);
+    margin-right: auto;
 }
