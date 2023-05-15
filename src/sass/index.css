@@ -425,6 +425,7 @@ img {
   gap: 8px;
   padding-top: 18px;
   padding-bottom: 18px;
+  margin-right: 145px;
   color: #111111;
 }
 @media screen and (min-width: 768px) {
@@ -924,6 +925,11 @@ body .dark,
 .dark .auth__modal-close-icon,
 .dark .form__icon {
   fill: #ffffff;
+}
+
+.dark .menu-toggle :hover,
+.dark.menu-toggle :focus {
+  fill: #eac645;
 }
 
 .dark .menu-toggle :hover,

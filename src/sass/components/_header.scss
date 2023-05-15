@@ -6,7 +6,7 @@
 .header-wrapper {
     display: flex;
     position: relative;
-    border: 1.5px solid $color-background-text-black;
+    border: 1.5px solid #111111;
     border-radius: 0px 0px 8px 8px;
     background-color: $color-background-text-white;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -26,7 +26,8 @@
     gap: 8px;
     padding-top: 18px;
     padding-bottom: 18px;
-    color: $color-background-text-black;
+    margin-right: 145px;
+    color: #111111;
     @media screen and (min-width: 768px) {
         padding-top: 19px;
         padding-bottom: 25px;
@@ -537,85 +538,7 @@ body .dark,
     fill: #eac645;
 }
 
-// ///category section///
-// .dark .category-books__title+.category-books__author {
-//     color: #b4afaf;
-//     transition: color cubic-bezier(0.4, 0, 0.2, 1);
-// }
-// .dark .category-books__name,
-// .dark .load-more-js,
-// .dark .main__title-js,
-// .dark .shopping__title,
-// .dark .modal__close-btn,
-// .dark .menu__shopping.link,
-// .dark .modal__close-btn,
-// .dark .shopping-main__title,
-// .dark .shopping__text,
-// .dark .menu__home,
-// .dark .form__label,
-// .dark .auth__modal-close-icon,
-// .dark .form__input-name,
-// .dark .form__input-mail,
-// .dark .form__input-password,
-// .dark .modal__remobe-btn-message {
-//     color: #ffffff;
-//     transition: color cubic-bezier(0.4, 0, 0.2, 1);
-// }
-// .dark .load-more-js,
-// .dark .form__input,
-// .dark .form__btn-sign-up,
-// .dark .form__btn-sign-in,
-// .dark .auth__modal-close {
-//     background-color: #202024;
-// }
-// .dark .categories-list__button {
-//     color: #f6f6f6;
-// }
-// .dark .categories-list__button.selected-categories {
-//     color: #eac645;
-// }
-// .dark .icon-burger,
-// .dark .auth__modal-close-icon,
-// .dark .form__icon {
-//     fill: #ffffff;
-// }
-// .dark .menu-toggle :hover,
-// .dark.menu-toggle :focus {
-//     fill: #eac645;
-// }
-// .dark .modal,
-// .dark .auth__modal {
-//     background-color: #202024;
-//     border: 2px solid #ffffff;
-//     color: #ffffff;
-//     transition: color cubic-bezier(0.4, 0, 0.2, 1), backgroung-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-// .dark .form__field input,
-// .dark .form__btn-submit {
-//     border: 2px solid #ffffff;
-// }
-// .dark .form__btn-submit {
-//     background-color: #f6f6f6;
-//     color: #111111;
-// }
-// .dark .form__btn-sign-up,
-// .dark .form__btn-sign-in {
-//     color: #f6f6f680;
-// }
-// .dark .form__btn-sign-up.active,
-// .dark .form__btn-sign-in.active {
-//     color: #4f2ee8;
-// }
-// .dark .modal__item.amazon,
-// .dark .shops-list__link.amazon {
-//     filter: grayscale(100%) invert(50%) brightness(150%);
-// }
-// .dark .pagination__btn-current-page {
-//     background-color: #111111;
-//     border: 1px solid #ffffff;
-//     color: #ffffff;
-// }
-// .dark .pagination__btn-current-page.selected {
-//     background-color: #ffffff;
-//     color: #111111;
-// }
+.dark .menu-toggle :hover,
+.dark.menu-toggle :focus {
+    fill: #eac645;
+}

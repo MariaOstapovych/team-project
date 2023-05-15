@@ -1,5 +1,4 @@
 // Igor
-// Igor
 
 import openCloseIcon from '../images/icons.svg';
 
