@@ -204,7 +204,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 14px 28px;
+    padding: 14px 15px;
 
     border: 2px solid $color-text-button-purple;
     border-radius: 40px;
@@ -225,7 +225,7 @@
         background-color: $color-text-button-purple;
     }
     @media screen and (min-width: 768px) {
-        padding: 14px 165px;
+        padding: 14px 125px;
     }
 }
 
@@ -249,7 +249,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
-    margin: 8px 85px;
+    margin: 8px -13px;
     text-align: center;
     text-align: center;
     letter-spacing: -0.04em;
