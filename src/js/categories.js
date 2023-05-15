@@ -41,8 +41,8 @@ function createBookList(arr) {
         book_image,
         title,
         author,
-      }) => `<li class="item-category-book js-book-modal" data-book-id="${_id}">
-       <a class="link-books-render" href="#">   
+      }) => `<li class="item-category-book" data-book-id="${_id}">       
+      <button class ='modal__open' type='button'>
         <div class="card-book">
             <div class="img-card-book">
             <img src="${book_image}" alt="book" class="img-book">
@@ -56,8 +56,8 @@ function createBookList(arr) {
                   </div>
               </div>
           </div>
-      </a>
-      </li>`
+          </button>
+        </li>`
     )
     .join('');
 }

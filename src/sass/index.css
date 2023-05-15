@@ -404,6 +404,10 @@ img {
   }
 }
 
+.item-category-book {
+  width: 375px;
+}
+
 .support__container {
   max-width: 335px;
   height: 352px;
@@ -805,7 +809,8 @@ img {
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   margin: -1px;
 }
 
@@ -897,7 +902,8 @@ img {
   width: 287px;
   height: 408px;
   border-radius: 8px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -1005,4 +1011,4 @@ img {
   mix-blend-mode: luminosity;
   order: 0;
   flex-grow: 0;
-}
+}/*# sourceMappingURL=index.css.map */

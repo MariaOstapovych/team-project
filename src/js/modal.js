@@ -1,13 +1,14 @@
 // Nazar
+import './categories';
 import axios from 'axios';
 const btnModalOpen = document.querySelector('.modal__open');
 const btnModalCLose = document.querySelector('.modal__close-btn');
 const backdrop = document.querySelector('.backdrop-js');
 const modal = document.querySelector('.modal-js');
 
-btnModalOpen.addEventListener('click', onClick);
+btnModalOpen.addEventListener('click', onModal);
 
-function onClick(evt) {
+function onModal(evt) {
   evt.preventDefault();
   backdrop.style.display = 'block';
 }
