@@ -1540,3 +1540,26 @@ body .dark,
   order: 0;
   flex-grow: 0;
 }
+
+.modal__descr-local {
+  display: none;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 8px 85px;
+  text-align: center;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: rgba(17, 17, 17, 0.6);
+}
+@media screen and (min-width: 768px) {
+  .modal__descr-local {
+    margin: 8px 85px 0px 86px;
+  }
+}
+
+.toggle {
+  padding: 14px 125px;
+}

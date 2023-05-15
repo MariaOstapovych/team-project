@@ -2,12 +2,21 @@
 import './categories';
 import axios from 'axios';
 const btnModalOpen = document.querySelector('.modal__open');
-const btnModalCLose = document.querySelector('.modal__close-btn');
+const btnModalClose = document.querySelector('.modal__close-btn');
 const backdrop = document.querySelector('.backdrop-js');
 const modal = document.querySelector('.modal-js');
+const btnList = document.querySelector('.modal__add-btn-js');
+const localDescr = document.querySelector('.modal__descr-local');
+
+btnList.addEventListener('click', onShoppingList);
+function onShoppingList(evt) {
+  evt.preventDefault();
+  btnList.textContent = 'Remove from the shopping list';
+  btnList.classList.toggle('toggle-js');
+  localDescr.style.display = 'block';
+}
 
 btnModalOpen.addEventListener('click', onModal);
-
 function onModal(evt) {
   evt.preventDefault();
   backdrop.style.display = 'block';
@@ -28,7 +37,7 @@ function onBackdropClick(evt) {
   }
 }
 
-btnModalCLose.addEventListener('click', onBtnClose);
+btnModalClose.addEventListener('click', onBtnClose);
 function onBtnClose(evt) {
   evt.preventDefault();
   backdrop.style.display = 'none';
@@ -56,9 +65,9 @@ function createMarkup(arr) {
 //     console.log(book._id);
 //   });
 // }
-getTopBooks()
-  .then(data => {
-    const markup = createMarkup(data);
-    console.log(data);
-  })
-  .catch(err => console.log(err));
+// getTopBooks()
+//   .then(data => {
+//     const markup = createMarkup(data);
+//     console.log(data);
+//   })
+//   .catch(err => console.log(err));
