@@ -1018,15 +1018,11 @@ body .dark,
   margin-right: 16px;
   font-size: 14px;
   line-height: 1.286;
-  letter-spacing: -0.04em;
 }
 
 .support-image {
-  filter: brightness(0) invert(1) saturate(1);
-  margin-right: auto;
+  filter: brightness(0) invert(1);
 }
-
-
 
 .container-center {
   display: flex;
@@ -1317,5 +1313,4 @@ body .dark,
 .scroll-up:focus {
   opacity: 0.9;
   transform: scale(1);
-
-}/*# sourceMappingURL=index.css.map */
+}
