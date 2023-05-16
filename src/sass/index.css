@@ -937,8 +937,126 @@ body .dark,
   fill: #eac645;
 }
 
-.item-category-book {
-  width: 180px;
+.aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 307px;
+  max-height: 228px;
+  overflow-y: scroll;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .category-container {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    width: 337px;
+    height: 472px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .category-container {
+    width: 356px;
+    height: 472px;
+    margin-bottom: 86px;
+  }
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .category-list {
+    gap: 32px;
+  }
+}
+
+.category__link {
+  border: none;
+  background-color: inherit;
+  font-family: "DM Sans";
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: 400;
+  height: 16px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(17, 17, 17, 0.6);
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .category__link {
+    font-size: 18px;
+    height: 18px;
+    line-height: 24px;
+  }
+}
+
+.category-selected,
+.category-all {
+  color: #4f2ee8;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.book-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.category-book-item {
+  margin-bottom: 40px;
+}
+
+.category-book {
+  width: 100%;
+}
+
+.category-book-img {
+  width: 335px;
+  height: 485px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .category-book-img {
+    width: 218px;
+    height: 316px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .category-book-img {
+    width: 180px;
+    height: 258px;
+  }
+}
+
+.titlebox-title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.125;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.authorbox-author {
+  font-family: "DM Sans";
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  color: #b4afaf;
 }
 
 .support__container {
@@ -949,7 +1067,7 @@ body .dark,
   padding-top: 24px;
   padding-bottom: 20px;
   border-radius: 16px;
-  background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
+  background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4f2ee8 18.03%, #ffffff 100%);
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
   color: #FFFFFF;
   font-family: "DM Sans", sans-serif;

@@ -41,18 +41,16 @@ function createBookList(arr) {
         book_image,
         title,
         author,
-      }) => `<li class="item-category-book js-book-modal" data-book-id="${_id}">
-       <a class="link-books-render" href="#">   
-        <div class="card-book">
-            <div class="img-card-book">
-            <img src="${book_image}" alt="book" class="img-book">
-            </div>
-              <div class="box-text-book-category">
-                <div class="box-title">  
-                  <p class="title-book">${title}</p>
+      }) => `<li class="category-book-item js-book-modal" data-book-id="${_id}">
+       <a class="category-book-link" href="#">   
+        <div class="category-book">
+            <img src="${book_image}" alt="book" class="category-book-img">
+            <div class="textbox">
+                <div class="titlebox">  
+                  <p class="titlebox-title">${title}</p>
                 </div>
-                  <div class="box-author">  
-                  <p class="author-book">${author}</p>
+                  <div class="authorbox">  
+                  <p class="authorbox-author">${author}</p>
                   </div>
               </div>
           </div>
@@ -70,8 +68,8 @@ const createCategoryList = async () => {
     const buttonsCategoriesList = categoriesList
       .map(
         category =>
-          `<li class="cat-list__item">
-          <button class="cat-list__button">
+          `<li class="category__item">
+          <button class="category__link">
             ${category.list_name}
           </button>
         </li>`
