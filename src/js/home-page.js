@@ -6,50 +6,62 @@ import Notiflix from 'notiflix';
 const bestBooks = document.querySelector('.best-books__list');
 
 const promise = getTopBooks();
-const categoryList = getCategoriesList();
+const categories = getCategoriesList();
 
-categoryList.then(value => {
-  let markupCategories = '';
+promise.then(data => createBooks(data));
+categories.then(categ => createMarkup(categ));
 
-  value.map(({ list_name }) => {
-    console.log(list_name);
-    markupCategories += `
-      <li class="best-books__category">
-      <h2 class="best-books__name">${list_name}</h2>
-      </li>`;
+let markupBooks = '';
+
+function createBooks(data) {
+  data.map(arr => {
+    const dataBooks = arr.books;
+    dataBooks.map((mas) => {
+        markupBooks += `<li><p>${mas.title}</p></li>`
+    })
   });
+}
 
-  bestBooks.insertAdjacentHTML('beforeend', markupCategories);
-  const bestBooksInfo = document.querySelector('.best-books__category');
+console.log(markupBooks)
 
-  promise.then(value => {
-    value.map(list_name => {
-      const data = list_name.books;
-      let markupTopBooks = '';
-
-      data.map(({ book_image, title, author }) => {
-        markupTopBooks += `
-        <ul>
-        <p>${title}</p>
-        <p>${author}</p></li>
-        <li><img class="best-books__image" src="${book_image}" alt="${title}" />
-        <p>${title}</p>
-        <p>${author}</p></li>
-        <li><img class="best-books__image" src="${book_image}" alt="${title}" />
-        <p>${title}</p>
-        <p>${author}</p></li>
-        <li><img class="best-books__image" src="${book_image}" alt="${title}" />
-        <p>${title}</p>
-        <p>${author}</p></li>
-        <li><img class="best-books__image" src="${book_image}" alt="${title}" />
-        <p>${title}</p>
-        <p>${author}</p></li>
-        <li><img class="best-books__image" src="${book_image}" alt="${title}" />
-      </ul>`;
-      });
-
-      bestBooksInfo.insertAdjacentHTML('beforeend', markupTopBooks);
-    });
+function createMarkup(categ) {
+  let markup = '';
+  categ.map(arr => {
+    markup += `
+           <li>
+           <p>${arr.list_name}</p>
+            <ul></ul>
+           <button type="button" data-category="${arr.list_name}">see more
+           </button>
+           </li>`;
   });
-});
+  // .join('')
+  //   console.log(markup)
+  bestBooks.insertAdjacentHTML('afterbegin', markup);
+}
 
+///////////////////////
+// console.log(books)
+// .map(category => {
+//     return `
+//          <li class='all-categories__item'>
+//          <p class='category-books__title'>${category.list_name}</p>
+//           <ul class='category-books__list-js card-set'>
+//          ${makeMarkupGategory(category.books)}
+//          </ul>
+//          <button class="load-more-js" type="button" data-category="${
+//            category.list_name
+//          }">see more</button>
+//          </li>
+//     `;
+//   })
+//   .join('');
+// };
+// const dataBook = arr.books;
+//     dataBook.map((book) => {
+//       return ` <li><p>${arr.list_name}</p>
+//       <ul><li>${book.title}</li></ul>
+//     <button type="button" data-category="${arr.list_name}">see more</button></li>`;
+//     });
+//     return
+//   });
