@@ -1,6 +1,6 @@
 // Iryna
 import { fondItems } from './fond-items';
-import Swiper, { Mousewheel } from 'swiper';
+import Swiper from 'swiper';
 
 
 const supportList = document.querySelector(`.support-list-js`);
@@ -48,7 +48,7 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 4,
     } 
   },
-   mousewheel: true,
+  mousewheel: true,  
 });
 
 swiperButton.addEventListener('click', () => {
