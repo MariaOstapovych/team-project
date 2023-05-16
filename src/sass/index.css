@@ -207,6 +207,7 @@ img {
   top: 182px;
   box-sizing: border-box;
   display: flex;
+  margin-bottom: 20px;
   padding: 14px;
 }
 @media (min-width: 375px) {
@@ -222,9 +223,8 @@ img {
 }
 
 .books-list__image {
-  min-width: 100px;
-  min-height: 142px;
-  background-color: rgba(79, 46, 232, 0.4);
+  max-width: 100px;
+  max-height: 142px;
   margin-right: 14px;
   border-radius: 8px;
   overflow: hidden;
@@ -232,8 +232,8 @@ img {
 @media (min-width: 768px) {
   .books-list__image {
     margin-right: 24px;
-    min-width: 116px;
-    min-height: 165px;
+    max-width: 116px;
+    max-height: 165px;
   }
 }
 
@@ -308,24 +308,22 @@ img {
   max-height: 68px;
   left: 128px;
   top: 58px;
+  margin-bottom: 16px;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.04em;
-}
-@media (max-width: 1439px) {
-  .books-list__description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 @media (min-width: 768px) {
   .books-list__description {
     max-height: 53px;
+    margin-bottom: 33px;
   }
 }
 
@@ -337,6 +335,56 @@ img {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: -0.04em;
+}
+
+.shops {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  gap: 8px;
+}
+@media (min-width: 768px) {
+  .shops {
+    gap: 16px;
+  }
+}
+
+.amazon {
+  filter: grayscale(100%);
+  width: 32px;
+  height: 11px;
+}
+@media (min-width: 768px) {
+  .amazon {
+    width: 48px;
+    height: 15px;
+  }
+}
+
+.ibooks {
+  filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 768px) {
+  .ibooks {
+    width: 28px;
+    height: 27px;
+  }
+}
+
+.book-shop {
+  filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 768px) {
+  .book-shop {
+    width: 32px;
+    height: 30px;
+  }
 }
 
 .pagination-list {
@@ -594,6 +642,7 @@ img {
   top: 182px;
   box-sizing: border-box;
   display: flex;
+  margin-bottom: 20px;
   padding: 14px;
 }
 @media (min-width: 375px) {
@@ -609,9 +658,8 @@ img {
 }
 
 .books-list__image {
-  min-width: 100px;
-  min-height: 142px;
-  background-color: rgba(79, 46, 232, 0.4);
+  max-width: 100px;
+  max-height: 142px;
   margin-right: 14px;
   border-radius: 8px;
   overflow: hidden;
@@ -619,8 +667,8 @@ img {
 @media (min-width: 768px) {
   .books-list__image {
     margin-right: 24px;
-    min-width: 116px;
-    min-height: 165px;
+    max-width: 116px;
+    max-height: 165px;
   }
 }
 
@@ -695,24 +743,22 @@ img {
   max-height: 68px;
   left: 128px;
   top: 58px;
+  margin-bottom: 16px;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.04em;
-}
-@media (max-width: 1439px) {
-  .books-list__description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 @media (min-width: 768px) {
   .books-list__description {
     max-height: 53px;
+    margin-bottom: 33px;
   }
 }
 
@@ -724,6 +770,56 @@ img {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: -0.04em;
+}
+
+.shops {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  gap: 8px;
+}
+@media (min-width: 768px) {
+  .shops {
+    gap: 16px;
+  }
+}
+
+.amazon {
+  filter: grayscale(100%);
+  width: 32px;
+  height: 11px;
+}
+@media (min-width: 768px) {
+  .amazon {
+    width: 48px;
+    height: 15px;
+  }
+}
+
+.ibooks {
+  filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 768px) {
+  .ibooks {
+    width: 28px;
+    height: 27px;
+  }
+}
+
+.book-shop {
+  filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 768px) {
+  .book-shop {
+    width: 32px;
+    height: 30px;
+  }
 }
 
 .pagination-list {

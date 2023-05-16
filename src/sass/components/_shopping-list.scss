@@ -23,7 +23,7 @@
     box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
     color: $color-background-text-white;
     font-family: 'DM Sans', sans-serif;
-margin-right: 40px;
+    margin-right: 40px;
     height: 490px;
     padding-bottom: 14px;
   }
@@ -45,7 +45,7 @@ margin-right: 40px;
   font-size: 32px;
   line-height: 1.18;
   letter-spacing: -0.04em;
-margin-bottom: 40px;
+  margin-bottom: 40px;
 
   @media (min-width: 375px) {
     width: 100%;
@@ -91,18 +91,14 @@ margin-bottom: 40px;
 .books-list__item {
   border: 2px solid rgba(79, 46, 232, 0.4);
   border-radius: 16px;
-  //   width: 335px;
   height: 170px;
   left: 20px;
   top: 182px;
   box-sizing: border-box;
   display: flex;
-  //   flex-direction: row;
-  //   align-items: flex-start;
+margin-bottom: 20px;
   padding: 14px;
-  // gap: 48px;
-  //   isolation: isolate;
-  //   position: absolute;
+ 
 
   @media (min-width: 375px) {
     width: 100%;
@@ -115,17 +111,17 @@ margin-bottom: 40px;
 }
 
 .books-list__image {
-  min-width: 100px;
-  min-height: 142px;
-  background-color: rgba(79, 46, 232, 0.4);
+  max-width: 100px;
+  max-height: 142px;
+//   background-color: rgba(79, 46, 232, 0.4);
   margin-right: 14px;
   border-radius: 8px;
   overflow: hidden;
 
   @media (min-width: 768px) {
     margin-right: 24px;
-    min-width: 116px;
-    min-height: 165px;
+    max-width: 116px;
+    max-height: 165px;
   }
 }
 
@@ -201,6 +197,7 @@ margin-bottom: 40px;
   max-height: 68px;
   left: 128px;
   top: 58px;
+  margin-bottom: 16px;
 
   font-family: 'DM Sans';
   font-style: normal;
@@ -210,15 +207,14 @@ margin-bottom: 40px;
 
   letter-spacing: -0.04em;
 
-  @media (max-width: 1439px) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 
   @media (min-width: 768px) {
     max-height: 53px;
+    margin-bottom: 33px;
   }
 }
 
@@ -231,11 +227,54 @@ margin-bottom: 40px;
   line-height: 1.16;
 
   letter-spacing: -0.04em;
-
- 
 }
 
+.shops {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  gap: 8px;
 
+  @media (min-width: 768px) {
+   gap: 16px;
+  }
+}
+
+.amazon {
+//   mix-blend-mode: luminosity;
+filter: grayscale(100%);
+  width: 32px;
+  height: 11px;
+
+  @media (min-width: 768px) {
+    width: 48px;
+    height: 15px;
+  }
+}
+
+.ibooks {
+    filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: 768px) {
+    width: 28px;
+    height: 27px;
+  }
+}
+
+.book-shop {
+    filter: grayscale(100%);
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: 768px) {
+    width: 32px;
+    height: 30px;
+  }
+}
 
 .pagination-list {
   display: flex;
