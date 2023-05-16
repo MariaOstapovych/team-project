@@ -96,6 +96,8 @@ img {
   border-radius: 16px;
   background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+  color: #FFFFFF;
+  font-family: "DM Sans", sans-serif;
 }
 @media (min-width: 768px) {
   .support__container {
@@ -118,12 +120,10 @@ img {
 .support__title {
   margin-right: 12px;
   margin-bottom: 40px;
-  font-family: "DM Sans";
   font-weight: 700;
   font-size: 28px;
   line-height: 1.143;
   letter-spacing: -0.04em;
-  color: #FFFFFF;
 }
 
 .icon-trident {
@@ -146,4 +146,31 @@ img {
   cursor: pointer;
   background-color: #FFFFFF;
   fill: #4F2EE8;
+}
+
+.swiper {
+  height: 188px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .swiper {
+    height: 292px;
+  }
+}
+
+.support-items {
+  display: flex;
+  align-items: center;
+}
+
+.support-number {
+  margin-right: 16px;
+  font-size: 14px;
+  line-height: 1.286;
+  letter-spacing: -0.04em;
+}
+
+.support-image {
+  filter: brightness(0) invert(1) saturate(1);
+  margin-right: auto;
 }/*# sourceMappingURL=index.css.map */

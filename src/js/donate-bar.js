@@ -1,6 +1,7 @@
 // Iryna
 import { fondItems } from './fond-items';
-import Swiper from 'swiper';
+import Swiper, { Mousewheel } from 'swiper';
+
 
 const supportList = document.querySelector(`.support-list-js`);
 const swiperButton = document.querySelector('.swiper-button-next');
@@ -30,29 +31,31 @@ const swiper = new Swiper('.swiper', {
  
   direction: 'vertical',
   loop: true,
-  rewind: true,
+  //rewind: true,
 
   navigation: {
     nextEl: '.swiper-button-next',
   },
   speed: 400,
-  freeMode: true,
 
   breakpoints: {
     // when window width is >= 300px
     300: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
      // when window width is >= 768px
     768: {
-      slidesPerView: 6,
+      slidesPerView: 4,
     } 
-  }
+  },
+   mousewheel: true,
 });
 
 swiperButton.addEventListener('click', () => {
  swiper.slideNext();
 });
+
+//swiper.update();
 
 function formatNumber(num) {
   return num.toString().padStart(2, '0');
