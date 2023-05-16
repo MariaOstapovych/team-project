@@ -1332,6 +1332,7 @@ body .dark,
 }
 
 .backdrop {
+  display: none;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -1349,12 +1350,13 @@ body .dark,
 }
 
 .modal {
+  z-index: 3;
   position: absolute;
-  left: 50%;
-  top: 450px;
+  top: 20%;
+  left: 30%;
   background-color: #FFFFFF;
-  width: 100%;
-  max-width: 335px;
+  width: 579px;
+  height: 465px;
   border: solid 2px #111111;
   border-radius: 10px;
   overflow: auto;
@@ -1362,7 +1364,6 @@ body .dark,
 @media screen and (min-width: 768px) {
   .modal {
     max-width: 579px;
-    top: 50%;
   }
 }
 
@@ -1379,8 +1380,6 @@ body .dark,
 }
 
 .icon-close:hover {
-  width: 18;
-  height: 18;
   fill: #4F2EE8;
 }
 
@@ -1415,7 +1414,7 @@ body .dark,
 }
 
 .modal__btn:hover {
-  background-color: black;
+  background-color: #4F2EE8;
 }
 
 .hidden {

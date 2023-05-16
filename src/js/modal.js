@@ -1,4 +1,5 @@
 // Nazar
+
 const btnModalOpen = document.querySelector('.modal__open');
 const backdrop = document.querySelector('.backdrop');
 const btnModalClose = document.querySelector('.modal__close-btn');
@@ -76,7 +77,7 @@ function createMarkup(data) {
       `<img src="${book_image}" alt="${title}"  class="modal__img"/>
         <div class="modal__content">
           <h2 class="modal__title">${title || 'No title'}</h2>
-          <p class="modal__author">$${author || 'No author'}</p>
+          <p class="modal__author">${author || 'No author'}</p>
           <p class="modal__description">${description || 'No description'}</p>
         </div>`
   );
