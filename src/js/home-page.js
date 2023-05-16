@@ -26,8 +26,7 @@ function createDate(categ) {
            </button>
            </li>`;
   });
-  // .join('')
-  //   console.log(markup)
+  
   bestBooks.insertAdjacentHTML('afterbegin', markup);
 }
 

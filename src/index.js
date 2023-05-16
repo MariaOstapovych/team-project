@@ -5,6 +5,7 @@ import './js/categories'
 import './js/donate-bar'
 import './js/scroll-up'
 import './js/request'
+import './js/switch-theme'
 import './js/modal'
 
 
