@@ -3,32 +3,45 @@
 .aside {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: column;
+    margin-bottom: 86px;
+  }
 }
 
-//---------Categoty-list-----------//
 .category-container {
+  overflow-y: scroll;
   padding-left: 20px;
   padding-right: 20px;
   max-width: 307px;
   max-height: 228px;
-  overflow-y: scroll;
   margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     padding-left: 0;
     padding-right: 0;
     max-width: none;
-    width: 337px;
-    height: 472px;
-    margin-bottom: 100px;
-  }
+    max-width: 337px;
+    max-height: 472px;
+    // margin-bottom: 100px;
 
-  @media screen and (min-width: 1440px) {
-    width: 356px;
-    height: 472px;
-    margin-bottom: 86px;
+    @media screen and (min-width: 1440px) {
+      max-width: 356px;
+      max-height: 472px;
+      // margin-bottom: 86px;
+    }
   }
 }
+
+//---------Categoty-list-----------//
 
 .category-list {
   display: flex;
@@ -71,10 +84,27 @@
 }
 
 //-----------Books-----------//
+//-----------Books-----------//
+//-----------Books-----------//
 
-.book-container {
+.book-list-js {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.book-container {
+  @media screen and (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .category-book-item {
@@ -95,7 +125,7 @@
   border-radius: 8px;
 
   @media screen and (min-width: 768px) {
-    width: 218px;
+    max-width: 218px;
     height: 316px;
   }
 
