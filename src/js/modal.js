@@ -1,22 +1,11 @@
 // Nazar
 const btnModalOpen = document.querySelector('.modal__open');
-const backdrop = document.querySelector('.backdrop-js');
-const modal = document.querySelector('.modal-js');
-const btnList = document.querySelector('.modal__add-btn-js');
-const localDescr = document.querySelector('.modal__descr-local');
-const modalMarkup = document.querySelector('.modal-markup');
+const backdrop = document.querySelector('.backdrop');
 const btnModalClose = document.querySelector('.modal__close-btn');
-const listMarup = document.querySelector('.js-list-markup');
-const arraylocal = [];
-
-// btnList.addEventListener('click', onShoppingList);
-// function onShoppingList(evt) {
-//   evt.preventDefault();
-//   btnList.textContent = 'Remove from the shopping list';
-//   btnList.classList.toggle('toggle-js');
-//   localDescr.style.display = 'block';
-//   localStorage.setItem('arraylocal', JSON.stringify(data));
-// }
+const modalContainer = document.querySelector('.modal__container');
+const modalBtn = document.querySelector('.modal__btn');
+const localDescr = document.querySelector('.modal__descr-local');
+const body = document.body;
 
 // Масив обк'єкта, який приходить із бекенду
 const data = [
@@ -84,73 +73,61 @@ const data = [
 function createMarkup(data) {
   return data.map(
     ({ book_image, title, description, author }) =>
-      `
-        <div>
-          <button type="button" class="modal__close-btn">
-            <svg width="24" height="24" class="icon-close">
-              <use href="/src/images/icons.svg#icon-x-close"></use>
-            </svg>
-          </button>
-          <div class="modal__wrapper modal__wrapper-js">
-            <a href="#">
-              <img
-                class="book modal__img"
-                src="${book_image}"
-                alt="${title}"
-              />
-            </a>
-            <div class="modal__content">
-              <h3 class="modal__title">${title || 'No title'}</h3>
-              <p class="modal__author">${author || 'Not found'}</p>
-              <p class="modal__description">${
-                description || 'No description'
-              }</p>
-            </div>
-            <ul class="modal__shops">
-              <li class="modal__amazon">></li>
-              <li class="modal__ibooks"></li>
-               <li class="modal__book-shop"></li>
-            </ul>
-          </div>
-            <button type="submit" class="modal__add-btn modal__add-btn-js toggle-js">
-              Add to shopping list
-            </button>
-            <p class="modal__descr-local">
-              Сongratulations! You have added the book to the shopping list. To delete,
-              press the button “Remove from the shopping list”.
-            </p>
-          </div>`
+      `<img src="${book_image}" alt="${title}"  class="modal__img"/>
+        <div class="modal__content">
+          <h2 class="modal__title">${title || 'No title'}</h2>
+          <p class="modal__author">$${author || 'No author'}</p>
+          <p class="modal__description">${description || 'No description'}</p>
+        </div>`
   );
 }
 
 // Відкриття модалки
-btnModalOpen.addEventListener('click', onModal);
-function onModal(evt) {
+btnModalOpen.addEventListener('click', openModal);
+function openModal(evt) {
   evt.preventDefault();
   backdrop.style.display = 'block';
-  listMarup.innerHTML = createMarkup(data);
+  modalContainer.innerHTML = createMarkup(data);
+  btnModalClose.addEventListener('click', onClosebtn);
+  backdrop.addEventListener('click', onBackdrop);
+  window.addEventListener('keydown', onKeyDown);
+  backdrop.classList.remove('backdrop__hidden');
+  body.classList.add('modal__open');
 }
 
-// Закриття модалки по ESC
-document.addEventListener('keydown', onEsc);
-function onEsc(evt) {
-  evt.preventDefault();
-  if (evt.key === 'Escape') {
-    backdrop.style.display = 'none';
-  }
+function onClosebtn() {
+  backdrop.classList.add('backdrop__hidden');
+  body.classList.remove('modal__open');
 }
 
-// Закриття модалки по бекдропу
-backdrop.addEventListener('click', onBackdropClick);
-function onBackdropClick(evt) {
+function onBackdrop(evt) {
   if (evt.target === backdrop) {
-    backdrop.style.display = 'none';
+    backdrop.removeEventListener('click', onBackdrop);
+    backdrop.classList.add('backdrop__hidden');
+    body.classList.remove('modal__open');
   }
 }
 
-// Закриття модалки по хрестику
-// btnModalClose.addEventListener('click', onBtnClose);
-// function onBtnClose(evt) {
-//   evt.preventDefault();
-//   backdrop.style.display = 'none';
+function onKeyDown({ code }) {
+  if (code === 'Escape') {
+    window.removeEventListener('keydown', onKeyDown);
+    backdrop.classList.add('backdrop__hidden');
+    body.classList.remove('modal__open');
+  }
+}
+
+// function onBackdrop(evt) {
+//   debugger;
+//   if (evt.target.classList.contains('backdrop')) {
+//     backdrop.removeEventListener('click', onBackdrop);
+//     backdrop.classList.add('backdrop__hidden');
+//     body.classList.remove('modal__open');
+//   }
+// }
+
+// backdrop.addEventListener('click', onBackdropClick);
+// function onBackdropClick(evt) {
+//   if (evt.target === backdrop) {
+//     backdrop.style.display = 'none';
+//   }
 // }
