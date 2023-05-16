@@ -5,32 +5,27 @@ import axios from 'axios';
 
 const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
+const listItem = document.querySelector('.category__link');
 listElement.addEventListener('click', onClick);
 
 function onClick(evt) {
   const categoryName = evt.target.outerText;
-  console.log(categoryName);
 
   axios
     .get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
     )
     .then(function (response) {
-      // обработка успешного запроса
-      console.log(response.data);
       const book = response.data.map(({ _id, book_image, title, author }) =>
         console.log(_id, book_image, title, author)
       );
-
       bookList.innerHTML = createBookList(response.data);
     })
     .catch(function (error) {
-      // обработка ошибки
       console.log(error);
     });
-  // .finally(function () {
-  //   // выполняется всегда
-  // });
+
+  listItem.classList.add('category-selected');
 }
 
 function createBookList(arr) {
@@ -41,8 +36,8 @@ function createBookList(arr) {
         book_image,
         title,
         author,
-      }) => `<li class="category-book-item js-book-modal" data-book-id="${_id}">
-       <a class="category-book-link" href="#">   
+      }) => `<li class="category-book-item" data-book-id="${_id}">
+       <a class="category__link" href="#">   
         <div class="category-book">
             <img src="${book_image}" alt="book" class="category-book-img">
             <div class="textbox">
