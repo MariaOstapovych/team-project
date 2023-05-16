@@ -8,29 +8,20 @@ const bestBooks = document.querySelector('.best-books__list');
 const promise = getTopBooks();
 const categories = getCategoriesList();
 
-promise.then(data => createBooks(data));
-categories.then(categ => createMarkup(categ));
+promise.then(data => createDate(data));
 
-let markupBooks = '';
-
-function createBooks(data) {
-  data.map(arr => {
-    const dataBooks = arr.books;
-    dataBooks.map((mas) => {
-        markupBooks += `<li><p>${mas.title}</p></li>`
-    })
-  });
-}
-
-console.log(markupBooks)
-
-function createMarkup(categ) {
+function createDate(categ) {
   let markup = '';
+  let bookMarkup = '';
   categ.map(arr => {
+    const data = arr.books;
+    data.forEach(book => {
+      bookMarkup += `<li><p>${book.title}</p><img src="${book.books_image}" alt="${book.title}"></li>`;
+    });
     markup += `
            <li>
            <p>${arr.list_name}</p>
-            <ul></ul>
+            <ul>${bookMarkup}</ul>
            <button type="button" data-category="${arr.list_name}">see more
            </button>
            </li>`;
@@ -40,28 +31,4 @@ function createMarkup(categ) {
   bestBooks.insertAdjacentHTML('afterbegin', markup);
 }
 
-///////////////////////
-// console.log(books)
-// .map(category => {
-//     return `
-//          <li class='all-categories__item'>
-//          <p class='category-books__title'>${category.list_name}</p>
-//           <ul class='category-books__list-js card-set'>
-//          ${makeMarkupGategory(category.books)}
-//          </ul>
-//          <button class="load-more-js" type="button" data-category="${
-//            category.list_name
-//          }">see more</button>
-//          </li>
-//     `;
-//   })
-//   .join('');
-// };
-// const dataBook = arr.books;
-//     dataBook.map((book) => {
-//       return ` <li><p>${arr.list_name}</p>
-//       <ul><li>${book.title}</li></ul>
-//     <button type="button" data-category="${arr.list_name}">see more</button></li>`;
-//     });
-//     return
-//   });
+
