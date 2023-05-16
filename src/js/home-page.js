@@ -6,7 +6,7 @@ import Notiflix from 'notiflix';
 const bestBooks = document.querySelector('.best-books__list');
 
 const promise = getTopBooks();
-const categories = getCategoriesList();
+// const categories = getCategoriesList();
 
 promise.then(data => createDate(data));
 
@@ -16,7 +16,8 @@ function createDate(categ) {
   categ.map(arr => {
     const data = arr.books;
     data.forEach(book => {
-      bookMarkup += `<li><p>${book.title}</p><img src="${book.books_image}" alt="${book.title}"></li>`;
+      console.log(book)
+      bookMarkup += `<li><img class="best-books__image" src="${book.book_image}"alt="${book.title}"><p>${book.title}</p><p>${book.author}</p></li>`;
     });
     markup += `
            <li>
