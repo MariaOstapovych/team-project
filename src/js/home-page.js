@@ -16,8 +16,8 @@ function createDate(categ) {
   categ.map(arr => {
     const data = arr.books;
     data.forEach(book => {
-      console.log(book)
-      bookMarkup += `<li><img class="best-books__image" src="${book.book_image}"alt="${book.title}"><p>${book.title}</p><p>${book.author}</p></li>`;
+      // console.log(book);
+      bookMarkup += `<li><img id="${book._id}" class="best-books__image" src="${book.book_image}"alt="${book.title}"><p>${book.title}</p><p>${book.author}</p></li>`;
     });
     markup += `
            <li>
@@ -27,8 +27,6 @@ function createDate(categ) {
            </button>
            </li>`;
   });
-  
+
   bestBooks.insertAdjacentHTML('afterbegin', markup);
 }
-
-

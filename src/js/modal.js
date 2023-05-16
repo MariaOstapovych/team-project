@@ -1,5 +1,8 @@
 // Nazar
 
+import { getBookId } from './request';
+console.log(getBookId);
+
 const btnModalOpen = document.querySelector('.modal__open');
 const backdrop = document.querySelector('.backdrop');
 const btnModalClose = document.querySelector('.modal__close-btn');
@@ -28,7 +31,8 @@ const data = [
     contributor: "by Barbara O'Connor",
     contributor_note: '',
     created_date: '2023-04-05 23:10:17',
-    description: '',
+    description:
+      'In a homage to Louisa May Alcott’s “Little Women,” a young man’s dark past resurfaces as he gets to the know the family of his college sweetheart.',
     first_chapter_link: '',
     price: '0.00',
     primary_isbn10: '1250144051',
@@ -70,6 +74,8 @@ const data = [
   },
 ];
 
+const bookId = data._id;
+
 // Створення розмітки
 function createMarkup(data) {
   return data.map(
@@ -79,21 +85,13 @@ function createMarkup(data) {
           <h2 class="modal__title">${title || 'No title'}</h2>
           <p class="modal__author">${author || 'No author'}</p>
           <p class="modal__description">${description || 'No description'}</p>
+          <ul class="modal__shops">
+            <li class="modal__shops-link"></li>
+            <li class="modal__shops-link"></li>
+            <li class="modal__shops-link"></li>
+          </ul>
         </div>`
   );
-}
-
-// Відкриття модалки
-btnModalOpen.addEventListener('click', openModal);
-function openModal(evt) {
-  evt.preventDefault();
-  backdrop.style.display = 'block';
-  modalContainer.innerHTML = createMarkup(data);
-  btnModalClose.addEventListener('click', onClosebtn);
-  backdrop.addEventListener('click', onBackdrop);
-  window.addEventListener('keydown', onKeyDown);
-  backdrop.classList.remove('backdrop__hidden');
-  body.classList.add('modal__open');
 }
 
 function onClosebtn() {
@@ -117,18 +115,22 @@ function onKeyDown({ code }) {
   }
 }
 
-// function onBackdrop(evt) {
-//   debugger;
-//   if (evt.target.classList.contains('backdrop')) {
-//     backdrop.removeEventListener('click', onBackdrop);
-//     backdrop.classList.add('backdrop__hidden');
-//     body.classList.remove('modal__open');
-//   }
-// }
+// Відкриття модалки
+document.addEventListener('click', openModal);
+function openModal(evt) {
+  evt.preventDefault();
+  if (evt.target.classList.contains('best-books__image')) {
+    backdrop.style.display = 'block';
+    modalContainer.innerHTML = createMarkup(data);
+    btnModalClose.addEventListener('click', onClosebtn);
+    backdrop.addEventListener('click', onBackdrop);
+    window.addEventListener('keydown', onKeyDown);
+    backdrop.classList.remove('backdrop__hidden');
+    body.classList.add('modal__open');
 
-// backdrop.addEventListener('click', onBackdropClick);
-// function onBackdropClick(evt) {
-//   if (evt.target === backdrop) {
-//     backdrop.style.display = 'none';
-//   }
-// }
+    // const imageId = evt.target.dataset.imageId;
+  }
+}
+
+// const promise = getBookId();
+// promise.then(data => createModal(data));
