@@ -1,16 +1,49 @@
-// 
+//
 import { getTopBooks } from './request';
+import { getCategoriesList } from './request';
 import Notiflix from 'notiflix';
 
-const promise = getTopBooks()
+const bestBooks = document.querySelector('.best-books');
 
-promise.then(
-    value => {
-        value.map(({list_name, book_image, title, author}) => {
-            const markupTopBooks = ''
-        })
-    }
-)
+const promise = getTopBooks();
+const categoryBest = getCategoriesList();
+
+categoryBest.then(value => {
+  let markupCategories = '';
+
+  value.map(({ list_name }) => {
+    markupCategories += `<div class="best-books__categories">
+      <h2 class="best-books__name">${list_name}</h2>
+      <ul>
+      <li class="best-books__item"></li>
+      <li class="best-books__item"></li>
+      <li class="best-books__item"></li>
+      </ul>
+      </div>`;
+    bestBooks.insertAdjacentHTML('beforeend', markupCategories);
+  });
+
+  const bestBooksCtegories = document.querySelector('.best-books__item');
+
+  promise.then(value => {
+    value.map(list_name => {
+      const data = list_name.books;
+      let markupTopBooks = '';
+  
+      data.map(({ book_image, title, author }) => {
+        markupTopBooks += `
+                <img class="best-books__image" src="${book_image}" alt="${title}" />
+                  <p>${title}</p>
+                  <p>${author}</p>`;
+  
+        bestBooksCtegories.insertAdjacentHTML('beforeend', markupTopBooks);
+      });
+    });
+  });
+  
+});
+
+
 
 
 
@@ -46,16 +79,16 @@ promise.then(
 //     <h3 class="item-category">${list_name}</h3>
 //         <ul class="box-category">
 //       <li class="item-category-book js-book-modal" data-book-id="${books[0]._id}">
-//         <a class="link-books-render" href="#">  
+//         <a class="link-books-render" href="#">
 //       <div class="card-book">
 //             <div class="img-card-book">
 //             <img src="${books[0].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[0].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[0].author}</p>
 //                   </div>
 //                 </div>
@@ -74,16 +107,16 @@ promise.then(
 //     <h3 class="item-category">${list_name}</h3>
 //         <ul class="box-category">
 //       <li class="item-category-book js-book-modal" data-book-id="${books[0]._id}">
-//       <a class="link-books-render" href="#">    
+//       <a class="link-books-render" href="#">
 //       <div class="card-book">
 //             <div class="img-card-book">
 //             <img src="${books[0].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[0].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[0].author}</p>
 //                   </div>
 //               </div>
@@ -91,16 +124,16 @@ promise.then(
 //       </a>
 //           </li>
 //             <li class="item-category-book js-book-modal" data-book-id="${books[1]._id}">
-//           <a class="link-books-render" href="#"> 
+//           <a class="link-books-render" href="#">
 //            <div class="card-book">
 //             <div class="img-card-book">
 //             <img src="${books[1].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[1].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[1].author}</p>
 //                   </div>
 //               </div>
@@ -114,10 +147,10 @@ promise.then(
 //             <img src="${books[2].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[2].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[2].author}</p>
 //                   </div>
 //               </div>
@@ -136,16 +169,16 @@ promise.then(
 //     <h3 class="item-category">${list_name}</h3>
 //         <ul class="box-category">
 //       <li class="item-category-book js-book-modal" data-book-id="${books[0]._id}">
-//        <a class="link-books-render" href="#">   
+//        <a class="link-books-render" href="#">
 //       <div class="card-book">
 //             <div class="img-card-book">
 //                 <img src="${books[0].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[0].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[0].author}</p>
 //                   </div>
 //             </div>
@@ -159,10 +192,10 @@ promise.then(
 //             <img src="${books[1].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[1].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[1].author}</p>
 //                   </div>
 //               </div>
@@ -176,10 +209,10 @@ promise.then(
 //             <img src="${books[2].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[2].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[2].author}</p>
 //                   </div>
 //               </div>
@@ -193,10 +226,10 @@ promise.then(
 //             <img src="${books[3].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[3].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[3].author}</p>
 //                   </div>
 //               </div>
@@ -210,10 +243,10 @@ promise.then(
 //             <img src="${books[4].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[4].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[4].author}</p>
 //                   </div>
 //               </div>
@@ -236,13 +269,10 @@ promise.then(
 //   }
 // })();
 
-
 // // ===========розмітка по категоріям, кнопка SEE-MORE ===========================
 // if (listTopBooks) {
 //   listTopBooks.addEventListener('click', handleLoadMore);
 // }
-
-
 
 // async function handleLoadMore(e) {
 //   try {
@@ -270,16 +300,16 @@ promise.then(
 //       let markup = '';
 //       renderCategory.forEach(({ _id, book_image, title, author }) => {
 //         markup += `<li class="item-category-book js-book-modal" data-book-id="${_id}">
-//        <a class="link-books-render" href="#">   
+//        <a class="link-books-render" href="#">
 //         <div class="card-book">
 //             <div class="img-card-book">
 //             <img src="${book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-category">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${author}</p>
 //                   </div>
 //               </div>
@@ -318,7 +348,6 @@ promise.then(
 //     Notiflix.Notify.failure('Oops! Something went wrong... Please try again.');
 //   }
 // }
-
 
 // async function renderingCategory() {
 //   try {
@@ -363,7 +392,6 @@ promise.then(
 //   listCategory.addEventListener('click', handleCategoryMarkup);
 // }
 
-
 // async function handleCategoryMarkup(e) {
 //   if (e.target.nodeName === 'LI') {
 //     category = e.target.textContent.trim();
@@ -372,16 +400,16 @@ promise.then(
 //       let markup = '';
 //       renderCategory.forEach(({ _id, book_image, title, author }) => {
 //         markup += `<li class="item-category-book js-book-modal" data-book-id="${_id}">
-//         <a class="link-books-render" href="#">  
+//         <a class="link-books-render" href="#">
 //         <div class="card-book">
 //             <div class="img-card-book">
 //             <img src="${book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-category">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${author}</p>
 //                   </div>
 //               </div>
@@ -421,16 +449,16 @@ promise.then(
 //     <h3 class="item-category">${list_name}</h3>
 //         <ul class="box-category">
 //       <li class="item-category-book">
-//       <a class="link-books-render" href="#">    
+//       <a class="link-books-render" href="#">
 //       <div class="card-book">
 //             <div class="img-card-book">
 //             <img src="${books[0].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[0].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[0].author}</p>
 //                   </div>
 //               </div>
@@ -449,16 +477,16 @@ promise.then(
 //     <h3 class="item-category">${list_name}</h3>
 //         <ul class="box-category">
 //       <li class="item-category-book js-book-modal" data-book-id="${books[0]._id}">
-//       <a class="link-books-render" href="#">    
+//       <a class="link-books-render" href="#">
 //       <div class="card-book">
 //             <div class="img-card-book">
 //             <img src="${books[0].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[0].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[0].author}</p>
 //                   </div>
 //               </div>
@@ -472,10 +500,10 @@ promise.then(
 //             <img src="${books[1].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[1].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[1].author}</p>
 //                   </div>
 //               </div>
@@ -489,15 +517,15 @@ promise.then(
 //             <img src="${books[2].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[2].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[2].author}</p>
 //                   </div>
 //               </div>
 //           </div>
-//          </a>   
+//          </a>
 //           </li>
 //     </ul>
 //         <button type="button" aria-label="Show more" class="see-more">See more</button>
@@ -511,16 +539,16 @@ promise.then(
 //     <h3 class="item-category">${list_name}</h3>
 //         <ul class="box-category">
 //       <li class="item-category-book js-book-modal" data-book-id="${books[0]._id}">
-//         <a class="link-books-render" href="#">  
+//         <a class="link-books-render" href="#">
 //       <div class="card-book">
 //             <div class="img-card-book">
 //             <img src="${books[0].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[0].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[0].author}</p>
 //                   </div>
 //               </div>
@@ -534,10 +562,10 @@ promise.then(
 //             <img src="${books[1].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[1].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[1].author}</p>
 //                   </div>
 //               </div>
@@ -551,10 +579,10 @@ promise.then(
 //             <img src="${books[2].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[2].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[2].author}</p>
 //                   </div>
 //               </div>
@@ -568,10 +596,10 @@ promise.then(
 //             <img src="${books[3].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[3].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[3].author}</p>
 //                   </div>
 //               </div>
@@ -585,10 +613,10 @@ promise.then(
 //             <img src="${books[4].book_image}" alt="book" class="img-book">
 //             </div>
 //               <div class="box-text-book-best">
-//                 <div class="box-title">  
+//                 <div class="box-title">
 //                   <p class="title-book">${books[4].title}</p>
 //                 </div>
-//                   <div class="box-author">  
+//                   <div class="box-author">
 //                   <p class="author-book">${books[4].author}</p>
 //                   </div>
 //               </div>
