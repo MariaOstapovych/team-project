@@ -26,6 +26,10 @@ a {
   box-sizing: border-box;
 }
 
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
 img {
   display: block;
   width: 100%;
@@ -472,7 +476,7 @@ img {
 }
 
 .icon-cart {
-  fill: #ffffff;
+  fill: #111111;
 }
 
 .current {
@@ -639,14 +643,13 @@ img {
   pointer-events: none;
 }
 
-.header_modal.is-hidden {
+.modalll.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  z-index: 10000;
 }
 
-.header_modal {
+.modalll {
   position: absolute;
   top: 64px;
   left: 0px;
@@ -654,12 +657,12 @@ img {
   height: 100vh;
   overflow: hidden;
   padding: 20px;
-  z-index: 10000;
+  z-index: 7;
   background-image: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4f2ee8 18.03%, #ffffff 100%);
   transition: opacity 150ms linear, visibility 150ms linear;
 }
 @media screen and (min-width: 768px) {
-  .header_modal {
+  .modalll {
     display: none;
   }
 }
@@ -675,7 +678,7 @@ img {
   background-color: #4f2ee8;
   border: 1.5px solid #111111;
   border-radius: 18px;
-  color: transparent;
+  color: #ffffff;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -714,25 +717,18 @@ img {
   align-items: center;
   flex-direction: column;
   gap: 16px;
-  z-index: 10000000000000;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #ffffff;
-  margin-top: 183px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .drop-menu.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  z-index: 1000;
-}
-
-.drop-menu__shopping {
-  color: #ffffff;
 }
 
 .drop-menu__home,
@@ -742,7 +738,6 @@ img {
   display: flex;
   align-items: center;
   gap: 7px;
-  z-index: 10000;
 }
 
 .drop-menu__home:hover,
@@ -785,8 +780,7 @@ img {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   row-gap: 10px;
   margin: 0;
   width: 130%;
@@ -1031,7 +1025,7 @@ body .dark,
 }
 
 .support-image {
-  filter: brightness(0) invert(1) saturate(2);
+  filter: brightness(0) invert(1) saturate(1);
   margin-right: auto;
 }
 
@@ -1324,4 +1318,4 @@ body .dark,
 .scroll-up:focus {
   opacity: 0.9;
   transform: scale(1);
-}/*# sourceMappingURL=index.css.map */
+}
