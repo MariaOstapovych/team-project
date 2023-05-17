@@ -442,12 +442,12 @@ img {
   margin: 40px 0;
   font-weight: 700;
   font-size: 32px;
-  line-height: 1.1875;
+  line-height: 1.19;
 }
 @media screen and (min-width: 768px) {
   .best-books__maintitle {
     font-size: 48px;
-    line-height: 1.0833333333;
+    line-height: 1.08;
   }
 }
 
@@ -496,7 +496,7 @@ img {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.125;
+  line-height: 1.13;
   text-transform: uppercase;
   color: #111111;
 }
@@ -507,7 +507,7 @@ img {
   font-weight: 400;
   letter-spacing: -0.04em;
   font-size: 12px;
-  line-height: 1.1666666667;
+  line-height: 1.17;
   color: #b4afaf;
 }
 
@@ -1234,7 +1234,7 @@ body.dark,
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.125;
+  line-height: 1.13;
   text-transform: uppercase;
   color: #111111;
 }
@@ -1245,7 +1245,7 @@ body.dark,
   font-weight: 400;
   letter-spacing: -0.04em;
   font-size: 12px;
-  line-height: 1.1666666667;
+  line-height: 1.17;
   color: #b4afaf;
 }
 
