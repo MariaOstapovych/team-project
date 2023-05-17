@@ -1030,7 +1030,7 @@ body .dark,
 }
 
 .support-image {
-  filter: brightness(0) invert(1) saturate(2);
+  filter: brightness(0) invert(1) saturate(1);
   margin-right: auto;
 }
 

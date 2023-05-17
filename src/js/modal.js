@@ -1,7 +1,6 @@
 // Nazar
-
+import axios from 'axios';
 import { getBookId } from './request';
-console.log(getBookId);
 
 const btnModalOpen = document.querySelector('.modal__open');
 const backdrop = document.querySelector('.backdrop');
@@ -12,86 +11,27 @@ const localDescr = document.querySelector('.modal__descr-local');
 const body = document.body;
 
 // Масив обк'єкта, який приходить із бекенду
-const data = [
-  {
-    _id: '642fd89ac8cf5ee957f12361',
-    list_name: 'Middle Grade Paperback Monthly',
-    date: '2023-04-07T08:46:57.000Z',
-    age_group: '',
-    amazon_product_url:
-      'https://www.amazon.com/Wish-Barbara-OConnor/dp/1250144051?tag=NYTBSREV-20',
-    article_chapter_link: '',
-    author: "Barbara O'Connor",
-    book_image:
-      'https://storage.googleapis.com/du-prd/books/images/9781250144058.jpg',
-    book_image_width: 330,
-    book_image_height: 485,
-    book_review_link: '',
-    book_uri: 'nyt://book/46604242-8624-57d1-bdd4-424c21cde273',
-    contributor: "by Barbara O'Connor",
-    contributor_note: '',
-    created_date: '2023-04-05 23:10:17',
-    description:
-      'In a homage to Louisa May Alcott’s “Little Women,” a young man’s dark past resurfaces as he gets to the know the family of his college sweetheart.',
-    first_chapter_link: '',
-    price: '0.00',
-    primary_isbn10: '1250144051',
-    primary_isbn13: '9781250144058',
-    publisher: 'Square Fish',
-    rank: 1,
-    rank_last_week: 0,
-    sunday_review_link: '',
-    title: 'WISH',
-    updated_date: '2023-04-05 23:10:17',
-    weeks_on_list: 0,
-    buy_links: [
-      {
-        name: 'Amazon',
-        url: 'https://www.amazon.com/Wish-Barbara-OConnor/dp/1250144051?tag=NYTBSREV-20',
-      },
-      {
-        name: 'Apple Books',
-        url: 'https://goto.applebooks.apple/9781250144058?at=10lIEQ',
-      },
-      {
-        name: 'Barnes and Noble',
-        url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9781250144058',
-      },
-      {
-        name: 'Books-A-Million',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FWISH%252FBarbara%252BO%252527Connor%252F9781250144058&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DWISH%252BBarbara%252BO%252527Connor',
-      },
-      {
-        name: 'Bookshop',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9781250144058&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DWISH',
-      },
-      {
-        name: 'IndieBound',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9781250144058%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DWISH%2BBarbara%2BO%2527Connor%26aff%3DNYT',
-      },
-    ],
-    __v: 0,
-  },
-];
 
-const bookId = data._id;
+let markupModalBook = '';
 
 // Створення розмітки
-function createMarkup(data) {
-  return data.map(
-    ({ book_image, title, description, author }) =>
-      `<img src="${book_image}" alt="${title}"  class="modal__img"/>
-        <div class="modal__content">
-          <h2 class="modal__title">${title || 'No title'}</h2>
-          <p class="modal__author">${author || 'No author'}</p>
-          <p class="modal__description">${description || 'No description'}</p>
-          <ul class="modal__shops">
-            <li class="modal__shops-link"></li>
-            <li class="modal__shops-link"></li>
-            <li class="modal__shops-link"></li>
-          </ul>
-        </div>`
-  );
+function createMarkup(book) {
+  // modalContainer.innerHTML = '';
+  book.then(resp => {
+    markupModalBook = `
+    <img src="${resp.book_image}" alt="${resp.title}" class="modal__img"/>
+    <div class="modal__content">
+      <h2 class="modal__title">${resp.title || 'No title'}</h2>
+      <p class="modal__author">${resp.author || 'No author'}</p>
+      <p class="modal__description">${resp.description || 'No description'}</p>
+      <ul class="modal__shops">
+        <li class="modal__shops-link"></li>
+        <li class="modal__shops-link"></li>
+        <li class="modal__shops-link"></li>
+      </ul>
+    </div>`;
+  });
+  modalContainer.innerHTML = markupModalBook;
 }
 
 function onClosebtn() {
@@ -120,17 +60,109 @@ document.addEventListener('click', openModal);
 function openModal(evt) {
   evt.preventDefault();
   if (evt.target.classList.contains('best-books__image')) {
+    modalContainer.innerHTML = '';
     backdrop.style.display = 'block';
-    modalContainer.innerHTML = createMarkup(data);
-    btnModalClose.addEventListener('click', onClosebtn);
-    backdrop.addEventListener('click', onBackdrop);
-    window.addEventListener('keydown', onKeyDown);
-    backdrop.classList.remove('backdrop__hidden');
-    body.classList.add('modal__open');
-
-    // const imageId = evt.target.dataset.imageId;
+    const bookItem = evt.target.closest('.best-books__image');
+    const bookId = bookItem.dataset.id;
+    const bookData = getBookId(bookId);
+    createMarkup(bookData);
+    console.log(bookId);
+    try {
+      // const bookData = getBookId(bookId);
+      // const markup = createMarkup(bookData);
+      console.log(bookData);
+      // modalContainer.innerHTML = markupModalBook;
+      // modalBtn.addEventListener('click', onLocalClick(bookId));
+      btnModalClose.addEventListener('click', onClosebtn);
+      backdrop.addEventListener('click', onBackdrop);
+      window.addEventListener('keydown', onKeyDown);
+      backdrop.classList.remove('backdrop__hidden');
+      body.classList.add('modal__open');
+    } catch (error) {
+      console.error('Помилка при отриманні даних про книгу', error);
+    }
   }
 }
 
-// const promise = getBookId();
-// promise.then(data => createModal(data));
+// function onLocalClick(id) {}
+
+// // Відкриття модалки
+// document.addEventListener('click', openModal);
+// function openModal(evt) {
+//   evt.preventDefault();
+//   if (evt.target.classList.contains('best-books__image')) {
+//     backdrop.style.display = 'block';
+//     modalContainer.innerHTML = createMarkup(data);
+//     btnModalClose.addEventListener('click', onClosebtn);
+//     backdrop.addEventListener('click', onBackdrop);
+//     window.addEventListener('keydown', onKeyDown);
+//     backdrop.classList.remove('backdrop__hidden');
+//     body.classList.add('modal__open');
+//     // const bookItem = evt.target.closest('.best-books__image');
+//     // console.log(bookItem);
+//     // const bookId = bookItem.dataset.id;
+//     // console.log(bookId);
+//   }
+// }
+
+// const data = [
+//   {
+//     _id: '642fd89ac8cf5ee957f12361',
+//     list_name: 'Middle Grade Paperback Monthly',
+//     date: '2023-04-07T08:46:57.000Z',
+//     age_group: '',
+//     amazon_product_url:
+//       'https://www.amazon.com/Wish-Barbara-OConnor/dp/1250144051?tag=NYTBSREV-20',
+//     article_chapter_link: '',
+//     author: "Barbara O'Connor",
+//     book_image:
+//       'https://storage.googleapis.com/du-prd/books/images/9781250144058.jpg',
+//     book_image_width: 330,
+//     book_image_height: 485,
+//     book_review_link: '',
+//     book_uri: 'nyt://book/46604242-8624-57d1-bdd4-424c21cde273',
+//     contributor: "by Barbara O'Connor",
+//     contributor_note: '',
+//     created_date: '2023-04-05 23:10:17',
+//     description:
+//       'In a homage to Louisa May Alcott’s “Little Women,” a young man’s dark past resurfaces as he gets to the know the family of his college sweetheart.',
+//     first_chapter_link: '',
+//     price: '0.00',
+//     primary_isbn10: '1250144051',
+//     primary_isbn13: '9781250144058',
+//     publisher: 'Square Fish',
+//     rank: 1,
+//     rank_last_week: 0,
+//     sunday_review_link: '',
+//     title: 'WISH',
+//     updated_date: '2023-04-05 23:10:17',
+//     weeks_on_list: 0,
+//     buy_links: [
+//       {
+//         name: 'Amazon',
+//         url: 'https://www.amazon.com/Wish-Barbara-OConnor/dp/1250144051?tag=NYTBSREV-20',
+//       },
+//       {
+//         name: 'Apple Books',
+//         url: 'https://goto.applebooks.apple/9781250144058?at=10lIEQ',
+//       },
+//       {
+//         name: 'Barnes and Noble',
+//         url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9781250144058',
+//       },
+//       {
+//         name: 'Books-A-Million',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FWISH%252FBarbara%252BO%252527Connor%252F9781250144058&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DWISH%252BBarbara%252BO%252527Connor',
+//       },
+//       {
+//         name: 'Bookshop',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9781250144058&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DWISH',
+//       },
+//       {
+//         name: 'IndieBound',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9781250144058%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DWISH%2BBarbara%2BO%2527Connor%26aff%3DNYT',
+//       },
+//     ],
+//     __v: 0,
+//   },
+// ];
