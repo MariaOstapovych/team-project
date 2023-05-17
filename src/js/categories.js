@@ -37,19 +37,17 @@ function createBookList(arr) {
         title,
         author,
       }) => `<li class="category-book-item" data-book-id="${_id}">
-       <a class="category__link" href="#">   
-        <div class="category-book">
-            <img src="${book_image}" alt="book" class="category-book-img">
+       <a class="category__link" href="#">
+          <img src="${book_image}" alt="book" class="category-book-img">
             <div class="textbox">
                 <div class="titlebox">  
                   <p class="titlebox-title">${title}</p>
                 </div>
-                  <div class="authorbox">  
+                <div class="authorbox">  
                   <p class="authorbox-author">${author}</p>
-                  </div>
-              </div>
-          </div>
-      </a>
+                </div>
+            </div>          
+        </a>
       </li>`
     )
     .join('');
