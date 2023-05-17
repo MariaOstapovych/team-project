@@ -403,6 +403,11 @@ img {
   }
 }
 
+.best-books__image {
+  width: 180px;
+  height: 256px;
+}
+
 .header {
   position: sticky;
   top: -1px;
@@ -1060,7 +1065,7 @@ body.dark,
 }
 
 .support-image {
-  filter: brightness(0) invert(1) saturate(1);
+  filter: brightness(0) invert(1) saturate(2);
   margin-right: auto;
 }
 
