@@ -1,90 +1,86 @@
 // Iryna
 .support__container {
-  max-width: 335px;
-  height: 352px;
-  padding-left: 40px;
-  padding-right: 58px;
-  padding-top: 24px;
-  padding-bottom: 20px;
-  border-radius: 16px;
-  background: radial-gradient(
-    183.6% 183.01% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #ffffff 100%
-  );
-  box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
-  color: $color-background-text-white;
-  font-family: 'DM Sans', sans-serif;
+    max-width: 335px;
+    height: 352px;
+    padding-left: 40px;
+    padding-right: 58px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+    border-radius: 16px;
+    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
+    box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+    color: $color-background-text-white;
+    font-family: 'DM Sans', sans-serif;
 
-  @media (min-width: 768px) {
-    height: 472px;
-    padding-bottom: 14px;
-  }
+    @media (min-width: 768px) {
+        height: 472px;
+        padding-bottom: 14px;
+    }
 
-  @media (min-width: 1440px) {
-    width: 356px;
-    height: 490px;
-    padding-bottom: 24px;
-  }
+    @media (min-width: 1440px) {
+        width: 356px;
+        height: 490px;
+        padding-bottom: 24px;
+    }
 }
 
 .support__title-box {
-  display: flex;
+    display: flex;
 }
 
 .support__title {
-  margin-right: 12px;
-  margin-bottom: 40px;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.143;
-  letter-spacing: -0.04em;
+    margin-right: 12px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.143;
+    letter-spacing: -0.04em;
 }
 
 .icon-trident {
-  fill: $color-background-text-white;
+    fill: $color-background-text-white;
 }
 
 .support__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 16px;
-  margin-bottom: 20px;
-  padding: 0;
-  width: 32px;
-  height: 32px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: $color-background-text-white;
-  fill: $color-text-button-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $color-background-text-white;
+    fill: $color-text-button-purple;
 }
 
 .swiper {
-  height: 188px;
-  overflow: hidden;
+    height: 188px;
+    overflow: hidden;
 
-  @media (min-width: 768px) {
-    height: 292px;
-  }
+    @media (min-width: 768px) {
+        height: 292px;
+    }
 }
 
 .support-items {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .support-number {
-  margin-right: 16px;
-  font-size: 14px;
-  line-height: 1.286;
-  letter-spacing: -0.04em;
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 1.286;
+    letter-spacing: -0.04em;
 }
 
 .support-image {
-  filter: brightness(0) invert(1) saturate(2);
-  margin-right: auto;
+    filter: brightness(0)invert(1)saturate(1);
+    margin-right: auto;
 }
