@@ -68,11 +68,9 @@ async function openModal(evt) {
     const bookId = bookItem.dataset.id;
     const bookData = getBookId(bookId);
     createMarkup(bookData);
-    console.log(bookId);
     try {
       // const bookData = getBookId(bookId);
       // const markup = createMarkup(bookData);
-      console.log(bookData);
       // modalContainer.innerHTML = markupModalBook;
       // modalBtn.addEventListener('click', onLocalClick(bookId));
       btnModalClose.addEventListener('click', onClosebtn);
@@ -86,7 +84,6 @@ async function openModal(evt) {
           const bookObject = response;
           arrayStorage.push(bookObject);
           localStorage.setItem('arrayStorage', JSON.stringify(arrayStorage));
-          console.log(arrayStorage);
         });
       }
     } catch (error) {
