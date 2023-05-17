@@ -4,8 +4,8 @@ import { getCategoriesList } from './request';
 import Notiflix from 'notiflix';
 
 const bestBooks = document.querySelector('.best-books__list');
-
 const promise = getTopBooks();
+
 // const categories = getCategoriesList();
 
 promise.then(data => createDate(data));
@@ -18,12 +18,18 @@ function createDate(categ) {
     data.forEach(book => {
       // console.log(book);
       bookMarkup += `<li><img data-id="${book._id}" class="best-books__image" src="${book.book_image}"alt="${book.title}"><p>${book.title}</p><p>${book.author}</p></li>`;
+      console.log(book);
+      bookMarkup += `<li>
+      <img class="best-books__image" src="${book.book_image}"alt="${book.title}">
+      <p class='best-book__title'>${book.title}</p>
+      <p class='best-book__author'>${book.author}</p>
+      </li>`;
     });
     markup += `
-           <li>
-           <p>${arr.list_name}</p>
+           <li class='best-book-item'>
+           <p class='best-books__categorytitle'>${arr.list_name}</p>
             <ul>${bookMarkup}</ul>
-           <button type="button" data-category="${arr.list_name}">see more
+           <button  class='best-books-morebutton'type="button" data-category="${arr.list_name}">see more
            </button>
            </li>`;
   });
