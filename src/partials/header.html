@@ -9,11 +9,11 @@
         </a>
 
         <!-- МЕНЮ ДЛЯ  АВТОРИЗОВАНОГО  КОРИСТУВАЧА -->
-        <ul class="menu list is-hidden">
-            <li><a class="menu__home link" href="./index.html">Home</a></li>
-            <li>
-                <a class="menu__shopping link" href="shopping-list.html">Shopping-list
-          <svg class="icon-cart" width="20" height="20">
+        <ul class="menu list link ">
+            <li class="menu_item"><a class="menu__home link " href="./index.html">Home</a></li>
+            <li class="menu_item">
+                <a class="menu__shopping link" href="./shopping-list.html">Shopping-list
+          <svg class="menu__shopping_icon-cart" width="20" height="20">
             <use href="./images/icons.svg#icon-shopping-cart"></use>
           </svg>
         </a>
@@ -30,7 +30,7 @@
 
             <button class="auth__modal-open auth__modal-open-js" type="button">
         Sign up
-        <svg class="" width="20px" height="20px">
+        <svg class="auth__modal-open_button" width="20" height="20">
           <use href="./images/icons.svg#icon-arrow-narrow-right"></use>
         </svg>
       </button>
@@ -70,7 +70,7 @@
 
         <div class="modalll is-hidden data-modal">
             <!-- кнопка   Sign up -->
-            <button class="drop-auth__modal-open drop-auth__modal-open-js" type="button">
+            <button class="drop-auth__modal-open drop-auth__modal-open-js is-hidden" type="button">
         Sign up
         <svg  width="20" height="20">
           <use href="./images/icons.svg#icon-arrow-narrow-right"></use>
@@ -78,7 +78,7 @@
       </button>
 
             <!-- кнопка авторизованого User -->
-            <button class="drop-btn-user user-btn-js is-hidden" type="button">
+            <button class="drop-btn-user user-btn-js " type="button">
         <span class="fone-icon-user">
           <svg class="icon-user" width="19" height="19">
             <use href="./images/icons.svg#icon-user"></use>
@@ -88,14 +88,14 @@
       </button>
 
             <!--   мобільне дроп меню   -->
-            <ul class="drop-menu is-hidden">
+            <ul class="drop-menu  ">
                 <li>
-                    <a class="drop-menu__home link" href="./index.html">Home</a>
+                    <a class="drop-menu__home link current" href="./index.html ">Home</a>
                 </li>
                 <li>
-                    <a class="drop-menu__shopping link" href="./shopping-list.html">Shopping-list
-            <svg class="icon-cart" width="20" height="20">
-              <use href="./images/icons.svg#icon-shopping-cart"></use>
+                    <a class="drop-menu__shopping link " href="./shopping-list.html ">Shopping-list
+            <svg class="icon-cart link" width="20 " height="20 ">
+              <use href="./images/icons.svg#icon-shopping-cart "></use>
             </svg>
           </a>
                 </li>
