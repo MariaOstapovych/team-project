@@ -18,7 +18,7 @@ function createDate(categ) {
     data.forEach(book => {
       // console.log(book);
       bookMarkup += `<li><img data-id="${book._id}" class="best-books__image" src="${book.book_image}"alt="${book.title}"><p>${book.title}</p><p>${book.author}</p></li>`;
-      console.log(book);
+      // console.log(book);
       bookMarkup += `<li>
       <img class="best-books__image" src="${book.book_image}"alt="${book.title}">
       <p class='best-book__title'>${book.title}</p>
