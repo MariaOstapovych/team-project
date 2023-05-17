@@ -16,8 +16,10 @@ function createDate(categ) {
   categ.map(arr => {
     const data = arr.books;
     data.forEach(book => {
-      console.log(book);
-      bookMarkup += `<li class='is-hidden-books'>
+      // console.log(book);
+      bookMarkup += `<li><img data-id="${book._id}" class="best-books__image" src="${book.book_image}"alt="${book.title}"><p>${book.title}</p><p>${book.author}</p></li>`;
+      // console.log(book);
+      bookMarkup += `<li>
       <img class="best-books__image" src="${book.book_image}"alt="${book.title}">
       <p class='best-book__title'>${book.title}</p>
       <p class='best-book__author'>${book.author}</p>
@@ -25,9 +27,9 @@ function createDate(categ) {
     });
     markup += `
            <li class='best-book-item'>
-           <p class='best-books__category__title'>${arr.list_name}</p>
-           <ul class='best-book-category'>${bookMarkup}</ul>
-           <button  class='best-books-morebutton' type="button" data-category="${arr.list_name}">see more
+           <p class='best-books__categorytitle'>${arr.list_name}</p>
+            <ul>${bookMarkup}</ul>
+           <button  class='best-books-morebutton'type="button" data-category="${arr.list_name}">see more
            </button>
            </li>`;
   });

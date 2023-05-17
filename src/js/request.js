@@ -32,6 +32,10 @@ export async function getBooksCategory(selectedCategory) {
 
 //ДЕТАЛЬНА ІНФОРМАЦІЯ ПРО КНИГУ(ID)
 
+// export async function getBookId(id) {
+//   const bookById = await axios.get(
+//     `https://books-backend.p.goit.global/books/${id}`
+
 export async function getBookId(bookId) {
   const bookById = await axios.get(
     `https://books-backend.p.goit.global/books/${bookId}`
