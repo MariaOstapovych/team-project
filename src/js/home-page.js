@@ -13,7 +13,7 @@ promise.then(data => createDate(data));
 function createDate(categ) {
   let markup = '';
 
-  categ.map(arr => {
+  categ.map((arr) => {
     let bookMarkup = '';
     const data = arr.books;
     data.forEach(book => {
