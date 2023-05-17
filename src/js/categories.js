@@ -13,7 +13,7 @@ function onClick(evt) {
 
   axios
     .get(
-      https://books-backend.p.goit.global/books/category?category=${categoryName}
+      'https://books-backend.p.goit.global/books/category?category=${categoryName}'
     )
     .then(function (response) {
       const book = response.data.map(({ _id, book_image, title, author }) =>
