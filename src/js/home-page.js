@@ -17,15 +17,18 @@ function createDate(categ) {
     let bookMarkup = '';
     const data = arr.books;
     data.forEach(book => {
-      bookMarkup += `<li id="${book._id}"><img class="best-books__image" src="${book.book_image}" alt="${book.title}"><p>${book.title}</p><p>${book.author}</p></li>`;
+      bookMarkup += `<li class ='is-hidden-books' id="${book._id}">
+      <img class="best-books__image" src="${book.book_image}" alt="${book.title}">
+      <p class='best-book__title'>${book.title}</p>
+      <p class='best-book__author'>${book.author}</p></li>`;
     });
     markup += `
-      <li>
-        <p>${arr.list_name}</p>
-        <ul>${bookMarkup}</ul>
-        <button type="button" data-category="${arr.list_name}">see more</button>
+      <li class='best-books-category-wrap'>
+        <p class ='best-books__category__title'>${arr.list_name}</p>
+        <ul class='best-book-category'>${bookMarkup}</ul>
+        <button  class='best-books-morebutton' type="button" data-category="${arr.list_name}">see more</button>
       </li>`;
   });
-  
+
   bestBooks.insertAdjacentHTML('afterbegin', markup);
 }
