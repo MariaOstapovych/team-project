@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 //ПЕРЕЛІК КАТЕГОРІЙ КНИГ
 
 export async function getCategoriesList() {
@@ -22,7 +24,7 @@ export async function getTopBooks() {
 
 export async function getBooksCategory(selectedCategory) {
   const booksCategory = await axios.get(
-    https://books-backend.p.goit.global/books/category?category=${selectedCategory}
+    `https://books-backend.p.goit.global/books/category?category=${selectedCategory}`
   );
 
   return booksCategory.data;
@@ -32,11 +34,11 @@ export async function getBooksCategory(selectedCategory) {
 
 // export async function getBookId(id) {
 //   const bookById = await axios.get(
-//     https://books-backend.p.goit.global/books/${id}
+//     `https://books-backend.p.goit.global/books/${id}`
 
 export async function getBookId(bookId) {
   const bookById = await axios.get(
-    https://books-backend.p.goit.global/books/${bookId}
+    `https://books-backend.p.goit.global/books/${bookId}`
   );
   return bookById.data;
 }
