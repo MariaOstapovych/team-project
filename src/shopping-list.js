@@ -208,17 +208,7 @@ function removeBook(evt) {
         }
       }
       
-      // console.log(indexEl)
+      
     }
   }
 }
-  // const result = idselector.includes(idRemoveBtn)
-
-  //   if (result) {
-  //     console.log(result);
-  //   }
-
-  // const idElement = []
-  // for (const idEl of idselector) {
-  //     idElement.push(idEl.id)
-  // }
