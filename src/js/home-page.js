@@ -25,7 +25,7 @@ function createDate(categ) {
     });
     markup += `
            <li class='best-book-item'>
-           <p class='best-books__categorytitle'>${arr.list_name}</p>
+           <p class='best-books__category__title'>${arr.list_name}</p>
            <ul class='best-book-category'>${bookMarkup}</ul>
            <button  class='best-books-morebutton' type="button" data-category="${arr.list_name}">see more
            </button>

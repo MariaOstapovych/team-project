@@ -453,7 +453,7 @@ img {
   color: #4f2ee8;
 }
 
-.best-books__categorytitle {
+.best-books__category__title {
   margin-bottom: 18px;
   font-weight: 400;
   font-size: 14px;
@@ -463,7 +463,7 @@ img {
   color: #b4afaf;
 }
 @media screen and (min-width: 768px) {
-  .best-books__categorytitle {
+  .best-books__category__title {
     line-height: 1.71;
   }
 }
@@ -505,6 +505,21 @@ img {
   font-size: 12px;
   line-height: 1.1666666667;
   color: #b4afaf;
+}
+
+.best-book-category {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .is-hidden-books:nth-child(n+2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .is-hidden-books:nth-child(n+4) {
+    display: none;
+  }
 }
 
 .header {
@@ -677,7 +692,7 @@ img {
 }
 
 .auth__modal-open_button {
-  fill: #EAC645;
+  fill: #eac645;
 }
 
 .authorised-btns__wrapper {
@@ -865,8 +880,8 @@ img {
   line-height: 1.3;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: #FFFFFF;
-  fill: #FFFFFF;
+  color: #ffffff;
+  fill: #ffffff;
 }
 
 .drop-menu__home:hover,
@@ -1060,23 +1075,6 @@ body.dark,
 .dark .form__icon,
 .dark .menu__shopping_icon-cart {
   fill: #ffffff;
-}
-
-.dark .menu-toggle :hover,
-.dark.menu-toggle :focus {
-  fill: #FFFFFF;
-}
-
-.dark .menu-toggle :hover,
-.dark.menu-toggle :focus {
-  fill: #FFFFFF;
-}
-
-.dark .shopping__title,
-.dark .menu__shopping.link,
-.dark .menu__home {
-  color: #FFFFFF;
-  transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .aside {

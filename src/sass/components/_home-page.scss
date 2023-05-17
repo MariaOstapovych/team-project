@@ -40,7 +40,7 @@
   color: #4f2ee8;
 }
 
-.best-books__categorytitle {
+.best-books__category__title {
   margin-bottom: 18px;
   font-weight: 400;
   font-size: 14px;
@@ -97,20 +97,20 @@
   color: #b4afaf;
 }
 
-// .best-book-category {
-//   display: flex;
-// }
+.best-book-category {
+  display: flex;
+}
 
-// .is-hidden-books {
-//   @media screen and (max-width: 767px) {
-//     &:nth-child(n + 2) {
-//       display: none;
-//     }
-//   }
+.is-hidden-books {
+  @media screen and (max-width: 767px) {
+    &:nth-child(n + 2) {
+      display: none;
+    }
+  }
 
-//   @media screen and (max-width: 1439px) {
-//     &:nth-child(n + 4) {
-//       display: none;
-//     }
-//   }
-// }
+  @media screen and (max-width: 1439px) {
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+}
