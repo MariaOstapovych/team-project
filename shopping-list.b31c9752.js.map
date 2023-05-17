@@ -1,1 +1,0 @@
-{"mappings":"oeAAAA,EAAA,S","sources":["src/shopping-list.js"],"sourcesContent":["import './js/home-page'\nimport './js/header'\nimport './js/fond-items'\nimport './js/categories'\nimport './js/donate-bar'\nimport './js/scroll-up'\nimport './js/request'\nimport './js/switch-theme'\nimport './js/modal'"],"names":["parcelRequire"],"version":3,"file":"shopping-list.b31c9752.js.map"}
