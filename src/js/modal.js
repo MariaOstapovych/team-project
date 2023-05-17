@@ -1,5 +1,4 @@
 // // Nazar
-import axios from 'axios';
 import { getBookId } from './request';
 
 const backdrop = document.querySelector('.backdrop');
@@ -9,8 +8,6 @@ const modalBtn = document.querySelector('.modal__btn');
 const localDescr = document.querySelector('.modal__descr-local');
 const body = document.body;
 const arrayStorage = [];
-
-// Масив обк'єкта, який приходить із бекенду
 
 let markupModalBook = '';
 
@@ -64,15 +61,12 @@ async function openModal(evt) {
   if (evt.target.classList.contains('best-books__image')) {
     modalContainer.innerHTML = '';
     backdrop.style.display = 'block';
+    backdrop.style.overflow = 'hidden';
     const bookItem = evt.target.closest('.best-books__image');
     const bookId = bookItem.dataset.id;
     const bookData = getBookId(bookId);
     createMarkup(bookData);
     try {
-      // const bookData = getBookId(bookId);
-      // const markup = createMarkup(bookData);
-      // modalContainer.innerHTML = markupModalBook;
-      // modalBtn.addEventListener('click', onLocalClick(bookId));
       btnModalClose.addEventListener('click', onClosebtn);
       backdrop.addEventListener('click', onBackdrop);
       window.addEventListener('keydown', onKeyDown);
