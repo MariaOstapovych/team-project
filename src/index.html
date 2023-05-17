@@ -15,27 +15,25 @@
     />
     <link rel="stylesheet" href="./sass/index.css" />
   </head>
-  <body>
-    <a href="./shopping-list.html">shopping list</a>
 
+  <body>
     <include src="./partials/header.html"></include>
 
     <main>
+      <div class="container">
+        <aside class="aside">
+          <div class="category">
+            <include src="./partials/categories.html"></include>
+          </div>
+          <div>
+            <include src="./partials/donate-bar.html"></include>
+          </div>
+        </aside>
+      </div>
 
-    <div>
-      <aside>
-        <div>
-          <include src="./partials/categories.html"></include>
-        </div>
-        <div>
-          <include src="./partials/donate-bar.html"></include>
-        </div>
-      </aside>
-    </div>
-
-    <div>
-      <include src="./partials/home-page.html"></include>
-    </div>
+      <div>
+        <include src="./partials/home-page.html"></include>
+      </div>
 
       <include src="./partials/scroll-up.html"></include>
       <include src="./partials/modal.html"></include>

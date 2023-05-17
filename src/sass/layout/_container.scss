@@ -1,22 +1,25 @@
 .container {
-    width: 100%;
-    margin: 0 ;
+  width: 100%;
+  margin: 0 auto; // додано Авто марджин
+  padding-left: 20px;
+  padding-right: 20px;
+
+  //   перелом на 375
+  @media (min-width: 375px) {
+    width: 375px;
     padding-left: 20px;
     padding-right: 20px;
+  }
 
-    @media (min-width: 375px) {
-        width: 375px;
-    }
+  @media (min-width: 768px) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-    @media (min-width: 768px) {
-        width: 768px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-
-    @media (min-width: 1440px) {
-        width: 1440px;
-        padding-left: 24px;
-        padding-right: 24px;
-    }
+  @media (min-width: 1440px) {
+    width: 1440px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
