@@ -1,5 +1,5 @@
 // Iryna
-.support__container{
+.support__container {
     max-width: 335px;
     height: 352px;
     padding-left: 40px;
@@ -12,20 +12,20 @@
     color: $color-background-text-white;
     font-family: 'DM Sans', sans-serif;
 
-    @media (min-width: 768px){
-    height: 472px;
-    padding-bottom: 14px;
+    @media (min-width: 768px) {
+        height: 472px;
+        padding-bottom: 14px;
     }
 
-    @media (min-width: 1440px){
-    width: 356px;
-    height: 490px;
-    padding-bottom: 24px;
+    @media (min-width: 1440px) {
+        width: 356px;
+        height: 490px;
+        padding-bottom: 24px;
     }
 }
 
-.support__title-box{
-  display: flex;   
+.support__title-box {
+    display: flex;
 }
 
 .support__title {
@@ -41,7 +41,7 @@
     fill: $color-background-text-white;
 }
 
-.support__button{
+.support__button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,26 +59,28 @@
     fill: $color-text-button-purple;
 }
 
-.swiper{
+.swiper {
     height: 188px;
     overflow: hidden;
 
     @media (min-width: 768px) {
-    height: 292px;
+        height: 292px;
     }
 }
 
-.support-items{
+.support-items {
     display: flex;
     align-items: center;
 }
 
-.support-number{
+.support-number {
     margin-right: 16px;
     font-size: 14px;
     line-height: 1.286;
+    letter-spacing: -0.04em;
 }
 
-.support-image{
-    filter: brightness(0) invert(1);
+.support-image {
+    filter: brightness(0)invert(1)saturate(1);
+    margin-right: auto;
 }
