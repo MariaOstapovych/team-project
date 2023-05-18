@@ -273,9 +273,11 @@
 
   z-index: 7;
 
-  background-image: radial-gradient(183.6% 183.01% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #ffffff 100%);
+  background-image: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #ffffff 100%
+  );
   transition: opacity 150ms linear, visibility 150ms linear;
 
   @media screen and (min-width: 768px) {
@@ -435,7 +437,7 @@
   //   max-width: none;
   // }
 }
-
+ 
 // DARK_THEME
 .theme__switch-wrapper {
   display: flex;
@@ -587,4 +589,6 @@ body.dark,
 .dark .form__icon,
 .dark .menu__shopping_icon-cart {
   fill: #ffffff;
+
 }
+
