@@ -45,7 +45,12 @@ function createBookList(arr) {
         author,
       }) => `<li class="category-book-item" data-book-id="${_id}">
        <button class="category__link" type='button' data-category>
+       <a href="" class="best-books__link">
           <img src="${book_image}" alt="book" class="category-book-img">
+        </a>
+        <div class="card-quick">
+         <p class="card-quick-view">Quick view</p>
+      </div>
             <div class="textbox">
                 <div class="titlebox">  
                   <p class="titlebox-title">${title}</p>
