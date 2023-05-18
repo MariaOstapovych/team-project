@@ -16,10 +16,16 @@ function createDate(categ) {
     let bookMarkup = '';
     const data = arr.books;
     data.forEach(book => {
-      bookMarkup += `<li class ='is-hidden-books'>
-      <img class="best-books__image" loading="lazy" src="${book.book_image}" alt="${book.title}" data-id="${book._id}">
+      bookMarkup += `<li class="best-books__item">
+      <a href="" class="best-books__link">
+          <img class="best-books__image" loading="lazy" src="${book.book_image}" alt="${book.title}" data-id="${book._id}">
+      </a>
+      <div class="card-quick">
+         <p class="card-quick-view">Quick view</p>
+      </div>
       <p class='best-book__title'>${book.title}</p>
-      <p class='best-book__author'>${book.author}</p></li>`;
+      <p class='best-book__author'>${book.author}</p>
+      </li>`;
     });
     markup += `
       <li class='best-books-category-wrap'>
