@@ -3,6 +3,7 @@ import { getTopBooks } from './request';
 import Notiflix from 'notiflix';
 
 const bestBooks = document.querySelector('.best-books__list');
+const bestButton = document.querySelector('.category__linkAll');
 
 const promise = getTopBooks();
 // const categories = getCategoriesList();
@@ -36,4 +37,5 @@ function createDate(categ) {
   });
 
   bestBooks.insertAdjacentHTML('afterbegin', markup);
+  bestButton.classList.add('category-selected');
 }
