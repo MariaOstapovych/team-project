@@ -132,14 +132,19 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header__logo {
-    padding-top: 19px;
-    padding-bottom: 25px;
+    margin-right: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__logo {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-right: 76px;
   }
 }
 
 .menu {
   display: none;
-  margin-left: 32px;
   align-items: center;
   gap: 24px;
   font-weight: 500;
@@ -152,11 +157,6 @@ img {
 @media screen and (min-width: 768px) {
   .menu {
     display: flex;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .menu {
-    margin-left: 99px;
   }
 }
 .menu.is-hidden {
@@ -225,7 +225,7 @@ img {
   justify-content: center;
   gap: 90px;
   width: 184px;
-  height: 48px;
+  height: 45px;
   background-color: #4F2EE8;
   border: 1.5px solid #111111;
   border-radius: 18px;
