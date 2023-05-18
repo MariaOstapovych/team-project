@@ -171,8 +171,8 @@ img {
   align-items: center;
 }
 
-.icon-cart {
-  fill: currentColor;
+.menu__shopping_icon-cart {
+  fill: rgb(255, 255, 255);
 }
 
 .current {
@@ -190,6 +190,11 @@ img {
   background-color: transparent;
   cursor: pointer;
   border: none;
+}
+
+.menu__shopping-list {
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 768px) {
@@ -463,7 +468,7 @@ img {
 
 .modal__books-list {
   position: absolute;
-  top: 60%;
+  top: 45%;
   left: -10%;
   display: flex;
   align-items: center;
