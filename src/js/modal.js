@@ -92,8 +92,8 @@ function onKeyDown({ code }) {
 // Відкриття модалки
 document.addEventListener('click', openModal);
 async function openModal(evt) {
-  evt.preventDefault();
   if (evt.target.classList.contains('best-books__image')) {
+    evt.preventDefault();
     backdrop.style.display = 'flex';
     modalContainer.innerHTML = '';
     backdrop.style.overflow = 'hidden';
