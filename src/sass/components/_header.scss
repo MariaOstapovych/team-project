@@ -48,6 +48,7 @@
   text-transform: uppercase;
 
   color: $color-background-text-black;
+
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -236,8 +237,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     display: none;
   }
 }
@@ -437,6 +437,7 @@
   //   max-width: none;
   // }
 }
+ 
 // DARK_THEME
 .theme__switch-wrapper {
   display: flex;
@@ -469,9 +470,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -485,14 +488,15 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
 }
-
 .theme__switch {
   position: relative;
   display: inline-block;
@@ -511,11 +515,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(79, 46, 232, 1),
-    rgba(220, 220, 220, 1)
-  );
+  background: linear-gradient(to bottom,
+      rgba(79, 46, 232, 1),
+      rgba(220, 220, 220, 1));
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1),
     inset -1px -1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(79, 46, 232, 1);
   border-radius: 34px;
@@ -536,27 +538,23 @@
   transition: 0.4s;
 }
 
-input:checked + .slider {
-  background: linear-gradient(
-    to bottom,
-    rgba(79, 46, 232, 1),
-    rgba(104, 104, 104, 1)
-  );
+input:checked+.slider {
+  background: linear-gradient(to bottom,
+      rgba(79, 46, 232, 1),
+      rgba(104, 104, 104, 1));
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1),
     inset -1px -1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(79, 46, 232, 1);
 }
 
-input:focus + .slider {
-  background: linear-gradient(
-    to bottom,
-    rgba(79, 46, 232, 1),
-    rgba(104, 104, 104, 1)
-  );
+input:focus+.slider {
+  background: linear-gradient(to bottom,
+      rgba(79, 46, 232, 1),
+      rgba(104, 104, 104, 1));
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1),
     inset -1px -1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(79, 46, 232, 1);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   height: 18px;
   width: 18px;
   top: 4px;
@@ -591,4 +589,6 @@ body.dark,
 .dark .form__icon,
 .dark .menu__shopping_icon-cart {
   fill: #ffffff;
+
 }
+
