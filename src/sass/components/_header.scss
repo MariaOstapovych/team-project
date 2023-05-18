@@ -1,3 +1,9 @@
+.header {
+  position: sticky;
+  top: -1px;
+  z-index: 4;
+}
+
 .header-wrapper {
   display: flex;
   position: relative;
@@ -67,7 +73,11 @@
 }
 
 .menu__shopping_icon-cart {
-  fill: rgba(255, 255, 255, 1);
+  fill: white;
+}
+
+.menu__shopping_icon-cart-black {
+  fill: #111111;
 }
 
 .current {

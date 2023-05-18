@@ -2,7 +2,7 @@ import openCloseIcon from '../images/img.svg';
 const menuHomeEl = document.querySelector('.menu__home');
 const menuShoppingEl = document.querySelector('.menu__shopping');
 const dropMenuShoppingEl = document.querySelector('.menu_item-shop');
-
+const cart = document.querySelector('menu__shopping_icon-cart')
 setCurrentPage();
 function setCurrentPage() {
   const currentPageName = window.location.pathname;
@@ -10,11 +10,15 @@ function setCurrentPage() {
   if (currentPageName === '/index.html') {
     menuHomeEl.classList.add('current');
     menuShoppingEl.classList.remove('current');
+    cart.classList.add('menu__shopping_icon-cart');
+    cart.classList.remove('menu__shopping_icon-cart-black')
   }
 
   if (currentPageName === '/shopping-list.html') {
     menuShoppingEl.classList.add('current');
     menuHomeEl.classList.remove('current');
+    cart.classList.remove('menu__shopping_icon-cart');
+    cart.classList.add('menu__shopping_icon-cart-black');
   }
 }
 dropMenuShoppingEl.addEventListener('click', onShopping);
