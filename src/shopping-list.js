@@ -1,13 +1,15 @@
-import './header';
-import './donate-bar';
-import './fond-items';
-import './donate-bar';
-import './request';
-import './modal';
-import svgRemove from '../images/icons.svg';
-import amazonPNG from '../images/shopping-list/amazon@2x.png';
-import ibooksPNG from '../images/shopping-list/books@2x.png';
-import bookshopPNG from '../images/shopping-list/bookshop@2x.png';
+import './js/header';
+import './js/donate-bar';
+import './js/fond-items';
+import './js/donate-bar';
+import './js/request';
+import './js/modal';
+import './js/switch-theme';
+import svgRemove from '../src/images/icons.svg';
+import amazonPNG from '../src/images/shopping-list/amazon@2x.png';
+import ibooksPNG from '../src/images/shopping-list/books@2x.png';
+import bookshopPNG from '../src/images/shopping-list/bookshop@2x.png';
+
 
 const addElem = document.querySelector('.shopping__books-list');
 let massive = [];
