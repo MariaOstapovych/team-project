@@ -94,8 +94,8 @@ document.addEventListener('click', openModal);
 async function openModal(evt) {
   evt.preventDefault();
   if (evt.target.classList.contains('best-books__image')) {
+    backdrop.style.display = 'flex';
     modalContainer.innerHTML = '';
-    backdrop.style.display = 'block';
     backdrop.style.overflow = 'hidden';
     const bookItem = evt.target.closest('.best-books__image');
     const bookId = bookItem.dataset.id;
