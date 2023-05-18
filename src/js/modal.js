@@ -1,6 +1,6 @@
 // // Nazar
 import { getBookId } from './request';
-
+import { loader } from './loader'
 import amazonPNG from '../images/shopping-list/amazon@2x.png';
 import ibooksPNG from '../images/shopping-list/books@2x.png';
 import bookshopPNG from '../images/shopping-list/bookshop@2x.png';
@@ -26,6 +26,7 @@ async function createMarkup(bookData) {
       // console.log(bookName);
       // console.log(bookUrl);
     });
+    loader.show(); 
     markupModalBook = `.
     <img src="${resp.book_image}" alt="${resp.title}" class="modal__img"/>
     <div class="modal__content">
@@ -63,6 +64,7 @@ async function createMarkup(bookData) {
       </ul>
     </div>`;
     modalContainer.innerHTML = markupModalBook;
+    loader.hide(); 
   } catch (error) {
     console.error('Помилка при отриманні даних про книгу', error);
   }

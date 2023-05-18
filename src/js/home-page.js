@@ -1,5 +1,5 @@
 import { getTopBooks } from './request';
-
+import { loader } from './loader'
 import Notiflix from 'notiflix';
 
 const bestBooks = document.querySelector('.best-books__list');
@@ -9,7 +9,7 @@ const promise = getTopBooks();
 // const categories = getCategoriesList();
 
 promise.then(data => createDate(data));
-
+loader.show(); 
 function createDate(categ) {
   let markup = '';
 
@@ -35,7 +35,7 @@ function createDate(categ) {
         <button  class='best-books-morebutton' type="button" data-category="${arr.list_name}">see more</button>
       </li>`;
   });
-
+  loader.hide(); 
   bestBooks.insertAdjacentHTML('afterbegin', markup);
   bestButton.classList.add('category-selected');
 }
