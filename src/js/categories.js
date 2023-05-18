@@ -22,7 +22,7 @@ function onClick(evt) {
     .then(function (response) {
       bookList.innerHTML = createBookList(response.data);
     });
-
+  // listItem.classList.add('category-selected');
   bookTitle.textContent = categoryName;
   bestBooksHidden.style.display = 'none';
 }

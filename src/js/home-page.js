@@ -4,8 +4,6 @@ import { getBooksCategory } from './request';
 import Notiflix from 'notiflix';
 
 const bestBooks = document.querySelector('.best-books__list');
-const bestButtonAll = document.querySelector('.category__linkAll');
-bestButtonAll.addEventListener('click', onButtonAll);
 const promise = getTopBooks();
 // const categories = getCategoriesList();
 
@@ -38,14 +36,19 @@ function createDate(categ) {
       </li>`;
   });
 
-  bestBooks.insertAdjacentHTML('afterbegin', markup);
+  // bestBooks.insertAdjacentHTML('afterbegin', markup);
+  bestBooks.innerHTML = markup;
   const bestButton = document.querySelector('.best-books-morebutton');
-  console.log(bestButton);
-  bestButton.addEventListener('click', onSeeMore);
-}
 
+  const bestButtonAll = document.querySelector('.category__linkAll');
+  console.log(bestButtonAll);
+  bestButtonAll.addEventListener('click', onButtonAll);
+  function onButtonAll(e) {
+    bestBooks.innerHTML = ''; // Очистити контейнер bestBooks перед створенням нової розмітки
+    createDate(categ); // Викликати createDate з усіма категоріями
+  }
+}
+// bestButton.addEventListener('click', onSeeMore);
 // function onSeeMore(e) {
 //   e.preventDefault();
 // }
-
-function onButtonAll() {}
