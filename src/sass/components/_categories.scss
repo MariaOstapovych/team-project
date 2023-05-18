@@ -58,7 +58,8 @@
   }
 }
 
-.category__link {
+.category__link,
+.category__linkAll {
   cursor: pointer;
   border: none;
   background-color: inherit;
@@ -86,6 +87,18 @@
 }
 
 //-----------Books-----------//
+
+.book-title-js {
+  // margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.19;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.08;
+  }
+}
 
 .book-list-js {
   @media (min-width: 768px) {
