@@ -1,11 +1,10 @@
-import './js/home-page'
 import './js/header'
-import './js/fond-items'
 import './js/categories'
 import './js/donate-bar'
+import './js/home-page'
 import './js/scroll-up'
+import './js/modal'
+import './js/fond-items'
 import './js/request'
 import './js/switch-theme'
-import './js/modal'
-
 
