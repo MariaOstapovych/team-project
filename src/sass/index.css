@@ -417,6 +417,8 @@ img {
 }
 
 .best-books__image {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 335px;
   max-height: auto;
   margin-bottom: 14px;
@@ -425,27 +427,27 @@ img {
 }
 @media screen and (min-width: 768px) {
   .best-books__image {
-    max-width: 218px;
-    max-height: 316px;
+    width: 218px;
+    height: 316px;
   }
 }
 @media screen and (min-width: 1440px) {
   .best-books__image {
-    max-width: 180px;
-    max-height: 256px;
+    width: 180px;
+    height: 256px;
   }
 }
 
 .best-books__maintitle {
-  margin-bottom: 40px;
+  margin: 40px 0;
   font-weight: 700;
   font-size: 32px;
-  line-height: 1.1875;
+  line-height: 1.19;
 }
 @media screen and (min-width: 768px) {
   .best-books__maintitle {
     font-size: 48px;
-    line-height: 1.0833333333;
+    line-height: 1.08;
   }
 }
 
@@ -453,7 +455,7 @@ img {
   color: #4f2ee8;
 }
 
-.best-books__categorytitle {
+.best-books__category__title {
   margin-bottom: 18px;
   font-weight: 400;
   font-size: 14px;
@@ -463,12 +465,14 @@ img {
   color: #b4afaf;
 }
 @media screen and (min-width: 768px) {
-  .best-books__categorytitle {
+  .best-books__category__title {
     line-height: 1.71;
   }
 }
 
 .best-books-morebutton {
+  display: block;
+  margin-left: auto;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -492,7 +496,7 @@ img {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.125;
+  line-height: 1.13;
   text-transform: uppercase;
   color: #111111;
 }
@@ -503,8 +507,34 @@ img {
   font-weight: 400;
   letter-spacing: -0.04em;
   font-size: 12px;
-  line-height: 1.1666666667;
+  line-height: 1.17;
   color: #b4afaf;
+}
+
+.best-book-category {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .best-book-category {
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .best-book-category {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .is-hidden-books:nth-child(n+2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .is-hidden-books:nth-child(n+4) {
+    display: none;
+  }
 }
 
 .header {
@@ -910,7 +940,8 @@ img {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 10px;
   margin: 0;
   width: 130%;
@@ -1061,33 +1092,17 @@ body.dark,
   fill: #ffffff;
 }
 
-.dark .menu-toggle :hover,
-.dark.menu-toggle :focus {
-  fill: #FFFFFF;
-}
-
-.dark .menu-toggle :hover,
-.dark.menu-toggle :focus {
-  fill: #FFFFFF;
-}
-
-.dark .shopping__title,
-.dark .menu__shopping.link,
-.dark .menu__home {
-  color: #FFFFFF;
-  transition: color cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .aside {
   display: flex;
   flex-direction: column;
+  padding-top: 40px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .aside {
+    padding: 40px 0 60px;
     flex-direction: row;
     gap: 32px;
-    margin-bottom: 100px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1096,6 +1111,7 @@ body.dark,
     float: left;
     flex-direction: column;
     margin-bottom: 86px;
+    margin-right: 40px;
   }
 }
 
@@ -1184,16 +1200,18 @@ body.dark,
 }
 @media screen and (min-width: 768px) {
   .category-book-item {
-    max-width: 218px;
+    width: 218px;
   }
 }
 @media screen and (min-width: 1440px) {
   .category-book-item {
-    max-width: 180px;
+    width: 180px;
   }
 }
 
 .category-book-img {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 335px;
   margin-bottom: 14px;
   cursor: pointer;
@@ -1214,12 +1232,9 @@ body.dark,
 
 .titlebox-title {
   margin-bottom: 4px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.125;
+  line-height: 1.13;
   text-transform: uppercase;
   color: #111111;
 }
@@ -1230,7 +1245,7 @@ body.dark,
   font-weight: 400;
   letter-spacing: -0.04em;
   font-size: 12px;
-  line-height: 1.1666666667;
+  line-height: 1.17;
   color: #b4afaf;
 }
 
@@ -1800,4 +1815,4 @@ body.dark,
   .modal__content {
     padding: 40px;
   }
-}
+}/*# sourceMappingURL=index.css.map */
