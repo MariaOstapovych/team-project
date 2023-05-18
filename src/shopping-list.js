@@ -69,18 +69,16 @@ function removeBook(evt) {
   for (const elem of massive) {
     if (elem._id === idRemoveBtn) {
       const resultIndex = parsedBook.indexOf(elem);
-      //   console.log(massive);
-      if (massive.length === []) {
-        localStorage.clear();
-      } else if (massive.length === 1) {
+      if (massive.length === [] || massive.length === 1) {
         massive.splice(resultIndex, 1);
         selector[resultIndex].style.display = 'none';
         localStorage.clear();
-      } else {
+      } else if (massive.length > 1){
         massive.splice(resultIndex, 1);
-        selector[resultIndex].style.display = 'none';
         localStorage.setItem('arrayStorage', JSON.stringify(massive));
+        selector[resultIndex].style.display = 'none';
       }
+      console.log(massive);
     }
   }
  
