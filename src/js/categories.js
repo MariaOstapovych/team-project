@@ -5,7 +5,9 @@ import axios from 'axios';
 
 const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
+const bookTitle = document.querySelector('.book-title-js');
 const listItem = document.querySelector('.category__link');
+const bestBooksHidden = document.querySelector('.best-books');
 listElement.addEventListener('click', onClick);
 
 function onClick(evt) {
@@ -26,6 +28,8 @@ function onClick(evt) {
     });
 
   listItem.classList.add('category-selected');
+  bookTitle.textContent = evt.target.outerText;
+  bestBooksHidden.style.display = 'none';
 }
 
 function createBookList(arr) {

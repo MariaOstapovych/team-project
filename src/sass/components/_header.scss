@@ -26,7 +26,7 @@
   @media screen and (min-width: 768px) {
     margin-right: 40px;
   }
-  
+
   @media screen and (min-width: 1440px) {
     padding-top: 22px;
     padding-bottom: 22px;
@@ -66,11 +66,12 @@
 }
 
 .menu__shopping_icon-cart {
-    fill: rgba(255, 255, 255, 1);
+  fill: rgba(255, 255, 255, 1);
+}
 
 .current {
   font-weight: 700;
-  background: #EAC645;
+  background: #eac645;
   border-radius: 36px;
   padding: 8px 16px;
   color: $color-background-text-black;
@@ -272,9 +273,11 @@
 
   z-index: 7;
 
-  background-image: radial-gradient(183.6% 183.01% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #ffffff 100%);
+  background-image: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #ffffff 100%
+  );
   transition: opacity 150ms linear, visibility 150ms linear;
 
   @media screen and (min-width: 768px) {
@@ -306,7 +309,6 @@
   }
 }
 
-
 .drop-btn-user {
   display: flex;
 
@@ -336,7 +338,6 @@
     pointer-events: none;
   }
 }
-
 
 // МОБІЛЬНЕ ДРОП МЕНЮ
 .drop-menu {
@@ -432,9 +433,10 @@
   padding: 0;
   transform: rotate(15deg);
 
-  img {
-    max-width: none;
-  }
+  // img {
+  //   max-width: none;
+  // }
+}
 // DARK_THEME
 .theme__switch-wrapper {
   display: flex;
@@ -580,14 +582,13 @@ input:checked + .slider:before {
 ///body////
 body.dark,
 .dark .auth__modal {
-    background: #202024;
-    color: rgba(255, 255, 255, 0.6);
+  background: #202024;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .dark .icon-burger,
 .dark .auth__modal-close-icon,
 .dark .form__icon,
 .dark .menu__shopping_icon-cart {
-    fill: #ffffff;
+  fill: #ffffff;
 }
-

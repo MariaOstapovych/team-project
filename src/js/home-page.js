@@ -16,7 +16,7 @@ function createDate(categ) {
     let bookMarkup = '';
     const data = arr.books;
     data.forEach(book => {
-      bookMarkup += `<li class="best-books__item">
+      bookMarkup += `<li class="best-books__item is-hidden-books">
       <a href="" class="best-books__link">
           <img class="best-books__image" loading="lazy" src="${book.book_image}" alt="${book.title}" data-id="${book._id}">
       </a>
