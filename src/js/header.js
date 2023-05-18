@@ -40,7 +40,7 @@ function toggleModal() {
     modalBoxEl.classList.remove('is-hidden');
     iconHrefEl.setAttribute('href', `${openCloseIcon}#icon-x-close`);
     document.body.classList.add('modal-open');
-
+    menuShoppingEl.addEventListener('click', onShopping)
     return;
   } else {
     modalBoxEl.classList.add('is-hidden');
@@ -48,3 +48,4 @@ function toggleModal() {
     document.body.classList.remove('modal-open');
   }
 }
+
