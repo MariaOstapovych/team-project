@@ -3,6 +3,7 @@ import { getTopBooks } from './request';
 import Notiflix from 'notiflix';
 
 const bestBooks = document.querySelector('.best-books__list');
+const bestButton = document.querySelector('.category__linkAll');
 
 const promise = getTopBooks();
 // const categories = getCategoriesList();
@@ -16,7 +17,7 @@ function createDate(categ) {
     let bookMarkup = '';
     const data = arr.books;
     data.forEach(book => {
-      bookMarkup += `<li class="best-books__item">
+      bookMarkup += `<li class="best-books__item is-hidden-books">
       <a href="" class="best-books__link">
           <img class="best-books__image" loading="lazy" src="${book.book_image}" alt="${book.title}" data-id="${book._id}">
       </a>
@@ -36,4 +37,5 @@ function createDate(categ) {
   });
 
   bestBooks.insertAdjacentHTML('afterbegin', markup);
+  bestButton.classList.add('category-selected');
 }
