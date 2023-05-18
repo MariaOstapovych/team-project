@@ -1,7 +1,8 @@
 // Nazar
-.book{
+.book {
     width: 287px;
     height: 408px;
+
     @media screen and (min-width: 768px) {
         width: 192px;
         height: 281px;
@@ -99,6 +100,7 @@
 }
 
 .modal__descr-local {
+    display: none;
     font-family: DM Sans;
     padding-right: 46px;
     padding-left: 47px;
@@ -128,6 +130,7 @@
     height: 408px;
     border-radius: 8px;
     margin-bottom: 14px;
+
     @media screen and (min-width: 768px) {
         width: 192px;
         height: 281px;
@@ -177,5 +180,35 @@
 
     @media screen and (min-width: 768px) {
         padding: 40px;
+    }
+}
+
+.modal__shop-amazon {
+    filter: grayscale(100%);
+    width: 62px;
+    height: 19px;
+        &:hover,
+        &:focus {
+            filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+    }
+}
+
+.modal__shop-ibooks {
+    filter: grayscale(100%);
+    width: 33px;
+    height: 32px;
+    &:hover,
+    &:focus {
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+    }
+}
+
+.modal__shop-bookShop {
+    filter: grayscale(100%);
+    width: 38px;
+    height: 36px;
+    &:hover,
+    &:focus {
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
     }
 }

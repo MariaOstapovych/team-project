@@ -1,6 +1,9 @@
 // // Nazar
-import axios from 'axios';
 import { getBookId } from './request';
+
+import amazonPNG from '../images/shopping-list/amazon@2x.png';
+import ibooksPNG from '../images/shopping-list/books@2x.png';
+import bookshopPNG from '../images/shopping-list/bookshop@2x.png';
 
 const backdrop = document.querySelector('.backdrop');
 const btnModalClose = document.querySelector('.modal__close-btn');
@@ -10,24 +13,53 @@ const localDescr = document.querySelector('.modal__descr-local');
 const body = document.body;
 const arrayStorage = [];
 
-// Масив обк'єкта, який приходить із бекенду
-
 let markupModalBook = '';
 
 // Створення розмітки
 async function createMarkup(bookData) {
   try {
     const resp = await bookData;
-    markupModalBook = `
+    const links = resp.buy_links;
+    links.forEach(function (obj) {
+      const bookName = obj.name;
+      const bookUrl = obj.url;
+      // console.log(bookName);
+      // console.log(bookUrl);
+    });
+    markupModalBook = `.
     <img src="${resp.book_image}" alt="${resp.title}" class="modal__img"/>
     <div class="modal__content">
       <h2 class="modal__title">${resp.title || 'No title'}</h2>
       <p class="modal__author">${resp.author || 'No author'}</p>
       <p class="modal__description">${resp.description || 'No description'}</p>
-      <ul class="modal__shops">
-        <li class="modal__shops-link"></li>
-        <li class="modal__shops-link"></li>
-        <li class="modal__shops-link"></li>
+      <ul class="modal__shop">
+        <li class="modal__shop-item">
+          <a class="modal__shop-list" href="https://www.amazon.com/" target="_blank">
+            <img
+              class="modal__shop-amazon"
+              src="${amazonPNG}"
+              alt="Amazon book"
+            >
+          </a>
+        </li>
+        <li class="modal__shop-item">
+          <a class="modal__shop-list" href="https://www.amazon.com/" target="_blank">
+            <img
+              class="modal__shop-ibooks"
+              src="${ibooksPNG}"
+              alt="ibooks book"
+            >
+          </a>
+        </li>
+        <li class="modal__shop-item">
+          <a class="modal__shop-list" href="https://www.amazon.com/" target="_blank">
+            <img
+              class="modal__shop-bookShop"
+              src="${bookshopPNG}"
+              alt="Shop book"
+            >
+          </a>
+        </li>
       </ul>
     </div>`;
     modalContainer.innerHTML = markupModalBook;
@@ -64,15 +96,12 @@ async function openModal(evt) {
   if (evt.target.classList.contains('best-books__image')) {
     modalContainer.innerHTML = '';
     backdrop.style.display = 'block';
+    backdrop.style.overflow = 'hidden';
     const bookItem = evt.target.closest('.best-books__image');
     const bookId = bookItem.dataset.id;
     const bookData = getBookId(bookId);
     createMarkup(bookData);
     try {
-      // const bookData = getBookId(bookId);
-      // const markup = createMarkup(bookData);
-      // modalContainer.innerHTML = markupModalBook;
-      // modalBtn.addEventListener('click', onLocalClick(bookId));
       btnModalClose.addEventListener('click', onClosebtn);
       backdrop.addEventListener('click', onBackdrop);
       window.addEventListener('keydown', onKeyDown);
