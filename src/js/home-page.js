@@ -1,12 +1,9 @@
 //
 import { getTopBooks } from './request';
-
 import Notiflix from 'notiflix';
 
 const bestBooks = document.querySelector('.best-books__list');
-
 const promise = getTopBooks();
-// const categories = getCategoriesList();
 
 promise.then(data => createDate(data));
 
