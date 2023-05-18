@@ -1,7 +1,7 @@
 import './js/header'
+import './js/home-page'
 import './js/categories'
 import './js/donate-bar'
-import './js/home-page'
 import './js/scroll-up'
 import './js/modal'
 import './js/fond-items'

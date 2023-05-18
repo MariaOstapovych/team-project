@@ -407,39 +407,7 @@ img {
 }
 .drop-auth__modal-open.is-hidden {
   display: none;
-
-.best-books__image {
-  object-fit: cover;
-  max-width: 335px;
-  max-height: auto;
-  margin-bottom: 14px;
-  cursor: pointer;
-  border-radius: 8px;
 }
-@media screen and (min-width: 768px) {
-  .best-books__image {
-    width: 218px;
-    height: 316px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .best-books__image {
-    width: 180px;
-    height: 256px;
-  }
-}
-
-.best-books__maintitle {
-  margin: 40px 0;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.19;
-}
-@media screen and (min-width: 768px) {
-  .best-books__maintitle {
-    font-size: 48px;
-    line-height: 1.08;
-  }
 
 .drop-btn-user {
   display: flex;
@@ -464,7 +432,6 @@ img {
   pointer-events: none;
 }
 
-
 .drop-menu {
   display: flex;
   justify-content: center;
@@ -479,7 +446,6 @@ img {
   color: #ffffff;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .drop-menu.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -494,16 +460,6 @@ img {
   align-items: center;
   gap: 7px;
   font-family: "DM Sans";
-  
-@media screen and (min-width: 768px) {
-  .best-books__category__title {
-    line-height: 1.71;
-  }
-}
-
-.best-books-morebutton {
-  display: block;
-  margin-left: auto;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -545,101 +501,6 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
-.best-book__title {
-  margin-bottom: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.13;
-  text-transform: uppercase;
-  color: #111111;
-}
-
-.best-book__author {
-  text-transform: none;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  font-size: 12px;
-  line-height: 1.17;
-  color: #b4afaf;
-}
-
-.best-book-category {
-  display: flex;
-}
-@media screen and (min-width: 768px) {
-  .best-book-category {
-    gap: 25px;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .best-book-category {
-    gap: 24px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .is-hidden-books:nth-child(n+2) {
-    display: none;
-  }
-}
-@media screen and (max-width: 1439px) {
-  .is-hidden-books:nth-child(n+4) {
-    display: none;
-  }
-}
-
-.best-books__item {
-  position: relative;
-}
-
-.card-quick {
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
-  width: 335px;
-  top: 435px;
-  height: 70px;
-  opacity: 0;
-  background: #eac645;
-  pointer-events: none;
-  border-radius: 0 0 8px 8px;
-}
-@media screen and (min-width: 1440px) {
-  .card-quick {
-    width: 180px;
-    top: 186px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1399px) {
-  .card-quick {
-    width: 218px;
-    top: 247px;
-  }
-}
-
-.card-quick-view {
-  font-style: normal;
-  padding: 26px 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-  text-align: center;
-  color: #111111;
-}
-
-.best-books__link:hover + .card-quick,
-.best-books__link:focus + .card-quick {
-  opacity: 1;
-}
-
-.header {
-  position: sticky;
-  top: -1px;
-  z-index: 99;
 }
 
 .modal__books-list {
@@ -1110,6 +971,7 @@ body.dark,
 }
 
 .best-books__image {
+  object-fit: cover;
   max-width: 335px;
   max-height: auto;
   margin-bottom: 14px;
@@ -1118,27 +980,27 @@ body.dark,
 }
 @media screen and (min-width: 768px) {
   .best-books__image {
-    max-width: 218px;
-    max-height: 316px;
+    width: 218px;
+    height: 316px;
   }
 }
 @media screen and (min-width: 1440px) {
   .best-books__image {
-    max-width: 180px;
-    max-height: 256px;
+    width: 180px;
+    height: 256px;
   }
 }
 
 .best-books__maintitle {
-  margin-bottom: 40px;
+  margin: 40px 0;
   font-weight: 700;
   font-size: 32px;
-  line-height: 1.1875;
+  line-height: 1.19;
 }
 @media screen and (min-width: 768px) {
   .best-books__maintitle {
     font-size: 48px;
-    line-height: 1.0833333333;
+    line-height: 1.08;
   }
 }
 
@@ -1146,7 +1008,7 @@ body.dark,
   color: #4f2ee8;
 }
 
-.best-books__categorytitle {
+.best-books__category__title {
   margin-bottom: 18px;
   font-weight: 400;
   font-size: 14px;
@@ -1156,12 +1018,14 @@ body.dark,
   color: #b4afaf;
 }
 @media screen and (min-width: 768px) {
-  .best-books__categorytitle {
+  .best-books__category__title {
     line-height: 1.71;
   }
 }
 
 .best-books-morebutton {
+  display: block;
+  margin-left: auto;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1175,7 +1039,6 @@ body.dark,
   padding: 14px 28px;
   transition: background-color 250ms linear, color 250ms linear;
 }
-
 .best-books-morebutton:hover, .best-books-morebutton:focus {
   background-color: #4f2ee8;
   color: #ffffff;
@@ -1186,7 +1049,7 @@ body.dark,
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.125;
+  line-height: 1.13;
   text-transform: uppercase;
   color: #111111;
 }
@@ -1197,10 +1060,80 @@ body.dark,
   font-weight: 400;
   letter-spacing: -0.04em;
   font-size: 12px;
-  line-height: 1.1666666667;
+  line-height: 1.17;
   color: #b4afaf;
 }
 
+.best-book-category {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .best-book-category {
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .best-book-category {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .is-hidden-books:nth-child(n+2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .is-hidden-books:nth-child(n+4) {
+    display: none;
+  }
+}
+
+.best-books__item {
+  position: relative;
+}
+
+.card-quick {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  width: 335px;
+  top: 435px;
+  height: 70px;
+  opacity: 0;
+  background: #eac645;
+  pointer-events: none;
+  border-radius: 0 0 8px 8px;
+}
+@media screen and (min-width: 1440px) {
+  .card-quick {
+    width: 180px;
+    top: 186px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  .card-quick {
+    width: 218px;
+    top: 247px;
+  }
+}
+
+.card-quick-view {
+  font-style: normal;
+  padding: 26px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111111;
+}
+
+.best-books__link:hover + .card-quick,
+.best-books__link:focus + .card-quick {
+  opacity: 1;
+}
 
 .aside {
   display: flex;
