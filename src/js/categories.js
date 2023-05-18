@@ -1,23 +1,27 @@
-// Olga
 import { getCategoriesList } from './request';
 import axios from 'axios';
 // import { getBooksCategory } from "./request";
 
 const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
+const bookTitle = document.querySelector('.book-title-js');
+const bestButton = document.querySelector('.category__linkAll');
 const listItem = document.querySelector('.category__link');
+const bestBooksHidden = document.querySelector('.best-books');
+
 listElement.addEventListener('click', onClick);
 
 function onClick(evt) {
   const categoryName = evt.target.outerText;
+  console.log(categoryName);
 
   axios
     .get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
     )
     .then(function (response) {
-      const book = response.data.map(({ _id, book_image, title, author }) =>
-        console.log(_id, book_image, title, author)
+      const book = response.data.map(
+        ({ _id, book_image, title, author, list_name }) => console.log(response)
       );
       bookList.innerHTML = createBookList(response.data);
     })
@@ -25,7 +29,10 @@ function onClick(evt) {
       console.log(error);
     });
 
+  bestButton.classList.remove('category-selected');
   listItem.classList.add('category-selected');
+  bookTitle.textContent = categoryName;
+  bestBooksHidden.style.display = 'none';
 }
 
 function createBookList(arr) {
@@ -37,7 +44,7 @@ function createBookList(arr) {
         title,
         author,
       }) => `<li class="category-book-item" data-book-id="${_id}">
-       <button class="category__link" type='button'>
+       <button class="category__link" type='button' data-category>
           <img src="${book_image}" alt="book" class="category-book-img">
             <div class="textbox">
                 <div class="titlebox">  
