@@ -1,4 +1,3 @@
-import './js/home-page';
 import './js/header';
 import './js/donate-bar';
 import './js/fond-items';
@@ -11,23 +10,24 @@ import amazonPNG from '../src/images/shopping-list/amazon@2x.png';
 import ibooksPNG from '../src/images/shopping-list/books@2x.png';
 import bookshopPNG from '../src/images/shopping-list/bookshop@2x.png';
 
-
 const addElem = document.querySelector('.shopping__books-list');
-console.log(addElem)
+
 let massive = [];
 let idBooks = [];
 let parsedBook;
 
-storageData()
+storageData();
 
 function storageData() {
   const book = localStorage.getItem('arrayStorage');
 
   parsedBook = JSON.parse(book);
+
   parsedBook.map(arr => {
     massive.push(arr);
     idBooks.push(arr._id);
   });
+
   createMarkup(massive);
 }
 
@@ -37,7 +37,7 @@ function createMarkup(arr) {
     markup += `<li class="books-list__item" id="${_id}">
   <img class="books-list__image" src="${book_image}" alt="${title}">
   <div class="books-info">
-  <button type="button" class="dump-button" >
+  <button type="button" class="dump-button" id="${_id}">
                 <svg class="dump-icon">
                   <use href="${svgRemove}#icon-dump2" id="${_id}"></use>
                 </svg>
@@ -62,26 +62,26 @@ function createMarkup(arr) {
 }
 
 function removeBook(evt) {
-  const idRemoveBtn = evt.target.id;
-  console.log(evt)
-  const idselector = document.querySelectorAll('.shopping__books-list');
+  let idRemoveBtn = evt.target.id;
 
-  for (const value of idselector) {
-    if (value.id === idRemoveBtn) {
-      for (const elem of parsedBook) {
-        if (elem._id === idRemoveBtn) {
-          const resultIndex = parsedBook.indexOf(elem);
-          parsedBook.splice(resultIndex, 1);
-          value.style.display = 'none'
-          if(parsedBook.length === 1) {
-            localStorage.setItem('books', JSON.stringify(parsedBook));
-          } else {
-            localStorage.clear()
-          }
-        }
+  const selector = document.querySelectorAll('.books-list__item');
+  // const idselector = selector.id;
+  console.log(selector);
+  //   if (idselector === idRemoveBtn) {
+  for (const elem of massive) {
+    if (elem._id === idRemoveBtn) {
+      const resultIndex = parsedBook.indexOf(elem);
+      //   console.log(resultIndex);
+      massive.splice(resultIndex, 1);
+      selector[resultIndex].style.display = 'none';
+      if (selector.length > 0) {
+        selector[resultIndex].style.display = 'none';
+        localStorage.setItem('arrayStorage', JSON.stringify(massive));
+      } else {
+        localStorage.clear();
+        localStorage.setItem('arrayStorage', JSON.stringify(massive));
       }
-      
-      
     }
   }
+  //   }
 }
