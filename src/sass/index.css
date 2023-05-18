@@ -1775,6 +1775,7 @@ body.dark,
 }
 
 .modal__descr-local {
+  display: none;
   font-family: DM Sans;
   padding-right: 46px;
   padding-left: 47px;
@@ -1857,4 +1858,31 @@ body.dark,
   .modal__content {
     padding: 40px;
   }
+}
+
+.modal__shop-amazon {
+  filter: grayscale(100%);
+  width: 62px;
+  height: 19px;
+}
+.modal__shop-amazon:hover, .modal__shop-amazon:focus {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+.modal__shop-ibooks {
+  filter: grayscale(100%);
+  width: 33px;
+  height: 32px;
+}
+.modal__shop-ibooks:hover, .modal__shop-ibooks:focus {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+.modal__shop-bookShop {
+  filter: grayscale(100%);
+  width: 38px;
+  height: 36px;
+}
+.modal__shop-bookShop:hover, .modal__shop-bookShop:focus {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
 }
