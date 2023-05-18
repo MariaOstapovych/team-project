@@ -2,11 +2,9 @@
   display: flex;
   position: relative;
 
-  border: 1.5px solid $dark-color;
+  border: 1.5px solid $color-background-text-black;
   border-radius: 0px 0px 8px 8px;
-  background-color: $white-color;
-  transition: background-color $cubic-time, color $cubic-time,
-    border-color $cubic-time;
+  background-color: $color-background-text-white;
 }
 
 .mob-header {
@@ -46,9 +44,7 @@
   letter-spacing: -0.04em;
   text-transform: uppercase;
 
-  color: $dark-color;
-  transition: opacity $cubic-time, visibility $cubic-time;
-
+  color: $color-background-text-black;
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -76,10 +72,10 @@
 
 .current {
   font-weight: 700;
-  background: $yellow-color;
+  background: #EAC645;
   border-radius: 36px;
   padding: 8px 16px;
-  color: $dark-color;
+  color: $color-background-text-black;
 }
 
 //  КНОПКА БУРГЕР МЕНЮ МЕНЮ
@@ -106,7 +102,7 @@
 
 .menu-toggle :hover,
 .menu-toggle :focus {
-  fill: $blue-color;
+  fill: $color-text-button-purple;
 }
 
 // ПЕРЕМИКАЧ ТЕМНОІ ТЕМИ ТА  КНОПКИ  "sign-up", "user"
@@ -133,15 +129,13 @@
   gap: 90px;
   width: 184px;
   height: 48px;
-  background-color: $blue-color;
-  border: 1.5px solid $dark-color;
+  background-color: $color-text-button-purple;
+  border: 1.5px solid $color-background-text-black;
   border-radius: 18px;
-  color: $white-color;
+  color: $color-background-text-white;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-
-  transition: opacity $cubic-time, visibility $cubic-time;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -183,10 +177,10 @@
   line-height: 29px;
   letter-spacing: -0.02em;
 
-  color: $white-color;
-  border: 1px solid $blue-color;
+  color: $color-background-text-white;
+  border: 1px solid $color-text-button-purple;
   border-radius: 36px;
-  background-color: $blue-color;
+  background-color: $color-text-button-purple;
 
   height: 45px;
 
@@ -201,18 +195,18 @@
   justify-content: center;
   flex-shrink: 0;
 
-  background-color: $primary-background-color;
+  background-color: $color-text-medgrey;
   width: 37px;
   height: 37px;
   border-radius: 50%;
 }
 
 .icon-user {
-  fill: $blue-color;
+  fill: $color-text-button-purple;
 }
 
 .icon-triangle-down {
-  fill: $white-color;
+  fill: $color-background-text-white;
 }
 
 .btn-user:hover,
@@ -231,10 +225,10 @@
   gap: 90px;
   width: 184px;
   height: 48px;
-  background-color: $white-color;
-  border: 1.5px solid $dark-color;
+  background-color: $color-background-text-white;
+  border: 1.5px solid $color-background-text-black;
   border-radius: 18px;
-  color: $dark-color;
+  color: $color-background-text-black;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -296,15 +290,13 @@
   height: 48px;
   margin-top: 20px;
 
-  background-color: $blue-color;
-  border: 1.5px solid $dark-color;
+  background-color: $color-text-button-purple;
+  border: 1.5px solid $color-background-text-black;
   border-radius: 18px;
-  color: $white-color;
+  color: $color-background-text-white;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-
-  transition: opacity $cubic-time, visibility $cubic-time;
 
   &.is-hidden {
     display: none;
@@ -324,7 +316,7 @@
   line-height: 29px;
   letter-spacing: -0.02em;
 
-  color: $white-color;
+  color: $color-background-text-white;
   border: 1px solid transparent;
   border-radius: 36px;
   background-color: transparent;
@@ -357,8 +349,7 @@
   letter-spacing: -0.04em;
   text-transform: uppercase;
 
-  color: $white-color;
-  transition: opacity $cubic-time, visibility $cubic-time;
+  color: $color-background-text-white;
 
   &.is-hidden {
     opacity: 0;
@@ -397,10 +388,10 @@
   gap: 4px;
   width: 118px;
   height: 48px;
-  background-color: $white-color;
-  border: 1.5px solid $dark-color;
+  background-color: $color-background-text-white;
+  border: 1.5px solid $color-background-text-black;
   border-radius: 18px;
-  color: $dark-color;
+  color: $color-background-text-black;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
