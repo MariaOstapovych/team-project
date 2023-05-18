@@ -92,14 +92,15 @@ function onKeyDown({ code }) {
 // Відкриття модалки
 document.addEventListener('click', openModal);
 async function openModal(evt) {
-  evt.preventDefault();
   if (evt.target.classList.contains('best-books__image')) {
+    evt.preventDefault();
     backdrop.style.display = 'flex';
     modalContainer.innerHTML = '';
     backdrop.style.overflow = 'hidden';
     const bookItem = evt.target.closest('.best-books__image');
     const bookId = bookItem.dataset.id;
     const bookData = getBookId(bookId);
+    modalBtn.textContent = 'add to shopping list';
     createMarkup(bookData);
     try {
       btnModalClose.addEventListener('click', onClosebtn);
@@ -113,6 +114,8 @@ async function openModal(evt) {
           const bookObject = response;
           arrayStorage.push(bookObject);
           localStorage.setItem('arrayStorage', JSON.stringify(arrayStorage));
+          modalBtn.removeEventListener('click', onStorage);
+          modalBtn.textContent = 'remove from the shopping list';
         });
       }
     } catch (error) {

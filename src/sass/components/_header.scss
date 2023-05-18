@@ -48,6 +48,7 @@
   text-transform: uppercase;
 
   color: $color-background-text-black;
+
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -122,133 +123,6 @@
     gap: 24px;
   }
 }
-
-//  КНОПКИ  "sign-up" ТА  "user"
-
-.auth__modal-open {
-  display: none;
-
-  align-items: center;
-  justify-content: center;
-  gap: 90px;
-  width: 184px;
-  height: 45px;
-  background-color: $color-text-button-purple;
-  border: 1.5px solid $color-background-text-black;
-  border-radius: 18px;
-  color: $color-background-text-white;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-
-  &.is-hidden {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-}
-
-.auth__modal-open-js:hover,
-.auth__modal-open-js:focus {
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
-}
-
-.authorised-btns__wrapper {
-  position: relative;
-
-  &.is-hidden {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-}
-
-.btn-user {
-  display: none;
-
-  align-items: center;
-  justify-content: space-around;
-  gap: 5px;
-
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 29px;
-  letter-spacing: -0.02em;
-
-  color: $color-background-text-white;
-  border: 1px solid $color-text-button-purple;
-  border-radius: 36px;
-  background-color: $color-text-button-purple;
-
-  height: 45px;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-}
-
-.fone-icon-user {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  background-color: $color-text-medgrey;
-  width: 37px;
-  height: 37px;
-  border-radius: 50%;
-}
-
-.icon-user {
-  fill: $color-text-button-purple;
-}
-
-.icon-triangle-down {
-  fill: $color-background-text-white;
-}
-
-.btn-user:hover,
-.btn-user:focus {
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
-}
-
-// ==============
-
-.log-out-btn {
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 90px;
-  width: 184px;
-  height: 48px;
-  background-color: $color-background-text-white;
-  border: 1.5px solid $color-background-text-black;
-  border-radius: 18px;
-  color: $color-background-text-black;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-}
-
-.log-out-btn.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-// =========================
 
 // МОДАЛЬНЕ ВІКНО МЕНЮ
 
@@ -437,6 +311,7 @@
   //   max-width: none;
   // }
 }
+ 
 // DARK_THEME
 .theme__switch-wrapper {
   display: flex;
@@ -469,9 +344,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -485,14 +362,15 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
 }
-
 .theme__switch {
   position: relative;
   display: inline-block;
@@ -511,11 +389,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(79, 46, 232, 1),
-    rgba(220, 220, 220, 1)
-  );
+  background: linear-gradient(to bottom,
+      rgba(79, 46, 232, 1),
+      rgba(220, 220, 220, 1));
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1),
     inset -1px -1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(79, 46, 232, 1);
   border-radius: 34px;
@@ -536,27 +412,23 @@
   transition: 0.4s;
 }
 
-input:checked + .slider {
-  background: linear-gradient(
-    to bottom,
-    rgba(79, 46, 232, 1),
-    rgba(104, 104, 104, 1)
-  );
+input:checked+.slider {
+  background: linear-gradient(to bottom,
+      rgba(79, 46, 232, 1),
+      rgba(104, 104, 104, 1));
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1),
     inset -1px -1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(79, 46, 232, 1);
 }
 
-input:focus + .slider {
-  background: linear-gradient(
-    to bottom,
-    rgba(79, 46, 232, 1),
-    rgba(104, 104, 104, 1)
-  );
+input:focus+.slider {
+  background: linear-gradient(to bottom,
+      rgba(79, 46, 232, 1),
+      rgba(104, 104, 104, 1));
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1),
     inset -1px -1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(79, 46, 232, 1);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   height: 18px;
   width: 18px;
   top: 4px;
