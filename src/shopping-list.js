@@ -65,9 +65,7 @@ function removeBook(evt) {
   let idRemoveBtn = evt.target.id;
 
   const selector = document.querySelectorAll('.books-list__item');
-  // const idselector = selector.id;
-
-  //   if (idselector === idRemoveBtn) {
+  
   for (const elem of massive) {
     if (elem._id === idRemoveBtn) {
       const resultIndex = parsedBook.indexOf(elem);
@@ -85,5 +83,5 @@ function removeBook(evt) {
       }
     }
   }
-  //   }
+ 
 }
