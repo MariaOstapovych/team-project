@@ -81,6 +81,7 @@
 
 .menu__shopping_icon-cart {
     fill: rgba(255, 255, 255, 1);
+
 }
 
 .current {
@@ -99,11 +100,6 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
-}
-
-.menu__shopping-list {
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
 }
 
 @media (min-width: 768px) {
@@ -405,7 +401,7 @@
 // КНИГИ
 .modal__books-list {
   position: absolute;
-  top: 45%;
+  top: 60%;
   left: -10%;
   // display: block;
   display: flex;
@@ -585,5 +581,4 @@ body.dark,
 .dark .menu__shopping_icon-cart {
     fill: #ffffff;
 }
-
 
