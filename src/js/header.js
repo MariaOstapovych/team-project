@@ -2,7 +2,7 @@ import openCloseIcon from '../images/img.svg';
 const menuHomeEl = document.querySelector('.menu__home');
 const menuShoppingEl = document.querySelector('.menu__shopping');
 const dropMenuShoppingEl = document.querySelector('.menu_item-shop');
-const cart = document.querySelector('menu__shopping_icon-cart')
+const cart = document.querySelector('shop-cart')
 setCurrentPage();
 function setCurrentPage() {
   const currentPageName = window.location.pathname;
