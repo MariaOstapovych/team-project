@@ -1646,7 +1646,7 @@ body.dark,
   align-items: center;
   position: fixed;
   overflow: hidden;
-  z-index: 2;
+  z-index: 23;
   top: 0;
   left: 0;
   width: 100%;
@@ -1666,7 +1666,7 @@ body.dark,
   overflow: hidden;
   position: relative;
   width: 335px;
-  height: 762px;
+  height: 775px;
   background-color: #FFFFFF;
   border: solid 2px #111111;
   border-radius: 10px;
@@ -1713,10 +1713,22 @@ body.dark,
 
 .modal__btn {
   position: absolute;
-  width: 211px;
+  width: 257px;
   height: 46px;
-  left: 62px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111;
+  background-color: #fff;
+  border: 2px solid #4f2ee8;
+  border-radius: 40px;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  position: absolute;
   top: 676px;
+  left: 39px;
   border: 2px solid #4F2EE8;
   border-radius: 40px;
   font-family: "DM Sans";
@@ -1731,6 +1743,22 @@ body.dark,
 }
 @media screen and (min-width: 768px) {
   .modal__btn {
+    width: 252px;
+    height: 46px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #111;
+    background-color: #fff;
+    border: 2px solid #4f2ee8;
+    border-radius: 40px;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    position: absolute;
+    top: 676px;
+    left: 43px;
     justify-content: center;
     align-items: center;
     width: 499px;
@@ -1762,15 +1790,38 @@ body.dark,
 
 .modal__descr-local {
   display: none;
-  font-family: DM Sans;
-  padding-right: 46px;
-  padding-left: 47px;
-  margin-top: 8px;
-  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  width: 242px;
+  height: 36px;
+  left: 47px;
+  top: 730px;
+  margin-bottom: 10px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
   font-size: 10px;
+  line-height: 12px;
+  text-align: center;
   letter-spacing: -0.04em;
-  line-height: 1.2;
-  color: rgba(17, 17, 17, 0.6);
+  color: rgba(17, 17, 17, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .modal__descr-local {
+    position: absolute;
+    width: 324px;
+    height: 28px;
+    left: 128px;
+    top: 433px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: rgba(17, 17, 17, 0.5);
+  }
 }
 
 .modal__img {
