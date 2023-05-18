@@ -20,17 +20,9 @@ function onClick(evt) {
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
     )
     .then(function (response) {
-      const book = response.data.map(
-        ({ _id, book_image, title, author, list_name }) => console.log(response)
-      );
       bookList.innerHTML = createBookList(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
     });
 
-  bestButton.classList.remove('category-selected');
-  listItem.classList.add('category-selected');
   bookTitle.textContent = categoryName;
   bestBooksHidden.style.display = 'none';
 }
@@ -60,7 +52,7 @@ function createBookList(arr) {
     .join('');
 }
 
-const createCategoryList = async () => {
+export const createCategoryList = async () => {
   try {
     const categoriesList = await getCategoriesList();
     categoriesList.sort((a, b) => a.list_name.localeCompare(b.list_name));

@@ -1,10 +1,11 @@
 import { getTopBooks } from './request';
+import { getBooksCategory } from './request';
 
 import Notiflix from 'notiflix';
 
 const bestBooks = document.querySelector('.best-books__list');
-const bestButton = document.querySelector('.category__linkAll');
-
+const bestButtonAll = document.querySelector('.category__linkAll');
+bestButtonAll.addEventListener('click', onButtonAll);
 const promise = getTopBooks();
 // const categories = getCategoriesList();
 
@@ -16,6 +17,7 @@ function createDate(categ) {
   categ.forEach(arr => {
     let bookMarkup = '';
     const data = arr.books;
+    console.log(data);
     data.forEach(book => {
       bookMarkup += `<li class="best-books__item is-hidden-books">
       <a href="" class="best-books__link">
@@ -37,5 +39,13 @@ function createDate(categ) {
   });
 
   bestBooks.insertAdjacentHTML('afterbegin', markup);
-  bestButton.classList.add('category-selected');
+  const bestButton = document.querySelector('.best-books-morebutton');
+  console.log(bestButton);
+  bestButton.addEventListener('click', onSeeMore);
 }
+
+// function onSeeMore(e) {
+//   e.preventDefault();
+// }
+
+function onButtonAll() {}
