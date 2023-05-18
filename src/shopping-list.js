@@ -1,33 +1,23 @@
-import './js/header';
-import './js/donate-bar';
-import './js/fond-items';
-import './js/donate-bar';
-import './js/request';
-import './js/modal';
-
-import svgRemove from '../src/images/icons.svg';
-import amazonPNG from '../src/images/shopping-list/amazon@2x.png';
-import ibooksPNG from '../src/images/shopping-list/books@2x.png';
-import bookshopPNG from '../src/images/shopping-list/bookshop@2x.png';
+import './header';
+import './donate-bar';
+import './fond-items';
+import './donate-bar';
+import './request';
+import './modal';
+import svgRemove from '../images/icons.svg';
+import amazonPNG from '../images/shopping-list/amazon@2x.png';
+import ibooksPNG from '../images/shopping-list/books@2x.png';
+import bookshopPNG from '../images/shopping-list/bookshop@2x.png';
 
 const addElem = document.querySelector('.shopping__books-list');
-
 let massive = [];
-let idBooks = [];
-let parsedBook;
-
-storageData();
+if (addElem) {
+  storageData();
+}
 
 function storageData() {
-  const book = localStorage.getItem('arrayStorage');
-
-  parsedBook = JSON.parse(book);
-
-  parsedBook.map(arr => {
-    massive.push(arr);
-    idBooks.push(arr._id);
-  });
-
+  const book = JSON.parse(localStorage.getItem('arrayStorage')) || [];
+  massive = [...book];
   createMarkup(massive);
 }
 
@@ -58,28 +48,19 @@ function createMarkup(arr) {
 
   addElem.insertAdjacentHTML('afterbegin', markup);
   const dumpBtn = document.querySelectorAll('.dump-button');
-  dumpBtn.forEach(btn => btn.addEventListener('click', removeBook));
+  // dumpBtn.forEach(btn =>
+  addElem.addEventListener('click', removeBook);
+  // );
 }
 
 function removeBook(evt) {
-  let idRemoveBtn = evt.target.id;
-
-  const selector = document.querySelectorAll('.books-list__item');
-  
-  for (const elem of massive) {
-    if (elem._id === idRemoveBtn) {
-      const resultIndex = parsedBook.indexOf(elem);
-      if (massive.length === [] || massive.length === 1) {
-        massive.splice(resultIndex, 1);
-        selector[resultIndex].style.display = 'none';
-        localStorage.clear();
-      } else if (massive.length > 1){
-        massive.splice(resultIndex, 1);
-        localStorage.setItem('arrayStorage', JSON.stringify(massive));
-        selector[resultIndex].style.display = 'none';
-      }
-      console.log(massive);
-    }
+  if (!evt.target.closest('button').classList.contains('dump-button')) {
+    return;
   }
- 
+  let idRemoveBtn = evt.target.id;
+  const deletedItem = evt.target.closest('li');
+  deletedItem.remove();
+  const newMassive = massive.filter(({ _id }) => _id !== idRemoveBtn);
+  massive = newMassive;
+  localStorage.setItem('arrayStorage', JSON.stringify(newMassive));
 }
