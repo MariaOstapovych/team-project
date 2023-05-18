@@ -66,19 +66,21 @@ function removeBook(evt) {
 
   const selector = document.querySelectorAll('.books-list__item');
   // const idselector = selector.id;
-  console.log(selector);
+
   //   if (idselector === idRemoveBtn) {
   for (const elem of massive) {
     if (elem._id === idRemoveBtn) {
       const resultIndex = parsedBook.indexOf(elem);
-      //   console.log(resultIndex);
-      massive.splice(resultIndex, 1);
-      selector[resultIndex].style.display = 'none';
-      if (selector.length > 0) {
-        selector[resultIndex].style.display = 'none';
-        localStorage.setItem('arrayStorage', JSON.stringify(massive));
-      } else {
+      //   console.log(massive);
+      if (massive.length === []) {
         localStorage.clear();
+      } else if (massive.length === 1) {
+        massive.splice(resultIndex, 1);
+        selector[resultIndex].style.display = 'none';
+        localStorage.clear();
+      } else {
+        massive.splice(resultIndex, 1);
+        selector[resultIndex].style.display = 'none';
         localStorage.setItem('arrayStorage', JSON.stringify(massive));
       }
     }
