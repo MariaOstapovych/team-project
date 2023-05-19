@@ -2,17 +2,18 @@ import { getTopBooks } from './request';
 import { getBooksCategory } from './request';
 import { loader } from './loader';
 import { createBookList } from './categories';
-
+import './categories';
+const bookList = document.querySelector('.book-list-js');
 const bestBooks = document.querySelector('.best-books__list');
 const promise = getTopBooks();
 
 promise.then(data => createDate(data));
 function createDate(categ) {
   let markup = '';
-
   categ.forEach(arr => {
     let bookMarkup = '';
     const data = arr.books;
+
     data.forEach(book => {
       bookMarkup += `<li class="best-books__item is-hidden-books">
       <a href="" class="best-books__link">
@@ -32,9 +33,8 @@ function createDate(categ) {
         <button  class='best-books-morebutton' type="button" data-category="${arr.list_name}">see more</button>
       </li>`;
   });
-
-  // bestBooks.insertAdjacentHTML('afterbegin', markup);
-  bestBooks.innerHTML = markup;
+  bestBooks.insertAdjacentHTML('afterbegin', markup);
+  // bestBooks.innerHTML = markup;
 
   const bestButtonAll = document.querySelector('.category__linkAll');
   bestButtonAll.addEventListener('click', onButtonAll);
@@ -44,17 +44,23 @@ function createDate(categ) {
     const promise = getTopBooks();
 
     promise.then(data => {
-      createDate(categ);
-      bestBooks.innerHTML = getTopBooks(data);
+      console.log(data);
+
+      bestBooks.innerHTML = markup;
     });
   }
 
   const bestButton = document.querySelector('.best-books__list');
   bestButton.addEventListener('click', onSeeMore);
+
   function onSeeMore(e) {
     if (e.target.nodeName !== 'BUTTON') {
       return;
     }
-    bestBooks.innerHTML = createBookList();
+    const category = e.target.getAttribute('data-category');
+    getBooksCategory(category).then(data => {
+      bestBooks.innerHTML = '';
+      bookList.innerHTML = createBookList(data);
+    });
   }
 }

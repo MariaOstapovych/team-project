@@ -4,19 +4,19 @@ import { loader } from './loader';
 const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
 const bookTitle = document.querySelector('.book-title-js');
-const bestBooksHidden = document.querySelector('.best-books');
+const bestBooks = document.querySelector('.best-books__list');
 
 listElement.addEventListener('click', onClick);
 
 function onClick(evt) {
   const categoryName = evt.target.outerText;
-  console.log(categoryName);
   loader.show();
   axios
     .get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
     )
     .then(function (response) {
+      bestBooks.innerHTML = '';
       bookList.innerHTML = createBookList(response.data);
 
       loader.hide();
@@ -24,9 +24,7 @@ function onClick(evt) {
     .catch(function (error) {
       console.log(error);
     });
-  // listItem.classList.add('category-selected');
   bookTitle.textContent = categoryName;
-  bestBooksHidden.style.display = 'none';
 }
 
 export function createBookList(arr) {
