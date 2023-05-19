@@ -1,4 +1,4 @@
-import { getCategoriesList } from './request';
+import { getCategoriesList, getBooksCategory } from './request';
 import axios from 'axios';
 import { loader } from './loader';
 const listElement = document.querySelector('.cat-list-js');
@@ -9,25 +9,24 @@ const mainTitleHidden = document.querySelector('.best-books__maintitle');
 
 listElement.addEventListener('click', onClick);
 
-function onClick(evt) {
-  const categoryName = evt.target.outerText;
+async function onClick(evt) {
+  const categoryName = evt.target.textContent.trim();
   loader.show();
-  axios
-    .get(
-      `https://books-backend.p.goit.global/books/category?category=${categoryName}`
-    )
-    .then(function (response) {
-      bestBooks.innerHTML = '';
-      bookList.innerHTML = createBookList(response.data);
+  try {
+    const response = await getBooksCategory(categoryName);
+    console.log('response:', response);
 
-      loader.hide();
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  bookTitle.textContent = categoryName;
-  mainTitleHidden.style.visibility = 'hidden';
-  mainTitleHidden.style.position = 'absolute';
+    bestBooks.innerHTML = '';
+    bookList.innerHTML = createBookList(response);
+
+    loader.hide();
+
+    bookTitle.textContent = categoryName;
+    mainTitleHidden.style.visibility = 'hidden';
+    mainTitleHidden.style.position = 'absolute';
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export function createBookList(arr) {
@@ -81,3 +80,32 @@ export const createCategoryList = async () => {
   }
 };
 createCategoryList();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
