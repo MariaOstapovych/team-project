@@ -20,6 +20,7 @@ async function createMarkup(bookData) {
   try {
     const resp = await bookData;
     const links = resp.buy_links;
+
     links.forEach(function (obj) {
       const bookName = obj.name;
       const bookUrl = obj.url;
@@ -27,6 +28,10 @@ async function createMarkup(bookData) {
       // console.log(bookUrl);
     });
     loader.show(); 
+
+    const names = links.map(obj => obj.name);
+    const urls = links.map(obj => obj.url);
+
     markupModalBook = `.
     <img src="${resp.book_image}" alt="${resp.title}" class="modal__img"/>
     <div class="modal__content">
@@ -35,29 +40,29 @@ async function createMarkup(bookData) {
       <p class="modal__description">${resp.description || 'No description'}</p>
       <ul class="modal__shop">
         <li class="modal__shop-item">
-          <a class="modal__shop-list" href="https://www.amazon.com/" target="_blank">
+          <a class="modal__shop-list" href="${urls[0]}" target="_blank">
             <img
               class="modal__shop-amazon"
               src="${amazonPNG}"
-              alt="Amazon book"
+              alt="${names[0]}"
             >
           </a>
         </li>
         <li class="modal__shop-item">
-          <a class="modal__shop-list" href="https://www.amazon.com/" target="_blank">
+          <a class="modal__shop-list" href="${urls[1]}" target="_blank">
             <img
               class="modal__shop-ibooks"
               src="${ibooksPNG}"
-              alt="ibooks book"
+              alt="${names[1]}"
             >
           </a>
         </li>
         <li class="modal__shop-item">
-          <a class="modal__shop-list" href="https://www.amazon.com/" target="_blank">
+          <a class="modal__shop-list" href="${urls[2]}" target="_blank">
             <img
               class="modal__shop-bookShop"
               src="${bookshopPNG}"
-              alt="Shop book"
+              alt="${names[2]}"
             >
           </a>
         </li>
@@ -118,10 +123,25 @@ async function openModal(evt) {
           localStorage.setItem('arrayStorage', JSON.stringify(arrayStorage));
           modalBtn.removeEventListener('click', onStorage);
           modalBtn.textContent = 'remove from the shopping list';
+          modalBtn.addEventListener('click', onRemove);
+          localDescr.style.display = 'block';
         });
       }
     } catch (error) {
       console.error('Помилка при отриманні даних про книгу', error);
     }
+  }
+}
+
+// Функція видалення із LocalStorage
+function onRemove() {
+  const bookId = modalBtn.dataset.bookId;
+  const existingIndex = arrayStorage.findIndex(obj => obj.bookId === bookId);
+  if (existingIndex !== -1) {
+    arrayStorage.splice(existingIndex, 1);
+    localStorage.setItem('arrayStorage', JSON.stringify(arrayStorage));
+    modalBtn.removeEventListener('click', onRemove);
+    modalBtn.textContent = 'add to shopping list';
+    localDescr.style.display = 'none';
   }
 }
