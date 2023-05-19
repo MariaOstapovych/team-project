@@ -1,12 +1,9 @@
 import { getCategoriesList } from './request';
 import axios from 'axios';
-// import { getBooksCategory } from "./request";
 import { loader } from './loader';
 const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
 const bookTitle = document.querySelector('.book-title-js');
-// const bestButton = document.querySelector('.category__linkAll');
-// const listItem = document.querySelector('.category__link');
 const bestBooksHidden = document.querySelector('.best-books');
 
 listElement.addEventListener('click', onClick);
@@ -32,7 +29,7 @@ function onClick(evt) {
   bestBooksHidden.style.display = 'none';
 }
 
-function createBookList(arr) {
+export function createBookList(arr) {
   return arr
     .map(
       ({
@@ -43,7 +40,7 @@ function createBookList(arr) {
       }) => `<li class="category-book-item" data-book-id="${_id}">
        <button class="category__link" type='button' data-category>
        <a href="" class="best-books__link">
-          <img src="${book_image}" alt="book" class="category-book-img">
+          <img src="${book_image}" alt="book" data-id="${_id}" class="category-book-img best-books__image">
         </a>
         <div class="card-quick">
          <p class="card-quick-view">Quick view</p>

@@ -1,22 +1,18 @@
 import { getTopBooks } from './request';
 import { getBooksCategory } from './request';
-import { createCategoryList } from './categories';
-
 import { loader } from './loader';
+import { createBookList } from './categories';
 
 const bestBooks = document.querySelector('.best-books__list');
 const promise = getTopBooks();
-// const categories = getCategoriesList();
 
 promise.then(data => createDate(data));
-loader.show();
 function createDate(categ) {
   let markup = '';
 
   categ.forEach(arr => {
     let bookMarkup = '';
     const data = arr.books;
-    console.log(data);
     data.forEach(book => {
       bookMarkup += `<li class="best-books__item is-hidden-books">
       <a href="" class="best-books__link">
@@ -44,15 +40,21 @@ function createDate(categ) {
   bestButtonAll.addEventListener('click', onButtonAll);
 
   function onButtonAll(e) {
-    bestBooks.innerHTML = ''; // Очистити контейнер bestBooks перед створенням нової розмітки
-    createDate(); // Викликати createDate з усіма категоріями
+    e.preventDefault();
+    const promise = getTopBooks();
+
+    promise.then(data => {
+      createDate(categ);
+      bestBooks.innerHTML = getTopBooks(data);
+    });
   }
 
-  const bestButton = document.querySelector('.best-books-morebutton');
+  const bestButton = document.querySelector('.best-books__list');
   bestButton.addEventListener('click', onSeeMore);
-  function onSeeMore() {}
-
-  loader.hide();
-  bestBooks.insertAdjacentHTML('afterbegin', markup);
-  bestButton.classList.add('category-selected');
+  function onSeeMore(e) {
+    if (e.target.nodeName !== 'BUTTON') {
+      return;
+    }
+    bestBooks.innerHTML = createBookList();
+  }
 }
