@@ -1,7 +1,7 @@
 import { getCategoriesList } from './request';
 import axios from 'axios';
 // import { getBooksCategory } from "./request";
-
+import { loader } from './loader';
 const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
 const bookTitle = document.querySelector('.book-title-js');
@@ -14,13 +14,18 @@ listElement.addEventListener('click', onClick);
 function onClick(evt) {
   const categoryName = evt.target.outerText;
   console.log(categoryName);
-
+  loader.show();
   axios
     .get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
     )
     .then(function (response) {
       bookList.innerHTML = createBookList(response.data);
+
+      loader.hide();
+    })
+    .catch(function (error) {
+      console.log(error);
     });
   // listItem.classList.add('category-selected');
   bookTitle.textContent = categoryName;
@@ -37,7 +42,12 @@ function createBookList(arr) {
         author,
       }) => `<li class="category-book-item" data-book-id="${_id}">
        <button class="category__link" type='button' data-category>
+       <a href="" class="best-books__link">
           <img src="${book_image}" alt="book" class="category-book-img">
+        </a>
+        <div class="card-quick">
+         <p class="card-quick-view">Quick view</p>
+      </div>
             <div class="textbox">
                 <div class="titlebox">  
                   <p class="titlebox-title">${title}</p>

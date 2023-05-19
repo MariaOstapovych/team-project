@@ -1,15 +1,16 @@
+import './js/fond-items';
+import './js/request';
 import './js/header';
 import './js/donate-bar';
-import './js/fond-items';
 import './js/donate-bar';
-import './js/request';
+
 import './js/modal';
 import './js/switch-theme';
 import svgRemove from '../src/images/icons.svg';
 import amazonPNG from '../src/images/shopping-list/amazon@2x.png';
 import ibooksPNG from '../src/images/shopping-list/books@2x.png';
 import bookshopPNG from '../src/images/shopping-list/bookshop@2x.png';
-
+import { loader } from './js/loader'
 
 const addElem = document.querySelector('.shopping__books-list');
 let massive = [];
@@ -22,7 +23,7 @@ function storageData() {
   massive = [...book];
   createMarkup(massive);
 }
-
+loader.show(); 
 function createMarkup(arr) {
   let markup = '';
   arr.map(({ _id, book_image, title, publisher, description, author }) => {
@@ -54,7 +55,7 @@ function createMarkup(arr) {
   addElem.addEventListener('click', removeBook);
   // );
 }
-
+loader.hide(); 
 function removeBook(evt) {
   if (!evt.target.closest('button').classList.contains('dump-button')) {
     return;

@@ -2,14 +2,14 @@ import { getTopBooks } from './request';
 import { getBooksCategory } from './request';
 import { createCategoryList } from './categories';
 
-import Notiflix from 'notiflix';
+import { loader } from './loader';
 
 const bestBooks = document.querySelector('.best-books__list');
 const promise = getTopBooks();
 // const categories = getCategoriesList();
 
 promise.then(data => createDate(data));
-
+loader.show();
 function createDate(categ) {
   let markup = '';
 
@@ -51,4 +51,8 @@ function createDate(categ) {
   const bestButton = document.querySelector('.best-books-morebutton');
   bestButton.addEventListener('click', onSeeMore);
   function onSeeMore() {}
+
+  loader.hide();
+  bestBooks.insertAdjacentHTML('afterbegin', markup);
+  bestButton.classList.add('category-selected');
 }
