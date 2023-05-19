@@ -1,8 +1,9 @@
+import './js/fond-items';
+import './js/request';
 import './js/header';
 import './js/donate-bar';
-import './js/fond-items';
 import './js/donate-bar';
-import './js/request';
+
 import './js/modal';
 import './js/switch-theme';
 import svgRemove from '../src/images/icons.svg';
