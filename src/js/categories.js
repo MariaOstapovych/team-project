@@ -5,6 +5,7 @@ const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
 const bookTitle = document.querySelector('.book-title-js');
 const bestBooks = document.querySelector('.best-books__list');
+const mainTitleHidden = document.querySelector('.best-books__maintitle');
 
 listElement.addEventListener('click', onClick);
 
@@ -25,6 +26,8 @@ function onClick(evt) {
       console.log(error);
     });
   bookTitle.textContent = categoryName;
+  mainTitleHidden.style.visibility = 'hidden';
+  mainTitleHidden.style.position = 'absolute';
 }
 
 export function createBookList(arr) {
