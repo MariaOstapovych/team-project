@@ -1,7 +1,7 @@
 import { getCategoriesList } from './request';
 import axios from 'axios';
 // import { getBooksCategory } from "./request";
-
+import { loader } from './loader'
 const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
 const bookTitle = document.querySelector('.book-title-js');
@@ -14,7 +14,7 @@ listElement.addEventListener('click', onClick);
 function onClick(evt) {
   const categoryName = evt.target.outerText;
   console.log(categoryName);
-
+loader.show(); 
   axios
     .get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
@@ -24,6 +24,7 @@ function onClick(evt) {
         ({ _id, book_image, title, author, list_name }) => console.log(response)
       );
       bookList.innerHTML = createBookList(response.data);
+      loader.hide(); 
     })
     .catch(function (error) {
       console.log(error);
