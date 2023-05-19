@@ -476,15 +476,15 @@ body.dark,
 }
 
 .menu a {
-  color: #111111;
+  color: $color-background-text-black;
 }
 
 .dark .menu a {
-  color: #FFFFFF;
+  color: $color-background-text-white;
 }
 
 .dark body {
-  background-color: #000000;
+  background-color: $color-background-text-black;
 }
 
 
@@ -493,10 +493,11 @@ body.dark,
   text-transform: uppercase;
 }
 
-.dark .category__link {
-  color: rgba(255, 255, 255, 0.6);
+.dark .category__link,
+.dark .category__linkAll {
+  color: $color-text-mingrey;
 }
-
+/* .dark .category__linkAll  */  
 .dark .titlebox-title,
 .dark .best-books__maintitle,
 .dark .best-books-morebutton,
@@ -507,18 +508,26 @@ body.dark,
 .dark .icon-close,
 .dark .books-list__name,
 .dark .books-list__description {
-  color: #FFFFFF;
+  color: $color-background-text-white;
   fill: #FFFFFF;
 }
 
 .dark .modal {
-  background-color: #202024;
+  background-color: $color-background-dark;
 }
 
 .dark .books-list__item {
-  background-color: #111111;
+  background-color: $color-background-text-black;
 }
 
 .dark .modal {
   border: 2px solid #FFFFFF;
+}
+
+// active-link category
+.category__link:focus,
+.category__linkAll:focus{
+    color: #4f2ee8;
+    text-transform: uppercase;
+    font-weight: 700;
 }
