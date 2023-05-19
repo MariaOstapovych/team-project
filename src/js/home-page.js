@@ -5,6 +5,8 @@ import { createBookList } from './categories';
 import './categories';
 const bookList = document.querySelector('.book-list-js');
 const bestBooks = document.querySelector('.best-books__list');
+const titleBest = document.querySelector('.best-books__maintitle');
+const bookTit = document.querySelector('.book-title-js')
 const promise = getTopBooks();
 
 promise.then(data => createDate(data));
@@ -61,6 +63,11 @@ function createDate(categ) {
     getBooksCategory(category).then(data => {
       bestBooks.innerHTML = '';
       bookList.innerHTML = createBookList(data);
+      console.log(data);
+
+    titleBest.style.visibility = 'hidden';
+    titleBest.style.position = 'absolute';
+      bookTit.textContent = category;
     });
   }
 }
