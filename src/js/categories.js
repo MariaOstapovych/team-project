@@ -1,42 +1,36 @@
 import { getCategoriesList } from './request';
 import axios from 'axios';
-// import { getBooksCategory } from "./request";
-import { loader } from './loader'
+import { loader } from './loader';
 const listElement = document.querySelector('.cat-list-js');
 const bookList = document.querySelector('.book-list-js');
 const bookTitle = document.querySelector('.book-title-js');
-const bestButton = document.querySelector('.category__linkAll');
-const listItem = document.querySelector('.category__link');
-const bestBooksHidden = document.querySelector('.best-books');
+const bestBooks = document.querySelector('.best-books__list');
+const mainTitleHidden = document.querySelector('.best-books__maintitle');
 
 listElement.addEventListener('click', onClick);
 
 function onClick(evt) {
   const categoryName = evt.target.outerText;
-  console.log(categoryName);
-loader.show(); 
+  loader.show();
   axios
     .get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
     )
     .then(function (response) {
-      const book = response.data.map(
-        ({ _id, book_image, title, author, list_name }) => console.log(response)
-      );
+      bestBooks.innerHTML = '';
       bookList.innerHTML = createBookList(response.data);
-      loader.hide(); 
+
+      loader.hide();
     })
     .catch(function (error) {
       console.log(error);
     });
-
-  bestButton.classList.remove('category-selected');
-  listItem.classList.add('category-selected');
   bookTitle.textContent = categoryName;
-  bestBooksHidden.style.display = 'none';
+  mainTitleHidden.style.visibility = 'hidden';
+  mainTitleHidden.style.position = 'absolute';
 }
 
-function createBookList(arr) {
+export function createBookList(arr) {
   return arr
     .map(
       ({
@@ -66,7 +60,7 @@ function createBookList(arr) {
     .join('');
 }
 
-const createCategoryList = async () => {
+export const createCategoryList = async () => {
   try {
     const categoriesList = await getCategoriesList();
     categoriesList.sort((a, b) => a.list_name.localeCompare(b.list_name));
