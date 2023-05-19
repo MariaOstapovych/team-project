@@ -1,6 +1,6 @@
 import { getTopBooks } from './request';
 import { loader } from './loader'
-import Notiflix from 'notiflix';
+
 
 const bestBooks = document.querySelector('.best-books__list');
 const bestButton = document.querySelector('.category__linkAll');
