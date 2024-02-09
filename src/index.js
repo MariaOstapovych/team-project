@@ -7,4 +7,4 @@ import './js/modal'
 import './js/donate-bar'
 import './js/scroll-up'
 import './js/switch-theme'
-
+import './js/loader'
