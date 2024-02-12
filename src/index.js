@@ -1,4 +1,4 @@
-import './js/fond-items'
+//import './js/fond-items'
 import './js/request'
 import './js/header'
 import './js/home-page'
